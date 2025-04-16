@@ -146,18 +146,18 @@ const IndustrySection = () => {
           <Image
             src={current.image}
             alt={current.title}
+            width={300}
+            height={120}
             className="w-full h-full object-cover"
           />
           <div className="absolute bottom-6 left-6 bg-transparent text-white p-6 max-w-md">
             <p className="text-md leading-relaxed">{current.text}</p>
-            <Link href="#">
-            <a
+            <Link
               href="#"
               className="inline-flex items-center text-white mt-4 group"
             >
               <span className="font-semibold">See the case study</span>
               <ChevronRight className="w-4 h-4 ml-1 transition-transform duration-200 group-hover:translate-x-1" />
-            </a>
             </Link>
           </div>
         </div>

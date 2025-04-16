@@ -79,6 +79,8 @@ export default function Home() {
                 <Image
                   src="/assets/logo2.svg"
                   alt="Logo 1"
+                  width={300}
+                  height={120}
                   className="h-30 w-auto"
                 />
               </div>
@@ -87,6 +89,8 @@ export default function Home() {
                 <Image
                   src="/assets/logo2.svg"
                   alt="Logo 2"
+                  width={300}
+                  height={120}
                   className="h-30 w-auto"
                 />
               </div>
@@ -95,6 +99,8 @@ export default function Home() {
                 <Image
                   src="/assets/logo2.svg"
                   alt="Logo 3"
+                  width={300}
+                  height={120}
                   className="h-30 w-auto"
                 />
               </div>
@@ -103,6 +109,8 @@ export default function Home() {
                 <Image
                   src="/assets/logo4.svg"
                   alt="Logo 4"
+                  width={300}
+                  height={120}
                   className="h-30 w-auto"
                 />
               </div>
@@ -111,6 +119,8 @@ export default function Home() {
                 <Image
                   src="/assets/logo5.svg"
                   alt="Logo 5"
+                  width={300}
+                  height={120}
                   className="h-30 w-auto"
                 />
               </div>
@@ -119,6 +129,8 @@ export default function Home() {
                 <Image
                   src="/assets/logo6.svg"
                   alt="Logo 6"
+                  width={300}
+                  height={120}
                   className="h-30 w-auto"
                 />
               </div>
@@ -127,6 +139,8 @@ export default function Home() {
                 <Image
                   src="/assets/logo7.svg"
                   alt="Logo 7"
+                  width={300}
+                  height={120}
                   className="h-30 w-auto"
                 />
               </div>
@@ -134,6 +148,8 @@ export default function Home() {
                 <Image
                   src="/assets/logo8.svg"
                   alt="Logo 8"
+                  width={300}
+                  height={120}
                   className="h-30 w-auto"
                 />
               </div>
@@ -141,6 +157,8 @@ export default function Home() {
                 <Image
                   src="/assets/logo9.svg"
                   alt="Logo 9"
+                  width={300}
+                  height={120}
                   className="h-30 w-auto"
                 />
               </div>
@@ -148,6 +166,8 @@ export default function Home() {
                 <Image
                   src="/assets/logo2.svg"
                   alt="Logo 1"
+                  width={300}
+                  height={120}
                   className="h-30 w-auto"
                 />
               </div>
@@ -156,6 +176,8 @@ export default function Home() {
                 <Image
                   src="/assets/logo2.svg"
                   alt="Logo 2"
+                  width={300}
+                  height={120}
                   className="h-30 w-auto"
                 />
               </div>
@@ -164,6 +186,8 @@ export default function Home() {
                 <Image
                   src="/assets/logo2.svg"
                   alt="Logo 3"
+                  width={300}
+                  height={120}
                   className="h-30 w-auto"
                 />
               </div>
@@ -172,6 +196,8 @@ export default function Home() {
                 <Image
                   src="/assets/logo4.svg"
                   alt="Logo 4"
+                  width={300}
+                  height={120}
                   className="h-30 w-auto"
                 />
               </div>
@@ -180,6 +206,8 @@ export default function Home() {
                 <Image
                   src="/assets/logo5.svg"
                   alt="Logo 5"
+                  width={300}
+                  height={120}
                   className="h-30 w-auto"
                 />
               </div>
@@ -188,6 +216,8 @@ export default function Home() {
                 <Image
                   src="/assets/logo6.svg"
                   alt="Logo 6"
+                  width={300}
+                  height={120}
                   className="h-30 w-auto"
                 />
               </div>
@@ -196,6 +226,8 @@ export default function Home() {
                 <Image
                   src="/assets/logo7.svg"
                   alt="Logo 7"
+                  width={300}
+                  height={120}
                   className="h-30 w-auto"
                 />
               </div>
@@ -203,6 +235,8 @@ export default function Home() {
                 <Image
                   src="/assets/logo8.svg"
                   alt="Logo 8"
+                  width={300}
+                  height={120}
                   className="h-30 w-auto"
                 />
               </div>
@@ -210,6 +244,8 @@ export default function Home() {
                 <Image
                   src="/assets/logo9.svg"
                   alt="Logo 9"
+                  width={300}
+                  height={120}
                   className="h-30 w-auto"
                 />
               </div>
@@ -521,6 +557,8 @@ export default function Home() {
               <Image
                 src="/assets/award1.png"
                 alt="Logo 1"
+                width={300}
+                height={120}
                 className="h-30 w-auto"
               />
               <p className="text-center text-lg text-[#0A0842] mt-4">
@@ -532,6 +570,8 @@ export default function Home() {
               <Image
                 src="/assets/award2.jpg"
                 alt="Logo 2"
+                width={300}
+                height={120}
                 className="h-30 w-auto"
               />
               <p className="text-center text-lg text-[#0A0842] mt-4">
@@ -543,6 +583,8 @@ export default function Home() {
               <Image
                 src="/assets/award3.jpg"
                 alt="Logo 3"
+                width={300}
+                height={120}
                 className="h-30 w-auto"
               />
               <p className="text-center text-lg text-[#0A0842] mt-4">
@@ -554,6 +596,8 @@ export default function Home() {
               <Image
                 src="/assets/award4.jpg"
                 alt="Logo 4"
+                width={300}
+                height={120}
                 className="h-30 w-auto"
               />
               <p className="text-center text-lg text-[#0A0842] mt-4">
@@ -565,6 +609,8 @@ export default function Home() {
               <Image
                 src="/assets/award5.jpg"
                 alt="Logo 5"
+                width={300}
+                height={120}
                 className="h-30 w-auto"
               />
               <p className="text-center text-lg text-[#0A0842] mt-4">
@@ -576,6 +622,8 @@ export default function Home() {
               <Image
                 src="/assets/award6.png"
                 alt="Logo 6"
+                width={300}
+                height={120}
                 className="h-30 w-auto"
               />
               <p className="text-center text-lg text-[#0A0842] mt-4">
@@ -587,6 +635,8 @@ export default function Home() {
               <Image
                 src="/assets/award7.png"
                 alt="Logo 7"
+                width={300}
+                height={120}
                 className="h-30 w-auto"
               />
               <p className="text-center text-lg text-[#0A0842] mt-4">
@@ -597,6 +647,8 @@ export default function Home() {
               <Image
                 src="/assets/award8.jpg"
                 alt="Logo 8"
+                width={300}
+                height={120}
                 className="h-30 w-auto"
               />
               <p className="text-center text-lg text-[#0A0842] mt-4">
@@ -607,6 +659,8 @@ export default function Home() {
               <Image
                 src="/assets/award9.jpg"
                 alt="Logo 9"
+                width={300}
+                height={120}
                 className="h-30 w-auto"
               />
               <p className="text-center text-lg text-[#0A0842] mt-4">
@@ -617,6 +671,8 @@ export default function Home() {
               <Image
                 src="/assets/award10.jpg"
                 alt="Logo 10"
+                width={300}
+                height={120}
                 className="h-30 w-auto"
               />
               <p className="text-center text-lg text-[#0A0842] mt-4">
@@ -627,6 +683,8 @@ export default function Home() {
               <Image
                 src="/assets/award1.png"
                 alt="Logo 1"
+                width={300}
+                height={120}
                 className="h-30 w-auto"
               />
               <p className="text-center text-lg text-[#0A0842] mt-4">
@@ -638,6 +696,8 @@ export default function Home() {
               <Image
                 src="/assets/award2.jpg"
                 alt="Logo 2"
+                width={300}
+                height={120}
                 className="h-30 w-auto"
               />
               <p className="text-center text-lg text-[#0A0842] mt-4">
@@ -649,6 +709,8 @@ export default function Home() {
               <Image
                 src="/assets/award3.jpg"
                 alt="Logo 3"
+                width={300}
+                height={120}
                 className="h-30 w-auto"
               />
               <p className="text-center text-lg text-[#0A0842] mt-4">
@@ -660,6 +722,8 @@ export default function Home() {
               <Image
                 src="/assets/award4.jpg"
                 alt="Logo 4"
+                width={300}
+                height={120}
                 className="h-30 w-auto"
               />
               <p className="text-center text-lg text-[#0A0842] mt-4">
@@ -671,6 +735,8 @@ export default function Home() {
               <Image
                 src="/assets/award5.jpg"
                 alt="Logo 5"
+                width={300}
+                height={120}
                 className="h-30 w-auto"
               />
               <p className="text-center text-lg text-[#0A0842] mt-4">
@@ -682,6 +748,8 @@ export default function Home() {
               <Image
                 src="/assets/award6.png"
                 alt="Logo 6"
+                width={300}
+                height={120}
                 className="h-30 w-auto"
               />
               <p className="text-center text-lg text-[#0A0842] mt-4">
@@ -693,6 +761,8 @@ export default function Home() {
               <Image
                 src="/assets/award7.png"
                 alt="Logo 7"
+                width={300}
+                height={120}
                 className="h-30 w-auto"
               />
               <p className="text-center text-lg text-[#0A0842] mt-4">
@@ -703,6 +773,8 @@ export default function Home() {
               <Image
                 src="/assets/award8.jpg"
                 alt="Logo 8"
+                width={300}
+                height={120}
                 className="h-30 w-auto"
               />
               <p className="text-center text-lg text-[#0A0842] mt-4">
@@ -713,6 +785,8 @@ export default function Home() {
               <Image
                 src="/assets/award9.jpg"
                 alt="Logo 9"
+                width={300}
+                height={120}
                 className="h-30 w-auto"
               />
               <p className="text-center text-lg text-[#0A0842] mt-4">
@@ -723,6 +797,8 @@ export default function Home() {
               <Image
                 src="/assets/award10.jpg"
                 alt="Logo 10"
+                width={300}
+                height={120}
                 className="h-30 w-auto"
               />
               <p className="text-center text-lg text-[#0A0842] mt-4">

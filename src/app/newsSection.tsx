@@ -32,14 +32,13 @@ export default function NewsSection() {
                   alongside investors Baillie Gifford, Generali – through Lion
                   River, the Group’s company dedicated to Private...
                 </p>
-                <Link href="#">
-                <a
+
+                <Link
                   href="#"
                   className="inline-flex items-center text-md text-[#0A0842] transition group mt-2"
                 >
                   Read more
                   <ChevronRight className="w-4 h-4 ml-1 transition-transform duration-200 group-hover:translate-x-1" />
-                </a>
                 </Link>
               </div>
             </FadeInWhenVisible>
@@ -54,18 +53,17 @@ export default function NewsSection() {
                 <p className="text-sm text-[#0A0842] mb-4">
                   SAN FRANCISCO, CA – June 18, 2024 – Stellantis Financial
                   Services US, the captive automotive finance company of
-                  Stellantis in North America, today announced a new partnership
-                  with bolt, the insurtech with the world’s largest
+                  Stellantis in North America, today announced Link new
+                  partnership with bolt, the insurtech with the world’s largest
                   technology-enabled insurance exchange, to support customers...{" "}
                 </p>
-                <Link href="#">
-                <a
+
+                <Link
                   href="#"
                   className="inline-flex items-center text-md text-[#0A0842] transition group mt-2"
                 >
                   Read more
                   <ChevronRight className="w-4 h-4 ml-1 transition-transform duration-200 group-hover:translate-x-1" />
-                </a>
                 </Link>
               </div>
             </FadeInWhenVisible>
@@ -79,19 +77,24 @@ export default function NewsSection() {
                   <span className="absolute top-1 left-1 bg-yellow-400 text-xs font-bold px-2 py-1 rounded">
                     Insights
                   </span>
-                  <Image src="/assets/home.jpg" className="rounded" alt="News" />
+                  <Image
+                    src="/assets/home.jpg"
+                    className="rounded"
+                    width={300}
+                    height={120}
+                    alt="News"
+                  />
                 </div>
                 <h4 className="text-base font-semibold text-[#0A0842]">
                   Wearables impact on underwriting
                 </h4>
-                <Link href="#">
-                <a
+
+                <Link
                   href="#"
                   className="inline-flex items-center text-md text-[#0A0842] transition group mt-2"
                 >
                   Read more
                   <ChevronRight className="w-4 h-4 ml-1 transition-transform duration-200 group-hover:translate-x-1" />
-                </a>
                 </Link>
               </div>
             </FadeInWhenVisible>
@@ -101,14 +104,13 @@ export default function NewsSection() {
                 <h4 className="text-base font-semibold text-[#0A0842] mb-2">
                   Partnership with Singtel
                 </h4>
-                <Link href="#">
-                <a
+
+                <Link
                   href="#"
                   className="inline-flex items-center text-md text-[#0A0842] transition group mt-2"
                 >
                   Read more
                   <ChevronRight className="w-4 h-4 ml-1 transition-transform duration-200 group-hover:translate-x-1" />
-                </a>
                 </Link>
               </div>
             </FadeInWhenVisible>
@@ -122,20 +124,21 @@ export default function NewsSection() {
                   <Image
                     src="/assets/healtech.jpg"
                     className="rounded"
+                    width={300}
+                    height={120}
                     alt="News"
                   />
                 </div>
                 <h4 className="text-base font-semibold text-[#0A0842]">
                   Interview with our Group CEO
                 </h4>
-                <Link href="#">
-                <a
+
+                <Link
                   href="#"
                   className="inline-flex items-center text-md text-[#0A0842] transition group mt-2"
                 >
                   Read more
                   <ChevronRight className="w-4 h-4 ml-1 transition-transform duration-200 group-hover:translate-x-1" />
-                </a>
                 </Link>
               </div>
             </FadeInWhenVisible>

@@ -16,24 +16,18 @@ export default function Footer() {
             </h4>
             <ul className="space-y-3">
               <li>
-                <Link href="#">
-                  <a href="#" className="underline-hover">
-                    Insurer library
-                  </a>
+                <Link href="#" className="underline-hover">
+                  Insurer library
                 </Link>
               </li>
               <li>
-                <Link href="#">
-                  <a href="#" className="underline-hover">
-                    Dynamic quoting questionnaire
-                  </a>
+                <Link href="#" className="underline-hover">
+                  Dynamic quoting questionnaire
                 </Link>
               </li>
               <li>
-                <Link href="#">
-                  <a href="#" className="underline-hover">
-                    Data marketplace
-                  </a>
+                <Link href="#" className="underline-hover">
+                  Data marketplace
                 </Link>
               </li>
             </ul>
@@ -43,24 +37,18 @@ export default function Footer() {
             </h4>
             <ul className="space-y-3">
               <li>
-                <Link href="#">
-                  <a href="#" className="underline-hover">
-                    Device Protection
-                  </a>
+                <Link href="#" className="underline-hover">
+                  Device Protection
                 </Link>
               </li>
               <li>
-                <Link href="#">
-                  <a href="#" className="underline-hover">
-                    Insurance
-                  </a>
+                <Link href="#" className="underline-hover">
+                  Insurance
                 </Link>
               </li>
               <li>
-                <Link href="#">
-                  <a href="#" className="underline-hover">
-                    Embedded insurance API
-                  </a>
+                <Link href="#" className="underline-hover">
+                  Embedded insurance API
                 </Link>
               </li>
             </ul>
@@ -70,24 +58,18 @@ export default function Footer() {
             </h4>
             <ul className="space-y-3">
               <li>
-                <Link href="#">
-                  <a href="#" className="underline-hover">
-                    Servicing and claims portal
-                  </a>
+                <Link href="#" className="underline-hover">
+                  Servicing and claims portal
                 </Link>
               </li>
               <li>
-                <Link href="#">
-                  <a href="#" className="underline-hover">
-                    Policy admin
-                  </a>
+                <Link href="#" className="underline-hover">
+                  Policy admin
                 </Link>
               </li>
               <li>
-                <Link href="#">
-                  <a href="#" className="underline-hover">
-                    Global contact centers
-                  </a>
+                <Link href="#" className="underline-hover">
+                  Global contact centers
                 </Link>
               </li>
             </ul>
@@ -97,24 +79,18 @@ export default function Footer() {
             </h4>
             <ul className="space-y-3">
               <li>
-                <Link href="#">
-                  <a href="#" className="underline-hover">
-                    Device Protection
-                  </a>
+                <Link href="#" className="underline-hover">
+                  Device Protection
                 </Link>
               </li>
               <li>
-                <Link href="#">
-                  <a href="#" className="underline-hover">
-                    insurer advisory services
-                  </a>
+                <Link href="#" className="underline-hover">
+                  insurer advisory services
                 </Link>
               </li>
               <li>
-                <Link href="#">
-                  <a href="#" className="underline-hover">
-                    Insurance entity setup
-                  </a>
+                <Link href="#" className="underline-hover">
+                  Insurance entity setup
                 </Link>
               </li>
             </ul>
@@ -129,24 +105,18 @@ export default function Footer() {
             </h4>
             <ul className="space-y-3">
               <li>
-                <Link href="#">
-                  <a href="#" className="underline-hover">
-                    Mobile devices
-                  </a>
+                <Link href="#" className="underline-hover">
+                  Mobile devices
                 </Link>
               </li>
               <li>
-                <Link href="#">
-                  <a href="#" className="underline-hover">
-                    Consumer electronics
-                  </a>
+                <Link href="#" className="underline-hover">
+                  Consumer electronics
                 </Link>
               </li>
               <li>
-                <Link href="#">
-                  <a href="#" className="underline-hover">
-                    Customized
-                  </a>
+                <Link href="#" className="underline-hover">
+                  Customized
                 </Link>
               </li>
             </ul>
@@ -162,24 +132,18 @@ export default function Footer() {
             </h4>
             <ul className="space-y-3">
               <li>
-                <Link href="#">
-                  <a href="#" className="underline-hover">
-                    Financial services
-                  </a>
+                <Link href="#" className="underline-hover">
+                  Financial services
                 </Link>
               </li>
               <li>
-                <Link href="#">
-                  <a href="#" className="underline-hover">
-                    Financial services
-                  </a>
+                <Link href="#" className="underline-hover">
+                  Financial services
                 </Link>
               </li>
               <li>
-                <Link href="#">
-                  <a href="#" className="underline-hover">
-                    Mobility OEMs
-                  </a>
+                <Link href="#" className="underline-hover">
+                  Mobility OEMs
                 </Link>
               </li>
             </ul>
@@ -189,10 +153,8 @@ export default function Footer() {
             </h4>
             <ul className="space-y-3">
               <li>
-                <Link href="#">
-                  <a href="#" className="underline-hover">
-                    Insurers
-                  </a>
+                <Link href="#" className="underline-hover">
+                  Insurers
                 </Link>
               </li>
             </ul>
@@ -208,24 +170,18 @@ export default function Footer() {
             </h4>
             <ul className="space-y-3">
               <li>
-                <Link href="#">
-                  <a href="#" className="underline-hover">
-                    Case studies
-                  </a>
+                <Link href="#" className="underline-hover">
+                  Case studies
                 </Link>
               </li>
               <li>
-                <Link href="#">
-                  <a href="#" className="underline-hover">
-                    News
-                  </a>
+                <Link href="#" className="underline-hover">
+                  News
                 </Link>
               </li>
               <li>
-                <Link href="#">
-                  <a href="#" className="underline-hover">
-                    Insights
-                  </a>
+                <Link href="#" className="underline-hover">
+                  Insights
                 </Link>
               </li>
             </ul>
@@ -235,10 +191,8 @@ export default function Footer() {
             </h4>
             <ul className="space-y-3">
               <li>
-                <Link href="#">
-                  <a href="#" className="underline-hover">
-                    Customer Service
-                  </a>
+                <Link href="#" className="underline-hover">
+                  Customer Service
                 </Link>
               </li>
             </ul>
@@ -253,24 +207,18 @@ export default function Footer() {
             </h4>
             <ul className="space-y-3">
               <li>
-                <Link href="#">
-                  <a href="#" className="underline-hover">
-                    Who we are
-                  </a>
+                <Link href="#" className="underline-hover">
+                  Who we are
                 </Link>
               </li>
               <li>
-                <Link href="#">
-                  <a href="#" className="underline-hover">
-                    Our leadership
-                  </a>
+                <Link href="#" className="underline-hover">
+                  Our leadership
                 </Link>
               </li>
               <li>
-                <Link href="#">
-                  <a href="#" className="underline-hover">
-                    Careers
-                  </a>
+                <Link href="#" className="underline-hover">
+                  Careers
                 </Link>
               </li>
             </ul>
@@ -279,48 +227,45 @@ export default function Footer() {
 
         <div className="flex flex-col md:flex-row justify-between items-center mt-12 border-t pt-6">
           <div className="flex items-center space-x-6 text-md">
-            <Link href="#">
-              <a href="/">
-                <Image
-                  src="/assets/logo.jpg"
-                  alt="Company Logo"
-                  className="h-15 w-auto"
-                />
-              </a>
+            <Link href="/">
+              <Image
+                src="/assets/logo.jpg"
+                alt="Company Logo"
+                width={300}
+                height={120}
+                className="h-15 w-auto"
+              />
             </Link>
-            <Link href="#">
-              <a
-                href="#"
-                className="text-white hover:text-yellow-300 transition-colors duration-300 ease-in-out"
-              >
-                Disclaimer
-              </a>
+
+            <Link
+              href="#"
+              className="text-white hover:text-yellow-300 transition-colors duration-300 ease-in-out"
+            >
+              Disclaimer
             </Link>
-            <Link href="#">
-              <a
-                href="#"
-                className="text-white hover:text-yellow-300 transition-colors duration-300 ease-in-out"
-              >
-                Privacy Notice - Global
-              </a>
+
+            <Link
+              href="#"
+              className="text-white hover:text-yellow-300 transition-colors duration-300 ease-in-out"
+            >
+              Privacy Notice - Global
             </Link>
-            <Link href="#">
-              <a
-                href="#"
-                className="text-white hover:text-yellow-300 transition-colors duration-300 ease-in-out"
-              >
-                Cookie Policy
-              </a>
+
+            <Link
+              href="#"
+              className="text-white hover:text-yellow-300 transition-colors duration-300 ease-in-out"
+            >
+              Cookie Policy
             </Link>
           </div>
 
           <div className="justify-between items-center flex space-x-4 mt-4 md:mt-0 gap-6">
-            <a href="#">
+            <Link href="#">
               <FaLinkedinIn className="text-white text-2xl hover:text-yellow-300 transition-colors duration-300 ease-in-out" />
-            </a>
-            <a href="#">
+            </Link>
+            <Link href="#">
               <FaYoutube className="text-white text-2xl hover:text-yellow-300 transition-colors duration-300 ease-in-out" />
-            </a>
+            </Link>
           </div>
         </div>
       </div>
