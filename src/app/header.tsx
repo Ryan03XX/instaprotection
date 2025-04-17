@@ -18,7 +18,14 @@ import {
   ChevronRight,
   Earth,
   Headset,
+  Milestone,
+  MessageCircleQuestion,
+  PersonStanding,
+  X,
+  Menu,
 } from "lucide-react";
+import Link from "next/link";
+import MobileMenu from "./phoneMenu";
 
 const Header = () => {
   const [activeMenu, setActiveMenu] = useState<string | null>(null);
@@ -135,6 +142,30 @@ const Header = () => {
     { label: "Use cases" },
     { label: "Resources" },
     { label: "Company" },
+  ];
+
+  const menuPhoneItems = [
+    {
+      label: "Products",
+      submenu: [
+        { label: "Phone Insurance", href: "/products/phone" },
+        { label: "Gadget Coverage", href: "/products/gadget" },
+      ],
+    },
+    {
+      label: "Solutions",
+      submenu: [
+        { label: "For Retailers", href: "/solutions/retail" },
+        { label: "For Telcos", href: "/solutions/telco" },
+      ],
+    },
+    {
+      label: "About Us",
+      submenu: [
+        { label: "Company", href: "/about/company" },
+        { label: "Careers", href: "/about/careers" },
+      ],
+    },
   ];
 
   const platformTab1 = [
@@ -368,27 +399,38 @@ const Header = () => {
     {
       icon: Rocket,
       title: "Who We Are",
-      desc: "Launched in 2020, bolttech is a high-growth international insurtech business",
-    },
-    {
-      icon: Users,
-      title: "Careers",
-      desc: "Join our team of pioneers transforming the way insurance is bought and sold",
+      desc: "Founded in 2016, INSTAPROTECTION is a leading InsurTech service provider in South-East Asia",
+      href: "/about",
     },
     {
       icon: Newspaper,
       title: "News",
-      desc: "Read the latest news and insights from bolttech",
+      desc: "Read the latest news and insights from Instaprotection",
+      href: "/news",
+    },
+    {
+      icon: PersonStanding,
+      title: "Our Leadership",
+      desc: "Instaprotection is led by an extraordinary team with the vision to shape the future and the experience to make it happen",
+      href: "/leadership",
+    },
+    {
+      icon: Milestone,
+      title: "Milestones",
+      desc: "Discover our journey from inception to becoming a trusted InsurTech leader in South-East Asia. Explore key moments, achievements, and innovations that define instaprotection's success story",
+      href: "/milestones",
     },
     {
       icon: Users,
-      title: "Our Leadership",
-      desc: "Bolttech is led by a team of experienced insurance and technology professionals",
+      title: "Careers",
+      desc: "Join our team of pioneers transforming the way insurance is bought and sold. Be a part of dynamic and purpose-driven organization",
+      href: "/careers",
     },
     {
-      icon: Sprout,
-      title: "ESG",
-      desc: "We work everyday to reduce the protection gap, and ESG has been embedded into our approach from the very start",
+      icon: MessageCircleQuestion,
+      title: "FAQs",
+      desc: "Frequently asked questions",
+      href: "/faqs",
     },
   ];
 
@@ -402,7 +444,7 @@ const Header = () => {
       }}
     >
       <header
-        className={`fixed top-0 left-0 w-full z-10 flex justify-between items-center px-12 py-8 transition-colors duration-400 ${
+        className={`fixed top-0 left-0 w-full z-20 flex justify-between items-center px-12 py-8 transition-colors duration-400 ${
           showHeader
             ? isHovering || !atTop
               ? "bg-white text-black"
@@ -411,8 +453,10 @@ const Header = () => {
         }`}
       >
         <div className="flex items-center space-x-8">
-          <div className="text-2xl font-bold text-indigo-700 cursor-pointer">
-            <span
+          <div className="text-2xl font-bold text-indigo-700 cursor-pointer z-20">
+            <Link
+              onClick={() => (window.location.href = "/")}
+              href="/"
               className={`${
                 showHeader && (isHovering || !atTop)
                   ? "text-black"
@@ -420,7 +464,7 @@ const Header = () => {
               }`}
             >
               instaProtection
-            </span>
+            </Link>
           </div>
           <nav className="hidden md:flex space-x-8">
             {menuItems.map((item) => (
@@ -466,7 +510,7 @@ const Header = () => {
           </nav>
         </div>
 
-        <div className="flex items-center space-x-8">
+        <div className="flex items-center space-x-8 hidden md:flex">
           <button className="relative flex items-center gap-2 text-md cursor-pointer group">
             <Earth className="w-4 h-6" />
             EN
@@ -497,6 +541,10 @@ const Header = () => {
          origin-left transition-transform duration-300 ease-out"
             ></span>
           </button>
+        </div>
+
+        <div className="md:hidden">
+          <MobileMenu />
         </div>
       </header>
 
@@ -641,27 +689,34 @@ const Header = () => {
           onMouseEnter={() => setIsHovering(true)}
           onMouseLeave={handleMouseLeave}
         >
-          <div className="max-w-7xl mx-auto px-6 py-10 grid grid-cols-4 gap-8">
+          <div className="max-w-7xl mx-auto px-6 py-10 grid grid-cols-3 gap-8">
             <div className="col-span-1">
               <p className="text-lg font-medium text-indigo-800 mb-2">
                 At the heart of everything we do is the power of connection
               </p>
             </div>
 
-            <div className="col-span-3 grid grid-cols-3 gap-6">
+            <div className="col-span-2 grid grid-cols-2 gap-6">
               {company.map((item) => (
-                <div
+                <Link
                   key={item.title}
-                  className="flex space-x-3 hover:bg-cyan-100 p-2 rounded transition cursor-pointer"
+                  href={item.href}
+                  onClick={() => (window.location.href = item.href)}
                 >
-                  <item.icon className="text-indigo-700 w-5 h-5 mt-1" />
-                  <div>
-                    <h4 className="font-semibold text-md text-gray-900">
-                      {item.title}
-                    </h4>
-                    <p className="text-xs text-gray-600">{item.desc}</p>
+                  <div className="flex flex-col justify-between h-30 hover:bg-cyan-100 p-4 rounded cursor-pointer hover:cyan-300">
+                    <div className="flex space-x-3">
+                      <item.icon className="text-indigo-700 w-5 h-5 mt-1" />
+                      <div>
+                        <h4 className="font-semibold text-md text-gray-900">
+                          {item.title}
+                        </h4>
+                        <p className="text-xs text-gray-600 line-clamp-3">
+                          {item.desc}
+                        </p>
+                      </div>
+                    </div>
                   </div>
-                </div>
+                </Link>
               ))}
             </div>
           </div>

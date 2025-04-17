@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { sub } from "framer-motion/client";
+import Image from "next/image";
 
 const menuItems = [
   {
@@ -32,98 +33,67 @@ export default function TwoColumnMenu() {
   const [activeIndex, setActiveIndex] = useState<number>(0);
 
   return (
-    <div className="flex w-full h-[500px] bg-white overflow-hidden">
-      <div className="w-1/3 bg-white p-8 space-y-6">
-        {menuItems.map((item, index) => (
-          <div
-            key={index}
-            onMouseEnter={() => setActiveIndex(index)}
-            className={`relative cursor-pointer text-3xl transition-colors ${
-              activeIndex === index
-                ? "text-blue-900 font-semibold"
-                : "text-gray-600"
-            }`}
-          >
-            {item.title}
-            {activeIndex === index && (
-              <motion.div
-                initial={{ opacity: 0, x: 10 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.3 }}
-                className="absolute right-2 top-1/2 transform -translate-y-1/2"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="20"
-                  height="20"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  className="text-gray-600"
-                >
-                  <path d="M9 18l6-6-6-6" />
-                </svg>
-              </motion.div>
-            )}
-          </div>
-        ))}
-      </div>
-
-      <div className="w-2/3 relative bg-white">
-        <AnimatePresence mode="wait">
+    <div className="flex flex-col md:flex-row w-full h-auto bg-white">
+  {/* Menu List */}
+  <div className="w-full md:w-1/3 bg-white p-6 space-y-6">
+    {menuItems.map((item, index) => (
+      <div
+        key={index}
+        onMouseEnter={() => setActiveIndex(index)}
+        className={`relative cursor-pointer text-2xl md:text-3xl transition-colors ${
+          activeIndex === index ? "text-blue-900 font-semibold" : "text-gray-600"
+        }`}
+      >
+        {item.title}
+        {activeIndex === index && (
           <motion.div
-            key={activeIndex}
-            initial={{ opacity: 0, x: 30 }}
+            initial={{ opacity: 0, x: 10 }}
             animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: -30 }}
-            transition={{ duration: 0.4 }}
-            className="absolute inset-0 p-8"
+            transition={{ duration: 0.3 }}
+            className="absolute right-2 top-1/2 transform -translate-y-1/2"
           >
-            <div className="absolute top-0 right-0">
-              <motion.img
-                src={menuItems[activeIndex]?.image}
-                alt={menuItems[activeIndex]?.title}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: 10 }}
-                transition={{ duration: 0.5 }}
-                className="object-cover w-128 h-110 shadow-xl"
-              />
-            </div>
-
-            <div className="px-16 py-16 absolute -bottom-0 left-0 bg-cyan-100 p-6 shadow-lg max-w-lg">
-              <h2 className="text-4xl font-bold text-black mb-4">
-                {menuItems[activeIndex]?.subtitle}
-              </h2>
-              <p className="text-gray-700 mb-6 text-md">
-                {menuItems[activeIndex]?.description}
-              </p>
-
-              <button className="mt-6 relative overflow-hidden border px-4 py-3 text-md cursor-pointer border-cyan-500 group bg-cyan-500">
-                <span className="relative font-bold z-10 text-[#0A0842] transition-opacity duration-300 group-hover:opacity-0">
-                  Learn More
-                </span>
-
-                <span
-                  className="absolute left-0 top-0 w-full h-full flex items-center justify-center font-bold
-              opacity-0 transition-opacity duration-300 group-hover:opacity-100 z-10"
-                  style={{ color: "#0A0842" }}
-                >
-                  Learn More
-                </span>
-
-                <span
-                  className="absolute inset-0 bg-cyan-500 transform scale-x-0 group-hover:scale-x-100 
-              origin-left transition-transform duration-600 ease-out group-hover:bg-cyan-600"
-                ></span>
-              </button>
-            </div>
+            ➜
           </motion.div>
-        </AnimatePresence>
+        )}
       </div>
-    </div>
+    ))}
+  </div>
+
+  {/* Content Display */}
+  <div className="w-full md:w-2/3 relative bg-white">
+    <AnimatePresence mode="wait">
+      <motion.div
+        key={activeIndex}
+        initial={{ opacity: 0, x: 30 }}
+        animate={{ opacity: 1, x: 0 }}
+        exit={{ opacity: 0, x: -30 }}
+        transition={{ duration: 0.4 }}
+        className="p-6 md:p-8"
+      >
+        <div className="relative w-full h-64 md:h-96 mb-4 md:mb-0">
+          <Image
+            src={menuItems[activeIndex]?.image}
+            alt={menuItems[activeIndex]?.title}
+            fill
+            className="object-cover rounded-lg"
+          />
+        </div>
+
+        <div className="bg-cyan-100 p-6 shadow-lg rounded-lg">
+          <h2 className="text-2xl md:text-4xl font-bold text-black mb-4">
+            {menuItems[activeIndex]?.subtitle}
+          </h2>
+          <p className="text-gray-700 mb-6 text-sm md:text-md">
+            {menuItems[activeIndex]?.description}
+          </p>
+          <button className="mt-4 border border-cyan-500 bg-cyan-500 text-white font-bold px-4 py-2 rounded transition-all hover:bg-cyan-600">
+            Learn More
+          </button>
+        </div>
+      </motion.div>
+    </AnimatePresence>
+  </div>
+</div>
+
   );
 }

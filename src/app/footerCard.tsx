@@ -2,7 +2,7 @@ export default function FooterCTA() {
   return (
     <div className="w-full flex justify-center -mb-20 relative z-10">
       <div className="bg-cyan-100 shadow-xl px-8 py-12 w-full max-w-7xl transition-transform hover:scale-105">
-        <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+        <div className="flex flex-col text-center md:flex-row justify-between items-center gap-4">
           <h2
             className="font-bold"
             style={{ fontSize: "2.125rem", color: "#0A0842" }}

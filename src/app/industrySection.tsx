@@ -107,28 +107,31 @@ const IndustrySection = () => {
   const activeIndex = menuKeys.indexOf(active);
 
   return (
-    <div className="w-full px-8 py-12 bg-white">
-      <div className="flex justify-center gap-12 pb-6 relative">
+    <div className="w-full px-4 md:px-8 py-8 md:py-12 bg-white">
+      <div className="flex flex-wrap justify-center gap-4 md:gap-12 pb-6 relative">
         {Object.entries(data).map(([key, item], index) => {
           const IconComponent = item.icon;
           return (
             <button
               key={key}
               onClick={() => handleTabClick(key as any)}
-              className={`flex items-center gap-4 px-10 py-2 text-2xl font-semibold transition-all duration-200 cursor-pointer relative text-[#0A0842]`}
-            >
+              className={`
+                relative flex items-center gap-2 md:gap-4 px-4 md:px-10 py-2
+                text-base md:text-2xl font-semibold text-[#0A0842]
+                transition-all duration-200 cursor-pointer
+              `}            >
               <IconComponent className="w-5 h-5" />
               <span>{item.title}</span>
 
               {/* Blue Underline */}
               <div
-                className={`absolute bottom-0 left-0 w-full h-1 bg-[#534F85]`}
+                className={`absolute bottom-0 left-0 w-full h-[2px] md:h-1 bg-[#534F85]`}
               ></div>
 
               {/* Cyan Progress Line */}
               {active === key && (
                 <div
-                  className="absolute bottom-0 left-0 h-1 bg-cyan-500 transition-all duration-300"
+                  className="absolute bottom-0 left-0 h-[2px] md:h-1 bg-cyan-500 transition-all duration-300"
                   style={{
                     width: `${progress}%`,
                   }}
@@ -140,44 +143,38 @@ const IndustrySection = () => {
       </div>
 
       {/* Content Section */}
-      <div className="mt-12 flex flex-col md:flex-row">
+      <div className="flex flex-col md:flex-row mt-12 gap-8">
         {/* Image Block */}
-        <div className="relative w-full md:w-[70%] h-[480px] overflow-hidden ml-20">
+        <div className="relative w-full md:w-[70%] h-[300px] md:h-[480px] overflow-hidden">
           <Image
             src={current.image}
             alt={current.title}
-            width={300}
-            height={120}
-            className="w-full h-full object-cover"
+            fill
+            className="object-cover"
           />
-          <div className="absolute bottom-6 left-6 bg-transparent text-white p-6 max-w-md">
-            <p className="text-md leading-relaxed">{current.text}</p>
+          <div className="absolute bottom-6 left-6 right-6 md:left-6 md:right-auto bg-black/60 text-white p-4 md:p-6 rounded-md">
+            <p className="text-sm md:text-md leading-relaxed">{current.text}</p>
             <Link
               href="#"
-              className="inline-flex items-center text-white mt-4 group"
+              className="inline-flex items-center text-white mt-3 group"
             >
               <span className="font-semibold">See the case study</span>
-              <ChevronRight className="w-4 h-4 ml-1 transition-transform duration-200 group-hover:translate-x-1" />
+              <ChevronRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
             </Link>
           </div>
         </div>
 
         {/* Stats */}
-        <div className="w-full md:w-[30%] flex flex-col justify-center gap-8 pl-10">
-          {current.stats.map((stat, index) => {
-            const hasSuffix = stat.value.includes("%");
-            const numericValue = parseFloat(stat.value);
-
-            return (
-              <AnimatedCounter
-                key={index}
-                to={numericValue}
-                label={stat.label}
-                suffix={hasSuffix ? "%" : ""}
-                duration={1.8}
-              />
-            );
-          })}
+        <div className="w-full md:w-[30%] flex flex-col justify-center gap-6 px-4 md:px-10">
+          {current.stats.map((stat, index) => (
+            <AnimatedCounter
+              key={index}
+              to={parseFloat(stat.value)}
+              label={stat.label}
+              suffix={stat.value.includes("%") ? "%" : ""}
+              duration={1.8}
+            />
+          ))}
         </div>
       </div>
     </div>
