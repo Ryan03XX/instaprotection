@@ -9,15 +9,34 @@ const menuPhoneItems = [
   {
     label: "Platform",
     submenu: [
-      { label: "Overview", href: "/platform/overview" },
-      { label: "Technology", href: "/platform/tech" },
+      {
+        label: "Distribution Engine",
+        href: "/platform/distribution",
+        collapsible: true,
+        subsubmenu: ["Sales", "Servicing", "Custom solutions"],
+      },
     ],
   },
   {
     label: "Programs",
+    description:
+      "Tailored protection solutions provide comprehensive coverage and exceptional service to meet unique customer needs",
     submenu: [
-      { label: "Partner Program", href: "/programs/partners" },
-      { label: "Affiliate", href: "/programs/affiliate" },
+      { label: "Mobile devices", icon: "📱", href: "/programs/mobile" },
+      {
+        label: "Consumer electronics",
+        icon: "💻",
+        href: "/programs/electronics",
+      },
+      { label: "Health tech", icon: "💊", href: "/programs/health" },
+      { label: "Home", icon: "🏠", href: "/programs/home" },
+      {
+        label: "bolt Prevention Technology",
+        icon: "💡",
+        href: "/programs/prevention",
+      },
+      { label: "Mobility", icon: "🚗", href: "/programs/mobility" },
+      { label: "Travel", icon: "✈️", href: "/programs/travel" },
     ],
   },
   {
@@ -43,13 +62,18 @@ const menuPhoneItems = [
   },
 ];
 
-export default function MobileMenu() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+export default function MobileMenu({
+  isOpen,
+  setIsOpen,
+}: {
+  isOpen: boolean;
+  setIsOpen: React.Dispatch<React.SetStateAction<boolean>>;
+}) {
   const [activeMenu, setActiveMenu] = useState<string | null>(null);
 
   const toggleMobileMenu = () => {
-    setMobileMenuOpen((prev) => !prev);
-    setActiveMenu(null); 
+    setIsOpen((prev) => !prev);
+    setActiveMenu(null);
   };
 
   const toggleSubMenu = (label: string) => {
@@ -58,18 +82,21 @@ export default function MobileMenu() {
 
   return (
     <div className="relative z-10">
-      <button onClick={toggleMobileMenu} className="z-50 relative p-2 bg-transparent">
+      <button
+        onClick={toggleMobileMenu}
+        className="z-50 relative p-2 bg-transparent"
+      >
         <motion.div
           initial={false}
-          animate={{ rotate: mobileMenuOpen ? 90 : 0 }}
+          animate={{ rotate: isOpen ? 90 : 0 }}
           transition={{ duration: 0.3 }}
         >
-          {mobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
+          {isOpen ? <X size={28} /> : <Menu size={28} />}
         </motion.div>
       </button>
 
       <AnimatePresence>
-        {mobileMenuOpen && (
+        {isOpen && (
           <motion.div
             className="fixed top-0 left-0 w-full h-screen bg-white z-40 flex flex-col items-center px-6 pt-24 space-y-6 overflow-y-auto"
             initial={{ x: "-100%" }}
@@ -81,7 +108,7 @@ export default function MobileMenu() {
               <div className="flex justify-start gap-6 mb-6">
                 <span className="flex items-center gap-2">
                   🌐 <span>EN</span>
-                </span>              
+                </span>
               </div>
               <div className="flex justify-start gap-6 mb-6">
                 <span className="flex items-center gap-2">
@@ -94,9 +121,9 @@ export default function MobileMenu() {
             </div>
             <nav className="w-full">
               {menuPhoneItems.map((item) => (
-                <div key={item.label} className="border-t border-t-gray-300 py-8">
+                <div key={item.label} className="border-t border-gray-300 py-6">
                   <button
-                    className="w-full text-left font-semibold text-2xl flex justify-between items-center text-[#0A0842]"
+                    className="w-full text-left font-semibold text-xl flex justify-between items-center text-[#0A0842]"
                     onClick={() => toggleSubMenu(item.label)}
                   >
                     {item.label}
@@ -112,24 +139,35 @@ export default function MobileMenu() {
                     </motion.span>
                   </button>
 
+                  {item.description && (
+                    <p className="text-sm text-gray-500 mt-2">
+                      {item.description}
+                    </p>
+                  )}
+
                   <AnimatePresence>
                     {activeMenu === item.label && (
                       <motion.ul
-                        className="pl-4 mt-2 space-y-2"
+                        className={`mt-2 space-y-2 ${
+                          item.description
+                            ? "bg-blue-50 p-4 rounded-md mt-4"
+                            : ""
+                        }`}
                         initial={{ opacity: 0, height: 0 }}
                         animate={{ opacity: 1, height: "auto" }}
                         exit={{ opacity: 0, height: 0 }}
                         transition={{ duration: 0.3 }}
                       >
                         {item.submenu.map((sub, idx) => (
-                          <li key={idx}>
+                          <li
+                            key={idx}
+                            className="flex items-center gap-3 text-sm text-gray-700"
+                          >
+                            {/* {sub.icon && <span>{sub.icon}</span>} */}
                             <Link
                               href={sub.href}
-                              className="text-sm text-gray-600 hover:text-indigo-700 block py-1"
-                              onClick={() => {
-                                toggleMobileMenu();
-                                setActiveMenu(null);
-                              }}
+                              className="hover:text-indigo-700 block py-1"
+                              onClick={() => toggleMobileMenu()}
                             >
                               {sub.label}
                             </Link>

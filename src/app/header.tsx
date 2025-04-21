@@ -55,6 +55,7 @@ const Header = () => {
   const [showHeader, setShowHeader] = useState(true);
   const [atTop, setAtTop] = useState(true);
   const lastScrollY = useRef(0);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   //   useEffect(() => {
   //     const activeTab = tabRefs.current[activeSubTab];
@@ -136,36 +137,24 @@ const Header = () => {
     }, 200);
   };
 
+  useEffect(() => {
+    if (isMobileMenuOpen) {
+      document.body.classList.add("overflow-hidden");
+    } else {
+      document.body.classList.remove("overflow-hidden");
+    }
+
+    return () => {
+      document.body.classList.remove("overflow-hidden");
+    };
+  }, [isMobileMenuOpen]);
+
   const menuItems = [
     { label: "Platform" },
     { label: "Programs" },
     { label: "Use cases" },
     { label: "Resources" },
     { label: "Company" },
-  ];
-
-  const menuPhoneItems = [
-    {
-      label: "Products",
-      submenu: [
-        { label: "Phone Insurance", href: "/products/phone" },
-        { label: "Gadget Coverage", href: "/products/gadget" },
-      ],
-    },
-    {
-      label: "Solutions",
-      submenu: [
-        { label: "For Retailers", href: "/solutions/retail" },
-        { label: "For Telcos", href: "/solutions/telco" },
-      ],
-    },
-    {
-      label: "About Us",
-      submenu: [
-        { label: "Company", href: "/about/company" },
-        { label: "Careers", href: "/about/careers" },
-      ],
-    },
   ];
 
   const platformTab1 = [
@@ -544,7 +533,10 @@ const Header = () => {
         </div>
 
         <div className="md:hidden">
-          <MobileMenu />
+          <MobileMenu
+            isOpen={isMobileMenuOpen}
+            setIsOpen={setIsMobileMenuOpen}
+          />
         </div>
       </header>
 
@@ -616,7 +608,7 @@ const Header = () => {
                       key={item.title}
                       className="flex space-x-3 hover:bg-cyan-100 p-2 rounded transition cursor-pointer"
                     >
-                      <item.icon className="text-indigo-700 w-5 h-5 mt-1" />
+                      <item.icon className="text-indigo-700 w-5 h-5 mt-1 shrink-0" />
                       <div>
                         <h4 className="font-semibold text-md text-gray-900">
                           {item.title}
@@ -705,7 +697,7 @@ const Header = () => {
                 >
                   <div className="flex flex-col justify-between h-30 hover:bg-cyan-100 p-4 rounded cursor-pointer hover:cyan-300">
                     <div className="flex space-x-3">
-                      <item.icon className="text-indigo-700 w-5 h-5 mt-1" />
+                      <item.icon className="text-indigo-700 w-5 h-5 mt-1 shrink-0 " />
                       <div>
                         <h4 className="font-semibold text-md text-gray-900">
                           {item.title}
@@ -773,7 +765,7 @@ const Header = () => {
                       key={item.title}
                       className="flex space-x-3 hover:bg-cyan-100 p-2 rounded transition cursor-pointer"
                     >
-                      <item.icon className="text-indigo-700 w-5 h-5 mt-1" />
+                      <item.icon className="text-indigo-700 w-5 h-5 mt-1 shrink-0" />
                       <div>
                         <h4 className="font-semibold text-md text-gray-900">
                           {item.title}
@@ -828,7 +820,7 @@ const Header = () => {
                   key={item.title}
                   className="flex space-x-3 hover:bg-cyan-100 p-2 rounded transition cursor-pointer"
                 >
-                  <item.icon className="text-indigo-700 w-5 h-5 mt-1" />
+                  <item.icon className="text-indigo-700 w-5 h-5 mt-1 shrink-0" />
                   <div>
                     <h4 className="font-semibold text-md text-gray-900">
                       {item.title}
@@ -902,7 +894,7 @@ const Header = () => {
                       key={item.title}
                       className="flex space-x-3 hover:bg-cyan-100 p-2 rounded transition cursor-pointer"
                     >
-                      <item.icon className="text-indigo-700 w-5 h-5 mt-1" />
+                      <item.icon className="text-indigo-700 w-5 h-5 mt-1 shrink-0" />
                       <div>
                         <h4 className="font-semibold text-md text-gray-900">
                           {item.title}

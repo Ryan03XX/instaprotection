@@ -6,6 +6,7 @@ import IndustrySection from "./industrySection";
 import LottiePlayer from "./lottiePlayer";
 import Image from "next/image";
 import FadeInOnceOnScroll from "./fadeIn2";
+import FadeInOnceFromHorizon from "./horizonFadeIn";
 
 export default function Home() {
   return (
@@ -75,58 +76,84 @@ export default function Home() {
 
         <div className="overflow-hidden relative">
           <div className="flex animate-scroll whitespace-nowrap gap-6 sm:gap-10 md:gap-12">
-            <div className="flex animate-scroll whitespace-nowrap gap-6 sm:gap-10 md:gap-12">
-              {[...Array(2)].flatMap((_, i) =>
-                [
-                  "/assets/logo2.svg",
-                  "/assets/logo2.svg",
-                  "/assets/logo2.svg",
-                  "/assets/logo4.svg",
-                  "/assets/logo5.svg",
-                  "/assets/logo6.svg",
-                  "/assets/logo7.svg",
-                  "/assets/logo8.svg",
-                  "/assets/logo9.svg",
-                ].map((src, index) => (
-                  <div
-                    className="flex flex-col items-center shrink-0"
-                    key={`${i}-${index}`}
-                  >
-                    <Image
-                      src={src}
-                      alt={`Logo ${index + 1}`}
-                      width={150}
-                      height={60}
-                      className="h-16 w-auto sm:h-20 md:h-20"
-                    />
-                  </div>
-                ))
-              )}
-            </div>
+            {[...Array(2)].flatMap((_, i) =>
+              [
+                "/assets/logo2.svg",
+                "/assets/logo2.svg",
+                "/assets/logo2.svg",
+                "/assets/logo4.svg",
+                "/assets/logo5.svg",
+                "/assets/logo6.svg",
+                "/assets/logo7.svg",
+                "/assets/logo8.svg",
+                "/assets/logo9.svg",
+              ].map((src, index) => (
+                <div
+                  className="flex flex-col items-center shrink-0"
+                  key={`${i}-${index}`}
+                >
+                  <Image
+                    src={src}
+                    alt={`Logo ${index + 1}`}
+                    width={150}
+                    height={60}
+                    className="h-16 w-auto sm:h-20 md:h-20"
+                  />
+                </div>
+              ))
+            )}
+
+            {[...Array(2)].flatMap((_, i) =>
+              [
+                "/assets/logo2.svg",
+                "/assets/logo2.svg",
+                "/assets/logo2.svg",
+                "/assets/logo4.svg",
+                "/assets/logo5.svg",
+                "/assets/logo6.svg",
+                "/assets/logo7.svg",
+                "/assets/logo8.svg",
+                "/assets/logo9.svg",
+              ].map((src, index) => (
+                <div
+                  className="flex flex-col items-center shrink-0"
+                  key={`${i}-${index}`}
+                >
+                  <Image
+                    src={src}
+                    alt={`Logo ${index + 1}`}
+                    width={150}
+                    height={60}
+                    className="h-16 w-auto sm:h-20 md:h-20"
+                  />
+                </div>
+              ))
+            )}
           </div>
         </div>
       </section>
+      <FadeInOnceFromHorizon>
+        <section className="px-4 sm:px-6 md:px-20 py-20 mt-[-60px] z-20 relative">
+          <div className="flex justify-center relative">
+            <div className="max-w-7xl w-full bg-cyan-500 shadow-lg overflow-hidden px-4 sm:px-8 md:px-10 py-8 sm:py-10 relative">
+              <div className="p-4 sm:p-6">
+                <h6 className="text-black text-sm sm:text-base md:text-2xl lg:text-3xl leading-relaxed">
+                  bolttech‘s platform enables any business to embed tailored and
+                  affordable insurance products directly into their existing
+                  customer journeys. Whether you’re new to insurance or
+                  experienced, we empower you to offer the right protection at
+                  the right time, driving growth and staying ahead in the
+                  evolving insurance ecosystem.
+                </h6>
+              </div>
 
-      <section className="px-4 sm:px-6 md:px-20 py-20 mt-[-60px] z-20 relative">
-        <div className="flex justify-center relative">
-          <div className="max-w-7xl w-full bg-cyan-500 shadow-lg overflow-hidden px-4 sm:px-8 md:px-10 py-8 sm:py-10 relative">
-            <div className="p-4 sm:p-6">
-              <h6 className="text-black text-sm sm:text-base md:text-2xl lg:text-3xl leading-relaxed">
-                bolttech‘s platform enables any business to embed tailored and
-                affordable insurance products directly into their existing
-                customer journeys. Whether you’re new to insurance or
-                experienced, we empower you to offer the right protection at the
-                right time, driving growth and staying ahead in the evolving
-                insurance ecosystem.
-              </h6>
-            </div>
-
-            {/* <div className="absolute left-[0%] top-6 w-10 h-10 sm:w-14 sm:h-16 bg-blue-900 shadow-md z-20"></div>
+              {/* <div className="absolute left-[0%] top-6 w-10 h-10 sm:w-14 sm:h-16 bg-blue-900 shadow-md z-20"></div>
 
             <div className="absolute right-[-5%] bottom-6 w-28 h-10 sm:w-36 sm:h-12 bg-yellow-300 shadow-md z-20"></div> */}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </FadeInOnceFromHorizon>
 
       <section className="px-10 py-50 bg-white relative z-30">
         <div className="max-w-7xl mx-auto md:grid md:grid-cols-2 gap-10 items-center flex flex-col-reverse mb-60">
@@ -381,27 +408,31 @@ export default function Home() {
           </FadeInWhenVisible>
         </div>
         <FadeInWhenVisible>
-        <div className="max-w-7xl mx-auto mt-20">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-10">
-            <AnimatedCounter
-              to={50}
-              suffix="B+"
-              prefix="US$"
-              label="Quoted premiums annually"
-            />
-            <AnimatedCounter
-              to={35}
-              suffix="+"
-              label="Markets across four continents"
-            />
-            <AnimatedCounter
-              to={700}
-              suffix="+"
-              label="Distribution partners"
-            />
-            <AnimatedCounter to={6000} suffix="" label="Products on platform" />
+          <div className="max-w-7xl mx-auto mt-20">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-10">
+              <AnimatedCounter
+                to={50}
+                suffix="B+"
+                prefix="US$"
+                label="Quoted premiums annually"
+              />
+              <AnimatedCounter
+                to={35}
+                suffix="+"
+                label="Markets across four continents"
+              />
+              <AnimatedCounter
+                to={700}
+                suffix="+"
+                label="Distribution partners"
+              />
+              <AnimatedCounter
+                to={6000}
+                suffix=""
+                label="Products on platform"
+              />
+            </div>
           </div>
-        </div>
         </FadeInWhenVisible>
       </section>
 

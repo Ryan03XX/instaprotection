@@ -1,5 +1,7 @@
 import Image from "next/image";
 import { AnimatedCounter } from "../animatedCounter";
+import FadeInOnceFromHorizon from "../horizonFadeIn";
+import FadeInOnceFromHorizon2 from "../horizonFadeIn2";
 
 export default function About() {
   return (
@@ -8,25 +10,30 @@ export default function About() {
         className="absolute top-0 left-0 w-full h-screen bg-cover bg-center z-0"
         style={{ backgroundImage: "url('/assets/background1.jpg')" }}
       />
-      <main className="flex text-left px-20 w-full min-h-screen flex flex-col items-start justify-center px-4">
-        <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-          <span
-            style={{
-              display: "block",
-              position: "relative",
-              overflow: "hidden",
-            }}
-          >
-            Who we are
-          </span>
-        </h1>
+      <main className="flex text-left px-5 md:px-20 w-full min-h-screen flex flex-col items-start justify-center px-4">
+        <FadeInOnceFromHorizon2>
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            <span
+              style={{
+                display: "block",
+                position: "relative",
+                overflow: "hidden",
+              }}
+            >
+              Who we are
+            </span>
+          </h1>
+        </FadeInOnceFromHorizon2>
+
         <div></div>
-        <h3 className="text-xl md:text-2xl text-white z-10 font-bold">
-          Founded in 2016, INSTAPROTECTION is{" "}
-        </h3>
-        <h3 className="text-xl md:text-2xl text-white mb-8 z-10 font-bold">
-          a leading InsurTech service provider in South-East Asia
-        </h3>
+        <FadeInOnceFromHorizon>
+          <h3 className="text-xl md:text-2xl text-white z-10 font-bold">
+            Founded in 2016, INSTAPROTECTION is{" "}
+          </h3>
+          <h3 className="text-xl md:text-2xl text-white mb-8 z-10 font-bold">
+            a leading InsurTech service provider in South-East Asia
+          </h3>
+        </FadeInOnceFromHorizon>
       </main>
       <section className="w-full px-20 z-10 bg-gradient-to-r from-cyan-500 to-white py-40">
         <h1 className="text-2xl md:text-4xl font-bold text-[#0A0842] text-center items-center">
@@ -63,7 +70,7 @@ export default function About() {
           </span>
         </h1>
       </section>
-      <section className="px-20 py-50 bg-white relative z-30">
+      <section className="px-5 md:px-20 py-50 bg-white relative z-30">
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
           <div className="w-full aspect-video">
             <iframe
@@ -95,7 +102,7 @@ export default function About() {
           </div>
         </div>
       </section>
-      <section className="px-20 py-50 bg-gradient-to-r from-cyan-500 to-white relative z-30">
+      <section className="px-5 md:px-20 py-50 bg-gradient-to-r from-cyan-500 to-white relative z-30">
         <div className="max-w-9xl mx-auto mt-4">
           <div className="items-center justify-center flex flex-col text-center mb-10">
             <h2 className="text-4xl md:text-5xl font-bold text-[#0A0842] mb-6">
@@ -118,7 +125,7 @@ export default function About() {
             />
             <AnimatedCounter
               to={35}
-              suffix="+ Markets"
+              suffix="+"
               label="across four continents"
             />
             <AnimatedCounter
@@ -130,8 +137,8 @@ export default function About() {
           </div>
         </div>
       </section>
-      <section className="w-full px-20 z-10 bg-gray-100 py-40">
-        <h3 className="text-[#0A0842] font-bold text-5xl mb-4 text-center relative z-20">
+      <section className="w-full md:px-20 z-10 bg-gray-100 py-40">
+        <h3 className="text-[#0A0842] font-bold text-2xl md:text-5xl mb-4 text-center relative z-20">
           Backed by the best
         </h3>
 
@@ -392,7 +399,7 @@ export default function About() {
           </div>
         </div>
       </section>
-      <section className="px-20 py-50 bg-white relative z-30">
+      <section className="px-5 md:px-20 py-50 bg-white relative z-30">
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
           <div>
             <h2 className="text-4xl md:text-5xl font-bold text-[#0A0842] mb-6">

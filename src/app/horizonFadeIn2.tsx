@@ -3,7 +3,7 @@ import { motion, useAnimation } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 import { useInView } from "framer-motion";
 
-export default function FadeInOnceFromHorizon({
+export default function SunRiseFromLine({
   children,
 }: {
   children: React.ReactNode;
@@ -21,27 +21,33 @@ export default function FadeInOnceFromHorizon({
   }, [isInView, hasAnimated, controls]);
 
   return (
-    <motion.div
+    <div
+      style={{
+        overflow: "hidden",
+        display: "inline-block",
+      }}
       ref={ref}
-      initial="hidden"
-      animate={hasAnimated ? "visible" : controls}
-      transition={{
-        duration: 1,
-        ease: [0.5, 1, 0.5, 1],
-      }}
-      style={{ position: "relative" }}
-      variants={{
-        hidden: {
-          opacity: 0,
-          y: 40,
-        },
-        visible: {
-          opacity: 1,
-          y: 0,
-        },
-      }}
     >
-      {children}
-    </motion.div>
+      <motion.div
+        initial="hidden"
+        animate={hasAnimated ? "visible" : controls}
+        transition={{
+          duration: 1.0,
+          ease: [0.42, 0, 0.58, 1],
+        }}
+        variants={{
+          hidden: {
+            y: "100%",
+            opacity: 0,
+          },
+          visible: {
+            y: "0%",
+            opacity: 1,
+          },
+        }}
+      >
+        {children}
+      </motion.div>
+    </div>
   );
 }

@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import Image from "next/image";
+import { AnimatePresence, motion } from "framer-motion";
 
 const values = [
   {
@@ -39,18 +40,26 @@ export default function Value() {
         <h2 className="text-6xl font-bold text-[#0A0842] mb-10">Our values</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
           <div className="flex justify-center items-center h-full col-span-1">
-            <div
-              className="relative"
-              style={{ width: "300px", height: "300px" }}
-            >
-              <Image
-                src={values[activeIndex].image}
-                alt="Value visual"
-                layout="fill"
-                objectFit="cover"
-                className="rounded-lg shadow-lg"
-              />
-              <div className="absolute bottom-0 right-0 bg-[#0A0842] text-white font-bold text-xl leading-none p-2">
+            <div className="relative w-[300px] h-[300px]">
+              <AnimatePresence mode="wait">
+                <motion.div
+                  key={activeIndex}
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  transition={{ duration: 0.5 }}
+                  className="absolute top-0 left-0 w-full h-full"
+                >
+                  <Image
+                    src={values[activeIndex].image}
+                    alt="Value visual"
+                    fill
+                    className="rounded-lg shadow-lg object-cover"
+                  />
+                </motion.div>
+              </AnimatePresence>
+
+              <div className="absolute bottom-0 right-0 bg-[#0A0842] text-white font-bold text-xl leading-none p-2 z-10">
                 <div>{letters[activeIndex]}</div>
               </div>
             </div>

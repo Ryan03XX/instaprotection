@@ -1,4 +1,5 @@
 import FadeInOnceFromHorizon from "../horizonFadeIn";
+import FadeInOnceFromHorizon2 from "../horizonFadeIn2";
 import NewsSection from "../newsSection";
 
 export default function About() {
@@ -8,7 +9,8 @@ export default function About() {
         className="absolute top-0 left-0 w-full h-screen bg-cover bg-center z-0"
         style={{ backgroundImage: "url('/assets/background1.jpg')" }}
       />
-        <main className="flex text-left px-20 w-full min-h-screen flex flex-col items-start justify-center px-4">
+        <main className="flex text-left px-5 md:px-20w-full min-h-screen flex flex-col items-start justify-center px-4">
+        <FadeInOnceFromHorizon2>
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
             <span
               style={{
@@ -20,6 +22,7 @@ export default function About() {
               News
             </span>
           </h1>
+          </FadeInOnceFromHorizon2>
           <div></div>
           <FadeInOnceFromHorizon>
 
@@ -29,7 +32,7 @@ export default function About() {
           </FadeInOnceFromHorizon>
         </main>
 
-      <section className="-mt-40 z-40 relative px-20 py-40">
+      <section className="-mt-40 z-40 relative px-5 md:px-20 py-40">
         <NewsSection />
       </section>
     </div>
