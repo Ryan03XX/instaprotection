@@ -74,7 +74,7 @@ export default function About() {
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
           <div className="w-full aspect-video">
             <iframe
-              className="w-full h-full rounded-xl shadow-lg"
+              className="w-full h-full shadow-lg"
               src="https://www.youtube.com/embed/4sA-_z01eSo"
               title="YouTube video"
               frameBorder="0"

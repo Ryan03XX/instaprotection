@@ -46,7 +46,7 @@ export default function Home() {
             right time
           </span>
         </h1>
-        <h3 className="text-lg sm:text-xl md:text-2xl text-white mb-6 sm:mb-8">
+        <h3 className="text-lg sm:text-xl md:text-2xl text-white mb-6 sm:mb-8 z-10">
           Embed insurance and protection products into any customer journey
         </h3>
         <button className="relative overflow-hidden border px-4 py-3 text-md cursor-pointer border-cyan-500 group bg-cyan-500 mt-4 sm:mt-6">

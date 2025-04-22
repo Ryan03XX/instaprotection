@@ -57,16 +57,50 @@ const Header = () => {
   const lastScrollY = useRef(0);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-  //   useEffect(() => {
-  //     const activeTab = tabRefs.current[activeSubTab];
-  //     if (activeTab) {
-  //       const { offsetLeft, clientWidth } = activeTab;
-  //       setUseCasesIndicatorStyle({
-  //         left: offsetLeft,
-  //         width: clientWidth,
-  //       });
-  //     }
-  //   }, []);
+  useEffect(() => {
+    if (activeMenu === "Platform") {
+      setTimeout(() => {
+        const activeTab = platformTabRefs.current[platformActiveSubTab];
+        if (activeTab) {
+          const { offsetLeft, clientWidth } = activeTab;
+          setPlatformIndicatorStyle({
+            left: offsetLeft,
+            width: clientWidth,
+          });
+        }
+      }, 0);
+    }
+  }, [activeMenu]);
+
+  useEffect(() => {
+    if (activeMenu === "Use cases") {
+      setTimeout(() => {
+        const activeTab = tabRefs.current[activeSubTab];
+        if (activeTab) {
+          const { offsetLeft, clientWidth } = activeTab;
+          setUseCasesIndicatorStyle({
+            left: offsetLeft,
+            width: clientWidth,
+          });
+        }
+      }, 0);
+    }
+  }, [activeMenu]);
+
+  useEffect(() => {
+    if (activeMenu === "Resources") {
+      setTimeout(() => {
+        const activeTab = resourceTabRefs.current[resourceActiveSubTab];
+        if (activeTab) {
+          const { offsetLeft, clientWidth } = activeTab;
+          setResourceIndicatorStyle({
+            left: offsetLeft,
+            width: clientWidth,
+          });
+        }
+      }, 0);
+    }
+  }, [activeMenu]);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -162,31 +196,37 @@ const Header = () => {
       icon: Rocket,
       title: "Insurer Library",
       desc: "Expand offerings, boost conversions, and increase revenue with a flexible insurance distribution platform.",
+      href: "/distributionEngine/insurerLibrary",
     },
     {
       icon: Users,
       title: "Dynamic Quoting Questionnaire",
       desc: "Expand carrier and product access, streamline operations, and drive growth with more diverse insurance solutions.",
+      href: "/distributionEngine/dynamicQQ",
     },
     {
       icon: Rocket,
       title: "Product Configurator",
       desc: "Expand offerings, boost conversions, and increase revenue with a flexible insurance distribution platform.",
+      href: "/distributionEngine/productConfigurator",
     },
     {
       icon: Users,
       title: "Data Marketplace",
       desc: "Expand carrier and product access, streamline operations, and drive growth with more diverse insurance solutions.",
+      href: "/distributionEngine/dataMarketplace",
     },
     {
       icon: Rocket,
       title: "Data Insights",
       desc: "Expand offerings, boost conversions, and increase revenue with a flexible insurance distribution platform.",
+      href: "/distributionEngine/dataInsights",
     },
     {
       icon: Users,
       title: "UI Design System",
       desc: "Expand carrier and product access, streamline operations, and drive growth with more diverse insurance solutions.",
+      href: "/distributionEngine/designSystem",
     },
   ];
 
@@ -195,31 +235,37 @@ const Header = () => {
       icon: Rocket,
       title: "Embedded Insurance API",
       desc: "Expand offerings, boost conversions, and increase revenue with a flexible insurance distribution platform.",
+      href: "/sales/embeddedInsurance",
     },
     {
       icon: Users,
       title: "Consumer Portal",
       desc: "Expand carrier and product access, streamline operations, and drive growth with more diverse insurance solutions.",
+      href: "/sales/consumerPortal",
     },
     {
       icon: Rocket,
       title: "Enablement",
       desc: "Expand offerings, boost conversions, and increase revenue with a flexible insurance distribution platform.",
+      href: "/sales/enablement",
     },
     {
       icon: Users,
       title: "Agency Portal",
       desc: "Expand carrier and product access, streamline operations, and drive growth with more diverse insurance solutions.",
+      href: "/sales/agencyPortal",
     },
     {
       icon: Rocket,
       title: "Partner portal",
       desc: "Expand offerings, boost conversions, and increase revenue with a flexible insurance distribution platform.",
+      href: "/sales/partnerPortal",
     },
     {
       icon: Users,
       title: "Fulfillment",
       desc: "Expand carrier and product access, streamline operations, and drive growth with more diverse insurance solutions.",
+      href: "/sales/fulfillment",
     },
   ];
 
@@ -228,26 +274,31 @@ const Header = () => {
       icon: Rocket,
       title: "Servicing and claim portal",
       desc: "Expand offerings, boost conversions, and increase revenue with a flexible insurance distribution platform.",
+      href: "/servicing/sncPortal",
     },
     {
       icon: Users,
       title: "Global contact centers",
       desc: "Expand carrier and product access, streamline operations, and drive growth with more diverse insurance solutions.",
+      href: "/servicing/gcontactCenters",
     },
     {
       icon: Rocket,
       title: "Engagement Portal",
       desc: "Expand offerings, boost conversions, and increase revenue with a flexible insurance distribution platform.",
+      href: "/servicing/engagementPortal",
     },
     {
       icon: Users,
       title: "IPolicy Admin",
       desc: "Expand carrier and product access, streamline operations, and drive growth with more diverse insurance solutions.",
+      href: "/servicing/policyAdmin",
     },
     {
       icon: Rocket,
       title: "Servicing Ecosystem",
       desc: "Expand offerings, boost conversions, and increase revenue with a flexible insurance distribution platform.",
+      href: "/servicing/servicingEcosystem",
     },
   ];
 
@@ -256,26 +307,31 @@ const Header = () => {
       icon: Rocket,
       title: "Product Manufacturing",
       desc: "Expand offerings, boost conversions, and increase revenue with a flexible insurance distribution platform.",
+      href: "/customSolutions/productManufacturing",
     },
     {
       icon: Users,
       title: "Insurance Entity Setup",
       desc: "Expand carrier and product access, streamline operations, and drive growth with more diverse insurance solutions.",
+      href: "/customSolutions/insuranceEntitySetup",
     },
     {
       icon: Rocket,
       title: "Professional Services",
       desc: "Expand offerings, boost conversions, and increase revenue with a flexible insurance distribution platform.",
+      href: "/customSolutions/professionalServices",
     },
     {
       icon: Users,
       title: "Insurer Advisory Services",
       desc: "Expand carrier and product access, streamline operations, and drive growth with more diverse insurance solutions.",
+      href: "/customSolutions/insurerAdvisoryServices",
     },
     {
       icon: Rocket,
       title: "Integrations",
       desc: "Expand offerings, boost conversions, and increase revenue with a flexible insurance distribution platform.",
+      href: "/customSolutions/integrations",
     },
   ];
 
@@ -284,37 +340,49 @@ const Header = () => {
       icon: Phone,
       title: "Mobile Devices",
       desc: "Market leading device lifecycle solutions.",
+      href: "/mobile",
     },
     {
       icon: HeartPulse,
       title: "Health Tech",
       desc: "Comprehensive device protection.",
+      href: "/healTech",
     },
     {
       icon: Laptop,
       title: "Consumer Electronics",
       desc: "Tech protection and fast repairs.",
+      href: "/electronics",
     },
     {
       icon: Car,
       title: "Mobility",
       desc: "Integrated solutions for car insurance.",
+      href: "/mobility",
     },
-    { icon: Home, title: "Home", desc: "Holistic modularized coverage." },
+    {
+      icon: Home,
+      title: "Home",
+      desc: "Holistic modularized coverage.",
+      href: "/home",
+    },
     {
       icon: Plane,
       title: "Travel",
       desc: "Travel protection for roaming customers.",
+      href: "/travel",
     },
     {
       icon: Shield,
       title: "Cyber",
       desc: "Online safety and insurance coverage.",
+      href: "/cyber",
     },
     {
       icon: User,
       title: "Customized",
       desc: "Unique insurance for diverse needs.",
+      href: "/customized",
     },
   ];
 
@@ -322,34 +390,42 @@ const Header = () => {
     {
       icon: Phone,
       title: "Financial Services",
+      href: "/financialServices",
     },
     {
       icon: HeartPulse,
       title: "Retailers",
+      href: "/retailers",
     },
     {
       icon: Laptop,
       title: "Real Estate",
+      href: "/realEstate",
     },
     {
       icon: Car,
       title: "Telco",
+      href: "/telco",
     },
     {
       icon: Plane,
       title: "Device OEMs",
+      href: "/deviceOEM",
     },
     {
       icon: Shield,
       title: "Everyone Else",
+      href: "/everyoneElse",
     },
     {
       icon: User,
       title: "Experiences",
+      href: "/experiences",
     },
     {
       icon: User,
       title: "Mobility OEMs",
+      href: "/mobilityOEMs",
     },
   ];
 
@@ -358,11 +434,13 @@ const Header = () => {
       icon: Rocket,
       title: "Insurers",
       desc: "Expand offerings, boost conversions, and increase revenue with a flexible insurance distribution platform.",
+      href: "/insurers",
     },
     {
       icon: Users,
       title: "Insurance Agencies",
       desc: "Expand carrier and product access, streamline operations, and drive growth with more diverse insurance solutions.",
+      href: "/insuranceAgencies",
     },
   ];
 
@@ -371,16 +449,19 @@ const Header = () => {
       icon: Rocket,
       title: "Case Studies",
       desc: "Explore real-world success stories and industry solutions.",
+      href: "/caseStudy",
     },
     {
       icon: Newspaper,
       title: "News",
       desc: "Stay updated with the latest industry news and trends.",
+      href: "/resourcesNews",
     },
     {
       icon: Users,
       title: "Insights",
       desc: "Gain expert perspectives and in-depth analysis on key tools.",
+      href: "/insights",
     },
   ];
 
@@ -591,8 +672,31 @@ const Header = () => {
                   platformActiveSubTab === "Sales" ||
                   platformActiveSubTab === "Servicing" ||
                   platformActiveSubTab === "Custom Solutions") && (
+                  //   <Link
+                  //   href={
+                  //     platformActiveSubTab === "Distribution Engine"
+                  //       ? "/distributionEngine"
+                  //       : platformActiveSubTab === "Sales"
+                  //       ? "/sales"
+                  //       : platformActiveSubTab === "Servicing"
+                  //       ? "/servicing"
+                  //       : "/customSolutions"
+                  //   }
+                  //   className="inline-flex items-center text-md text-black transition group mt-2"
+                  // >
+                  //   Learn more
+                  //   <ChevronRight className="w-4 h-4 ml-1 transition-transform duration-200 group-hover:translate-x-1" />
+                  // </Link>
                   <a
-                    href="#"
+                    href={
+                      platformActiveSubTab === "Distribution Engine"
+                        ? "/distributionEngine"
+                        : platformActiveSubTab === "Sales"
+                        ? "/sales"
+                        : platformActiveSubTab === "Servicing"
+                        ? "/servicing"
+                        : "/customSolutions"
+                    }
                     className="inline-flex items-center text-md text-black transition group mt-2"
                   >
                     Learn more
@@ -604,69 +708,97 @@ const Header = () => {
               {platformActiveSubTab === "Distribution Engine" ? (
                 <div className="col-span-3 grid grid-cols-3 gap-6">
                   {platformTab1.map((item) => (
-                    <div
+                    <Link
                       key={item.title}
-                      className="flex space-x-3 hover:bg-cyan-100 p-2 rounded transition cursor-pointer"
+                      href={item.href}
+                      onClick={() => (window.location.href = item.href)}
                     >
-                      <item.icon className="text-indigo-700 w-5 h-5 mt-1 shrink-0" />
-                      <div>
-                        <h4 className="font-semibold text-md text-gray-900">
-                          {item.title}
-                        </h4>
-                        <p className="text-xs text-gray-600">{item.desc}</p>
+                      <div className="flex flex-col justify-between h-30 hover:bg-cyan-100 p-4 rounded cursor-pointer hover:cyan-300">
+                        <div className="flex space-x-3">
+                          <item.icon className="text-indigo-700 w-5 h-5 mt-1 shrink-0 " />
+                          <div>
+                            <h4 className="font-semibold text-md text-gray-900">
+                              {item.title}
+                            </h4>
+                            <p className="text-xs text-gray-600 line-clamp-3">
+                              {item.desc}
+                            </p>
+                          </div>
+                        </div>
                       </div>
-                    </div>
+                    </Link>
                   ))}
                 </div>
               ) : platformActiveSubTab === "Sales" ? (
                 <div className="col-span-3 grid grid-cols-2 gap-6">
                   {platformTab2.map((item) => (
-                    <div
+                    <Link
                       key={item.title}
-                      className="flex space-x-3 hover:bg-cyan-100 p-2 rounded transition cursor-pointer"
+                      href={item.href}
+                      onClick={() => (window.location.href = item.href)}
                     >
-                      <item.icon className="text-indigo-700 w-5 h-5 mt-1" />
-                      <div>
-                        <h4 className="font-semibold text-md text-gray-900">
-                          {item.title}
-                        </h4>
-                        <p className="text-xs text-gray-600">{item.desc}</p>
+                      <div className="flex flex-col justify-between h-30 hover:bg-cyan-100 p-4 rounded cursor-pointer hover:cyan-300">
+                        <div className="flex space-x-3">
+                          <item.icon className="text-indigo-700 w-5 h-5 mt-1 shrink-0 " />
+                          <div>
+                            <h4 className="font-semibold text-md text-gray-900">
+                              {item.title}
+                            </h4>
+                            <p className="text-xs text-gray-600 line-clamp-3">
+                              {item.desc}
+                            </p>
+                          </div>
+                        </div>
                       </div>
-                    </div>
+                    </Link>
                   ))}
                 </div>
               ) : platformActiveSubTab === "Servicing" ? (
                 <div className="col-span-3 grid grid-cols-2 gap-6">
                   {platformTab3.map((item) => (
-                    <div
+                    <Link
                       key={item.title}
-                      className="flex space-x-3 hover:bg-cyan-100 p-2 rounded transition cursor-pointer"
+                      href={item.href}
+                      onClick={() => (window.location.href = item.href)}
                     >
-                      <item.icon className="text-indigo-700 w-5 h-5 mt-1" />
-                      <div>
-                        <h4 className="font-semibold text-md text-gray-900">
-                          {item.title}
-                        </h4>
-                        <p className="text-xs text-gray-600">{item.desc}</p>
+                      <div className="flex flex-col justify-between h-30 hover:bg-cyan-100 p-4 rounded cursor-pointer hover:cyan-300">
+                        <div className="flex space-x-3">
+                          <item.icon className="text-indigo-700 w-5 h-5 mt-1 shrink-0 " />
+                          <div>
+                            <h4 className="font-semibold text-md text-gray-900">
+                              {item.title}
+                            </h4>
+                            <p className="text-xs text-gray-600 line-clamp-3">
+                              {item.desc}
+                            </p>
+                          </div>
+                        </div>
                       </div>
-                    </div>
+                    </Link>
                   ))}
                 </div>
               ) : platformActiveSubTab === "Custom Solutions" ? (
                 <div className="col-span-3 grid grid-cols-2 gap-6">
                   {platformTab4.map((item) => (
-                    <div
+                    <Link
                       key={item.title}
-                      className="flex space-x-3 hover:bg-cyan-100 p-2 rounded transition cursor-pointer"
+                      href={item.href}
+                      onClick={() => (window.location.href = item.href)}
                     >
-                      <item.icon className="text-indigo-700 w-5 h-5 mt-1" />
-                      <div>
-                        <h4 className="font-semibold text-md text-gray-900">
-                          {item.title}
-                        </h4>
-                        <p className="text-xs text-gray-600">{item.desc}</p>
+                      <div className="flex flex-col justify-between h-30 hover:bg-cyan-100 p-4 rounded cursor-pointer hover:cyan-300">
+                        <div className="flex space-x-3">
+                          <item.icon className="text-indigo-700 w-5 h-5 mt-1 shrink-0 " />
+                          <div>
+                            <h4 className="font-semibold text-md text-gray-900">
+                              {item.title}
+                            </h4>
+                            <p className="text-xs text-gray-600 line-clamp-3">
+                              {item.desc}
+                            </p>
+                          </div>
+                        </div>
                       </div>
-                    </div>
+                    </Link>
                   ))}
                 </div>
               ) : null}
@@ -761,34 +893,46 @@ const Header = () => {
               {activeSubTab === "By Industry" ? (
                 <div className="col-span-3 grid grid-cols-3 gap-6">
                   {useCasesTab1.map((item) => (
-                    <div
+                    <Link
                       key={item.title}
-                      className="flex space-x-3 hover:bg-cyan-100 p-2 rounded transition cursor-pointer"
+                      href={item.href}
+                      onClick={() => (window.location.href = item.href)}
                     >
-                      <item.icon className="text-indigo-700 w-5 h-5 mt-1 shrink-0" />
-                      <div>
-                        <h4 className="font-semibold text-md text-gray-900">
-                          {item.title}
-                        </h4>
+                      <div className="flex flex-col justify-between h-30 hover:bg-cyan-100 p-4 rounded cursor-pointer hover:cyan-300">
+                        <div className="flex space-x-3">
+                          <item.icon className="text-indigo-700 w-5 h-5 mt-1 shrink-0 " />
+                          <div>
+                            <h4 className="font-semibold text-md text-gray-900">
+                              {item.title}
+                            </h4>
+                          </div>
+                        </div>
                       </div>
-                    </div>
+                    </Link>
                   ))}
                 </div>
               ) : activeSubTab === "By Insurance Player" ? (
                 <div className="col-span-3 grid grid-cols-3 gap-6">
                   {useCasesTab2.map((item) => (
-                    <div
+                    <Link
                       key={item.title}
-                      className="flex space-x-3 hover:bg-cyan-100 p-2 rounded transition cursor-pointer"
+                      href={item.href}
+                      onClick={() => (window.location.href = item.href)}
                     >
-                      <item.icon className="text-indigo-700 w-5 h-5 mt-1" />
-                      <div>
-                        <h4 className="font-semibold text-md text-gray-900">
-                          {item.title}
-                        </h4>
-                        <p className="text-xs text-gray-600">{item.desc}</p>
+                      <div className="flex flex-col justify-between h-30 hover:bg-cyan-100 p-4 rounded cursor-pointer hover:cyan-300">
+                        <div className="flex space-x-3">
+                          <item.icon className="text-indigo-700 w-5 h-5 mt-1 shrink-0 " />
+                          <div>
+                            <h4 className="font-semibold text-md text-gray-900">
+                              {item.title}
+                            </h4>
+                            <p className="text-xs text-gray-600 line-clamp-3">
+                              {item.desc}
+                            </p>
+                          </div>
+                        </div>
                       </div>
-                    </div>
+                    </Link>
                   ))}
                 </div>
               ) : null}
@@ -816,18 +960,25 @@ const Header = () => {
 
             <div className="col-span-3 grid grid-cols-3 gap-6">
               {programs.map((item) => (
-                <div
+                <Link
                   key={item.title}
-                  className="flex space-x-3 hover:bg-cyan-100 p-2 rounded transition cursor-pointer"
+                  href={item.href}
+                  onClick={() => (window.location.href = item.href)}
                 >
-                  <item.icon className="text-indigo-700 w-5 h-5 mt-1 shrink-0" />
-                  <div>
-                    <h4 className="font-semibold text-md text-gray-900">
-                      {item.title}
-                    </h4>
-                    <p className="text-xs text-gray-600">{item.desc}</p>
+                  <div className="flex flex-col justify-between h-30 hover:bg-cyan-100 p-4 rounded cursor-pointer hover:cyan-300">
+                    <div className="flex space-x-3">
+                      <item.icon className="text-indigo-700 w-5 h-5 mt-1 shrink-0 " />
+                      <div>
+                        <h4 className="font-semibold text-md text-gray-900">
+                          {item.title}
+                        </h4>
+                        <p className="text-xs text-gray-600 line-clamp-3">
+                          {item.desc}
+                        </p>
+                      </div>
+                    </div>
                   </div>
-                </div>
+                </Link>
               ))}
             </div>
           </div>
@@ -878,7 +1029,7 @@ const Header = () => {
 
                 {resourceActiveSubTab === "Resource Hub" && (
                   <a
-                    href="#"
+                    href="resources"
                     className="inline-flex items-center text-md text-black transition group mt-2"
                   >
                     Learn more
@@ -890,39 +1041,28 @@ const Header = () => {
               {resourceActiveSubTab === "Resource Hub" ? (
                 <div className="col-span-3 grid grid-cols-3 gap-6">
                   {resources.map((item) => (
-                    <div
+                    <Link
                       key={item.title}
-                      className="flex space-x-3 hover:bg-cyan-100 p-2 rounded transition cursor-pointer"
+                      href={item.href}
+                      onClick={() => (window.location.href = item.href)}
                     >
-                      <item.icon className="text-indigo-700 w-5 h-5 mt-1 shrink-0" />
-                      <div>
-                        <h4 className="font-semibold text-md text-gray-900">
-                          {item.title}
-                        </h4>
-                        <p className="text-xs text-gray-600">{item.desc}</p>
+                      <div className="flex flex-col justify-between h-30 hover:bg-cyan-100 p-4 rounded cursor-pointer hover:cyan-300">
+                        <div className="flex space-x-3">
+                          <item.icon className="text-indigo-700 w-5 h-5 mt-1 shrink-0 " />
+                          <div>
+                            <h4 className="font-semibold text-md text-gray-900">
+                              {item.title}
+                            </h4>
+                            <p className="text-xs text-gray-600 line-clamp-3">
+                              {item.desc}
+                            </p>
+                          </div>
+                        </div>
                       </div>
-                    </div>
+                    </Link>
                   ))}
                 </div>
-              ) : //   : activeSubTab === "By Insurance Player" ? (
-              //     <div className="col-span-3 grid grid-cols-3 gap-6">
-              //       {useCasesTab2.map((item) => (
-              //         <div
-              //           key={item.title}
-              //           className="flex space-x-3 hover:bg-cyan-100 p-2 rounded transition cursor-pointer"
-              //         >
-              //           <item.icon className="text-indigo-700 w-5 h-5 mt-1" />
-              //           <div>
-              //             <h4 className="font-semibold text-md text-gray-900">
-              //               {item.title}
-              //             </h4>
-              //             <p className="text-xs text-gray-600">{item.desc}</p>
-              //           </div>
-              //         </div>
-              //       ))}
-              //     </div>
-              //   )
-              null}
+              ) : null}
             </div>
           </div>
         </div>
