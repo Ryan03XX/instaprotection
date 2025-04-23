@@ -211,7 +211,7 @@ export default function About() {
           </FadeInOnceOnScroll>
         </div>
       </section>
-      <section className="-mt-20 sm:-mt-32 md:-mt-40 z-40 relative px-6 sm:px-10 md:px-20 py-20 sm:py-32 md:py-40">
+      <section className="bg-gray-100 relative px-6 sm:px-10 md:px-20 py-30 md:py-30">
         <NewsSection />
       </section>
       <section className="w-full z-10 bg-gray-100 py-5"></section>
