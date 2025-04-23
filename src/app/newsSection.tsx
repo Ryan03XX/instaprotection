@@ -5,7 +5,7 @@ import FadeInOnceOnScroll from "./fadeIn2";
 
 export default function NewsSection() {
   return (
-    <section className="py-8 px-4 mt-8">
+    <section className="px-4">
       <div className="max-w-7xl mx-auto">
         <FadeInOnceOnScroll>
           <h2 className="text-2xl md:text-3xl font-bold text-[#534F85] mb-2">
@@ -19,7 +19,7 @@ export default function NewsSection() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="md:col-span-2 space-y-6">
             <FadeInOnceOnScroll>
-              <div className="bg-white border p-6 py-20 h-120 shadow-sm cursor-pointer relative bg-white border p-6 py-20 h-120 shadow-sm cursor-pointer transition-all duration-300 hover:-translate-y-1 hover:shadow-md hover:after:content-[''] hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:w-full hover:after:h-[3px] hover:after:bg-[#0A0842] after:transition-all after:duration-300">
+              <div className="bg-white p-6 py-20 h-120 shadow-sm cursor-pointer relative bg-white p-6 py-20 h-120 shadow-sm cursor-pointer transition-all duration-300 hover:-translate-y-1 hover:shadow-md hover:after:content-[''] hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:w-full hover:after:h-[3px] hover:after:bg-[#0A0842] after:transition-all after:duration-300">
                 <p className="text-sm text-gray-500 mb-2">05 December 2024</p>
                 <h3 className="text-xl font-semibold text-[#0A0842] mb-2">
                   Global insurtech bolttech announces Series C funding led by
@@ -43,7 +43,7 @@ export default function NewsSection() {
               </div>
             </FadeInOnceOnScroll>
             <FadeInOnceOnScroll>
-              <div className="bg-white border p-6 py-20 h-120 shadow-sm cursor-pointer relative shadow-sm cursor-pointer transition-all duration-300 hover:-translate-y-1 hover:shadow-md hover:after:content-[''] hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:w-full hover:after:h-[3px] hover:after:bg-[#0A0842] after:transition-all after:duration-300">
+              <div className="bg-white p-6 py-20 h-120 shadow-sm cursor-pointer relative shadow-sm cursor-pointer transition-all duration-300 hover:-translate-y-1 hover:shadow-md hover:after:content-[''] hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:w-full hover:after:h-[3px] hover:after:bg-[#0A0842] after:transition-all after:duration-300">
                 <p className="text-sm text-gray-500 mb-2">14 June 2024</p>
                 <h3 className="text-xl font-semibold text-[#0A0842] mb-2">
                   A new milestone for Stellantis Insurance: Stellantis Financial
@@ -71,7 +71,7 @@ export default function NewsSection() {
 
           <div className="space-y-6">
             <FadeInOnceOnScroll>
-              <div className="bg-white border p-4 cursor-pointer relative transition-all duration-300 hover:-translate-y-1 hover:shadow-md hover:after:content-[''] hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:w-full hover:after:h-[3px] hover:after:bg-[#0A0842] after:transition-all after:duration-300">
+              <div className="bg-white p-4 cursor-pointer relative transition-all duration-300 hover:-translate-y-1 hover:shadow-md hover:after:content-[''] hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:w-full hover:after:h-[3px] hover:after:bg-[#0A0842] after:transition-all after:duration-300">
                 <p className="text-sm text-gray-500 mb-1">16 August 2024</p>
                 <div className="relative mb-2">
                   <span className="absolute top-1 left-1 bg-yellow-400 text-xs font-bold px-2 py-1 rounded">
@@ -99,7 +99,7 @@ export default function NewsSection() {
               </div>
             </FadeInOnceOnScroll>
             <FadeInOnceOnScroll>
-              <div className="bg-white border p-4 cursor-pointer relative transition-all duration-300 hover:-translate-y-1 hover:shadow-md hover:after:content-[''] hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:w-full hover:after:h-[3px] hover:after:bg-[#0A0842] after:transition-all after:duration-300">
+              <div className="bg-white p-4 cursor-pointer relative transition-all duration-300 hover:-translate-y-1 hover:shadow-md hover:after:content-[''] hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:w-full hover:after:h-[3px] hover:after:bg-[#0A0842] after:transition-all after:duration-300">
                 <p className="text-sm text-gray-500 mb-1">23 March 2024</p>
                 <h4 className="text-base font-semibold text-[#0A0842] mb-2">
                   Partnership with Singtel
@@ -115,7 +115,7 @@ export default function NewsSection() {
               </div>
             </FadeInOnceOnScroll>
             <FadeInOnceOnScroll>
-              <div className="bg-white border p-4 cursor-pointer transition-all duration-300 hover:-translate-y-1 hover:shadow-md hover:after:content-[''] hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:w-full hover:after:h-[3px] hover:after:bg-[#0A0842] after:transition-all after:duration-300">
+              <div className="bg-white p-4 cursor-pointer transition-all duration-300 hover:-translate-y-1 hover:shadow-md hover:after:content-[''] hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:w-full hover:after:h-[3px] hover:after:bg-[#0A0842] after:transition-all after:duration-300">
                 <p className="text-sm text-gray-500 mb-1">1 July 2024</p>
                 <div className="relative mb-2">
                   <span className="absolute top-1 left-1 bg-yellow-400 text-xs font-bold px-2 py-1 rounded">

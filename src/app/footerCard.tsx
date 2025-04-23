@@ -1,6 +1,6 @@
 export default function FooterCTA() {
   return (
-    <div className="w-full flex justify-center -mb-20 relative z-10">
+    <div className="w-full flex justify-center relative bg-gray-100">
       <div className="bg-cyan-100 px-8 py-12 w-full max-w-7xl transition-transform hover:scale-105">
         <div className="flex flex-col text-center md:flex-row justify-between items-center gap-4">
           <h2

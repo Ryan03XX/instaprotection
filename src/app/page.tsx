@@ -7,6 +7,7 @@ import LottiePlayer from "./lottiePlayer";
 import Image from "next/image";
 import FadeInOnceOnScroll from "./fadeIn2";
 import FadeInOnceFromHorizon from "./horizonFadeIn";
+import BackToTopButton from "./backToTopButton";
 
 export default function Home() {
   return (
@@ -64,7 +65,7 @@ export default function Home() {
         </button>
       </main>
 
-      <section className="w-full bg-gray-100 mb-20 mt-20 z-10">
+      <section className="w-full bg-gray-100 z-10 py-10">
         <h3 className="text-[#0A0842] font-bold text-sm sm:text-md mb-6 text-center relative z-20">
           Trusted by world leading brands
         </h3>
@@ -79,7 +80,7 @@ export default function Home() {
                 "/assets/logo4.svg",
                 "/assets/logo5.svg",
                 "/assets/logo6.svg",
-                "/assets/logo7.svg",
+                "/assets/logo9.svg",
                 "/assets/logo8.svg",
                 "/assets/logo9.svg",
               ].map((src, index) => (
@@ -128,7 +129,7 @@ export default function Home() {
         </div>
       </section>
       <FadeInOnceFromHorizon>
-        <section className="px-6 md:px-4 py-20 mt-[-60px] z-20 relative">
+        <section className="px-6 md:px-4 py-20 z-20 relative bg-gray-100">
           <div className="flex justify-center relative">
             <div className="max-w-7xl w-full bg-cyan-500 overflow-hidden px-4 sm:px-8 md:px-10 py-8 sm:py-10 relative">
               <div className="p-4 sm:p-6">
@@ -554,7 +555,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="px-6 sm:px-10 md:px-20 py-20 bg-white relative z-30">
+      <section className="px-6 sm:px-10 md:px-20 bg-white relative z-30">
         <div className="max-w-7xl mx-auto grid grid-cols-1 gap-10 items-center">
           <div>
             <p className="text-xl sm:text-2xl md:text-3xl font-bold text-[#534F85] leading-relaxed mb-4">
@@ -574,9 +575,11 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="-mt-20 sm:-mt-32 md:-mt-40 z-40 relative px-6 sm:px-10 md:px-20 py-20 sm:py-32 md:py-40">
+      <section className="bg-gray-100 relative px-6 sm:px-10 md:px-20 py-10 md:py-20">
         <NewsSection />
       </section>
+
+      <BackToTopButton />
     </div>
   );
 }

@@ -1,5 +1,10 @@
 "use client";
-import { FaLinkedinIn, FaYoutube } from "react-icons/fa";
+import {
+  FaFacebookF,
+  FaInstagram,
+  FaLinkedin,
+  FaWhatsapp,
+} from "react-icons/fa";
 import Link from "next/link";
 import Image from "next/image";
 import { ChevronDown, ChevronUp } from "lucide-react";
@@ -217,23 +222,49 @@ export default function Footer() {
             </a>
           </div>
           <div className="flex space-x-8 mt-16">
-            <Link href="#">
-              <FaLinkedinIn className="text-white text-2xl hover:text-yellow-300 transition-colors duration-300 ease-in-out" />
-            </Link>
-            <Link href="#">
-              <FaYoutube className="text-white text-2xl hover:text-yellow-300 transition-colors duration-300 ease-in-out" />
-            </Link>
+            <a
+              href="https://www.facebook.com/InstaProtectionSG/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Visit our Facebook page"
+            >
+              <FaFacebookF className="text-white text-2xl hover:text-yellow-300 transition-colors duration-300 ease-in-out" />
+            </a>
+            <a
+              href="https://www.instagram.com/instaprotectionsg/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Visit our Facebook page"
+            >
+              <FaInstagram className="text-white text-2xl hover:text-yellow-300 transition-colors duration-300 ease-in-out" />
+            </a>
+            <a
+              href="https://www.linkedin.com/company/instaprotection-sg/?originalSubdomain=sg"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Visit our Facebook page"
+            >
+              <FaLinkedin className="text-white text-2xl hover:text-yellow-300 transition-colors duration-300 ease-in-out" />
+            </a>
+            <a
+              href="https://wa.me/6598551971?text=hi"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Visit our Facebook page"
+            >
+              <FaWhatsapp className="text-white text-2xl hover:text-yellow-300 transition-colors duration-300 ease-in-out" />
+            </a>
           </div>
           <div className="flex flex-col justify-center items-center mt-12">
-          <div className="flex">
-            <h4 className="text-md text-gray-400 cursor-default">
-              © 2025 Instaprotection Pte. Ltd. All Rights Reserved
-            </h4>
+            <div className="flex">
+              <h4 className="text-md text-gray-400 cursor-default">
+                © 2025 Instaprotection Pte. Ltd. All Rights Reserved
+              </h4>
+            </div>
           </div>
         </div>
-        </div>
       </div>
-      <div className="max-w-7xl mx-auto px-2 py-30 hidden md:block">
+      <div className="max-w-7xl mx-auto px-2 py-10 hidden md:block">
         <div className="grid grid-cols-2 md:grid-cols-5 gap-6">
           <div>
             <h6 className="mb-6 text-xl text-cyan-300 cursor-default">
@@ -487,18 +518,44 @@ export default function Footer() {
             </a>
           </div>
 
-          <div className="justify-between items-center flex space-x-4 mt-4 md:mt-0 gap-6">
-            <Link href="#">
-              <FaLinkedinIn className="text-white text-2xl hover:text-yellow-300 transition-colors duration-300 ease-in-out" />
-            </Link>
-            <Link href="#">
-              <FaYoutube className="text-white text-2xl hover:text-yellow-300 transition-colors duration-300 ease-in-out" />
-            </Link>
+          <div className="justify-between items-center flex space-x-4 mt-4 md:mt-0 gap-3">
+            <a
+              href="https://www.facebook.com/InstaProtectionSG/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Visit our Facebook page"
+            >
+              <FaFacebookF className="text-white text-2xl hover:text-yellow-300 transition-colors duration-300 ease-in-out" />
+            </a>
+            <a
+              href="https://www.instagram.com/instaprotectionsg/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Visit our Facebook page"
+            >
+              <FaInstagram className="text-white text-2xl hover:text-yellow-300 transition-colors duration-300 ease-in-out" />
+            </a>
+            <a
+              href="https://www.linkedin.com/company/instaprotection-sg/?originalSubdomain=sg"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Visit our Facebook page"
+            >
+              <FaLinkedin className="text-white text-2xl hover:text-yellow-300 transition-colors duration-300 ease-in-out" />
+            </a>
+            <a
+              href="https://wa.me/6598551971?text=hi"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Visit our Facebook page"
+            >
+              <FaWhatsapp className="text-white text-2xl hover:text-yellow-300 transition-colors duration-300 ease-in-out" />
+            </a>
           </div>
         </div>
-        <div className="flex flex-col justify-center items-center mt-12 pt-6">
-          <div className="flex space-x-6 text-md">
-            <h4 className="mb-3 text-md text-gray-400 cursor-default">
+        <div className="flex flex-col justify-center items-center pt-8">
+          <div className="flex text-md">
+            <h4 className="text-md text-gray-400 cursor-default">
               © 2025 Instaprotection Pte. Ltd. All Rights Reserved
             </h4>
           </div>

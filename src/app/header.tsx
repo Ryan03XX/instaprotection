@@ -607,7 +607,7 @@ const Header = () => {
               </button>
 
               {/* Dropdown */}
-              {isLangOpen && (
+              {/* {isLangOpen && (
                 <ul className="absolute right-0 mt-3 w-36 bg-white shadow-xl border z-50 text-base">
                   <li
                     onClick={() => {
@@ -637,7 +637,7 @@ const Header = () => {
                     Bahasa Melayu
                   </li>
                 </ul>
-              )}
+              )} */}
             </div>
           </div>
           <div className="md:hidden">
