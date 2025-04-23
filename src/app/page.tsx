@@ -13,7 +13,7 @@ export default function Home() {
     <div className="relative overflow-hidden">
       <video
         className="absolute top-0 left-0 w-full h-screen object-cover z-0"
-        src="/mainBackground/video_3.mp4"
+        src="/mainbackground/video_3.mp4"
         autoPlay
         muted
         loop
