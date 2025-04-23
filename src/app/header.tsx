@@ -52,7 +52,7 @@ const Header = () => {
   const tabRefs = useRef<{ [key: string]: HTMLDivElement | null }>({});
   const resourceTabRefs = useRef<{ [key: string]: HTMLDivElement | null }>({});
   const platformTabRefs = useRef<{ [key: string]: HTMLDivElement | null }>({});
-  const [showHeader, setShowHeader] = useState(true);
+  const [showHeader, setShowHeader] = useState(false);
   const [atTop, setAtTop] = useState(true);
   const lastScrollY = useRef(0);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -110,21 +110,30 @@ const Header = () => {
       } else {
         setAtTop(false);
       }
-
+  
       if (window.scrollY > lastScrollY.current) {
         setShowHeader(false);
       } else {
         setShowHeader(true);
       }
-
+  
       lastScrollY.current = window.scrollY;
     };
-
+  
+    if (window.scrollY === 0) {
+      setAtTop(true);
+      setShowHeader(true);
+    } else {
+      setAtTop(false);
+      setShowHeader(false);
+    }
+  
     window.addEventListener("scroll", handleScroll);
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+  
 
   useEffect(() => {
     const activeTab = tabRefs.current[activeSubTab];
