@@ -66,7 +66,7 @@ export default function Footer() {
   return (
     <footer className="bg-[#0A0842] text-gray-400 text-sm">
       <div className="w-full flex justify-center relative -mt-20">
-      <div className="bg-cyan-100 px-8 py-12 w-full max-w-7xl transition-transform hover:scale-105">
+      <div className="bg-cyan-100 px-8 py-6 md:py-12 w-full max-w-7xl transition-transform hover:scale-105">
         <div className="flex flex-col text-center md:flex-row justify-between items-center gap-4">
           <h2
             className="font-bold"
