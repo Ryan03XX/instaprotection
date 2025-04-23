@@ -575,7 +575,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="bg-gray-100 relative px-6 sm:px-10 md:px-20 py-10 md:py-20">
+      <section className="bg-gray-100 relative px-6 sm:px-10 md:px-20 py-10 md:py-30">
         <NewsSection />
       </section>
 

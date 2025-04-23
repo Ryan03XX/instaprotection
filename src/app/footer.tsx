@@ -65,6 +65,36 @@ function FooterSection({
 export default function Footer() {
   return (
     <footer className="bg-[#0A0842] text-gray-400 text-sm">
+      <div className="w-full flex justify-center relative -mt-20">
+      <div className="bg-cyan-100 px-8 py-12 w-full max-w-7xl transition-transform hover:scale-105">
+        <div className="flex flex-col text-center md:flex-row justify-between items-center gap-4">
+          <h2
+            className="font-bold"
+            style={{ fontSize: "2.125rem", color: "#0A0842" }}
+          >
+            Ready to transform your business?
+          </h2>
+          <button className="relative overflow-hidden border px-4 py-3 text-md cursor-pointer border-cyan-500 group bg-cyan-500">
+            <span className="relative font-bold z-10 text-[#0A0842] transition-opacity duration-300 group-hover:opacity-0">
+              Get started
+            </span>
+
+            <span
+              className="absolute left-0 top-0 w-full h-full flex items-center justify-center font-bold
+              opacity-0 transition-opacity duration-300 group-hover:opacity-100 z-10"
+              style={{ color: "#0A0842" }}
+            >
+              Get started
+            </span>
+
+            <span
+              className="absolute inset-0 bg-cyan-500 transform scale-x-0 group-hover:scale-x-100 
+              origin-left transition-transform duration-600 ease-out group-hover:bg-cyan-600"
+            ></span>
+          </button>
+        </div>
+      </div>
+    </div>
       <div className="max-w-7xl mx-auto px-6 py-30 block md:hidden">
         <div className="md:grid md:grid-cols-5 md:gap-6 flex flex-col space-y-4 md:space-y-0">
           <h6 className="mb-4 text-xl text-cyan-300 cursor-default mt-10">
