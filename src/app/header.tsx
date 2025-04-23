@@ -604,7 +604,7 @@ const Header = () => {
             ))}
           </nav>
           <div className="flex items-center space-x-8 hidden md:flex relative">
-            <div className="relative">
+            {/* <div className="relative">
               <button
                 className="relative flex items-center gap-3 text-lg font-medium cursor-pointer group px-3 py-2"
                 onClick={() => setIsLangOpen(!isLangOpen)}
@@ -615,8 +615,7 @@ const Header = () => {
                 <span className="absolute -bottom-1 left-0 w-0 h-[2px] bg-black transition-all duration-300 group-hover:w-full"></span>
               </button>
 
-              {/* Dropdown */}
-              {/* {isLangOpen && (
+              {isLangOpen && (
                 <ul className="absolute right-0 mt-3 w-36 bg-white shadow-xl border z-50 text-base">
                   <li
                     onClick={() => {
@@ -646,8 +645,8 @@ const Header = () => {
                     Bahasa Melayu
                   </li>
                 </ul>
-              )} */}
-            </div>
+              )}
+            </div> */}
           </div>
           <div className="md:hidden">
             <MobileMenu
