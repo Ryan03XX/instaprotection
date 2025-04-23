@@ -11,13 +11,17 @@ import FadeInOnceFromHorizon from "./horizonFadeIn";
 export default function Home() {
   return (
     <div className="relative overflow-hidden">
-      <div
-        className="absolute top-0 left-0 w-full h-screen bg-cover bg-center z-0 bg-no-repeat"
-        style={{ backgroundImage: "url('/assets/background1.jpg')" }}
-      ></div>
+      <video
+        className="absolute top-0 left-0 w-full h-screen object-cover z-0"
+        src="/mainBackground/video_3.mp4"
+        autoPlay
+        muted
+        loop
+        playsInline
+      ></video>
 
-      <main className="flex text-left px-4 sm:px-2 lg:px-20 w-full min-h-screen flex-col items-start justify-center">
-        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 sm:mb-6">
+      <main className="flex max-w-7xl mx-auto min-h-screen flex-col items-start justify-center px-6 md:px-0">
+        <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 sm:mb-6">
           <span
             style={{
               display: "block",
@@ -34,19 +38,10 @@ export default function Home() {
               overflow: "hidden",
             }}
           >
-            right insurance at the
-          </span>
-          <span
-            style={{
-              display: "block",
-              position: "relative",
-              overflow: "hidden",
-            }}
-          >
-            right time
+            right insurance at the right time
           </span>
         </h1>
-        <h3 className="text-lg sm:text-xl md:text-2xl text-white mb-6 sm:mb-8 z-10">
+        <h3 className="text-lg sm:text-xl md:text-2xl text-white mb-8 md:mb-6 z-10">
           Embed insurance and protection products into any customer journey
         </h3>
         <button className="relative overflow-hidden border px-4 py-3 text-md cursor-pointer border-cyan-500 group bg-cyan-500 mt-4 sm:mt-6">
@@ -69,8 +64,8 @@ export default function Home() {
         </button>
       </main>
 
-      <section className="w-full mt-[-160px] mb-20 z-10">
-        <h3 className="text-white font-bold text-sm sm:text-md mb-4 text-center relative z-20">
+      <section className="w-full bg-gray-100 mb-20 mt-20 z-10">
+        <h3 className="text-[#0A0842] font-bold text-sm sm:text-md mb-6 text-center relative z-20">
           Trusted by world leading brands
         </h3>
 
@@ -133,9 +128,9 @@ export default function Home() {
         </div>
       </section>
       <FadeInOnceFromHorizon>
-        <section className="px-4 sm:px-6 md:px-20 py-20 mt-[-60px] z-20 relative">
+        <section className="px-6 md:px-4 py-20 mt-[-60px] z-20 relative">
           <div className="flex justify-center relative">
-            <div className="max-w-7xl w-full bg-cyan-500 shadow-lg overflow-hidden px-4 sm:px-8 md:px-10 py-8 sm:py-10 relative">
+            <div className="max-w-7xl w-full bg-cyan-500 overflow-hidden px-4 sm:px-8 md:px-10 py-8 sm:py-10 relative">
               <div className="p-4 sm:p-6">
                 <h6 className="text-black text-sm sm:text-base md:text-2xl lg:text-3xl leading-relaxed">
                   bolttech‘s platform enables any business to embed tailored and
@@ -146,10 +141,6 @@ export default function Home() {
                   evolving insurance ecosystem.
                 </h6>
               </div>
-
-              {/* <div className="absolute left-[0%] top-6 w-10 h-10 sm:w-14 sm:h-16 bg-blue-900 shadow-md z-20"></div>
-
-            <div className="absolute right-[-5%] bottom-6 w-28 h-10 sm:w-36 sm:h-12 bg-yellow-300 shadow-md z-20"></div> */}
             </div>
           </div>
         </section>
@@ -409,7 +400,7 @@ export default function Home() {
         </div>
         <FadeInWhenVisible>
           <div className="max-w-7xl mx-auto mt-20">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-10">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-10 md:gap-33">
               <AnimatedCounter
                 to={50}
                 suffix="B+"
@@ -549,11 +540,11 @@ export default function Home() {
             <p className="text-xl sm:text-2xl md:text-3xl font-bold text-[#534F85] leading-relaxed mb-4">
               Our programs
             </p>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#0A0842] mb-6">
+            <h2 className="text-3xl md:text-4xl md:text-5xl font-bold text-[#0A0842] mb-6">
               Connecting your customers with more ways to protect the things
               they value
             </h2>
-            <p className="text-base sm:text-lg text-[#0A0842] leading-relaxed">
+            <p className="text-base text-lg text-[#0A0842] leading-relaxed">
               Discover the wide range of insurance and protection products
               available to meet your customers’ needs and help them get
               protected.

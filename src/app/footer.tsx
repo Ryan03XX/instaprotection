@@ -186,35 +186,35 @@ export default function Footer() {
           <div className="flex items-start space-x-6 text-md">
             <Link href="/">
               <Image
-                src="/assets/logo.jpg"
+                src="/instaLogo/insta_logo_white.svg"
                 alt="Company Logo"
                 width={300}
                 height={120}
-                className="h-15 w-auto"
+                className="h-15 w-60"
               />
             </Link>
           </div>
           <div className="flex items-center space-x-6 text-md mt-6 font-bold">
-            <Link
-              href="#"
+            <a
+              href="/privacyAndPolicy"
+              className="text-white hover:text-yellow-300 transition-colors duration-300 ease-in-out"
+            >
+              Privacy and Policy
+            </a>
+
+            <a
+              href="/termsAndConditions"
+              className="text-white hover:text-yellow-300 transition-colors duration-300 ease-in-out"
+            >
+              Terms & Conditons
+            </a>
+
+            <a
+              href="/disclaimer"
               className="text-white hover:text-yellow-300 transition-colors duration-300 ease-in-out"
             >
               Disclaimer
-            </Link>
-
-            <Link
-              href="#"
-              className="text-white hover:text-yellow-300 transition-colors duration-300 ease-in-out"
-            >
-              Privacy Notice - Global
-            </Link>
-
-            <Link
-              href="#"
-              className="text-white hover:text-yellow-300 transition-colors duration-300 ease-in-out"
-            >
-              Cookie Policy
-            </Link>
+            </a>
           </div>
           <div className="flex space-x-8 mt-16">
             <Link href="#">
@@ -224,6 +224,13 @@ export default function Footer() {
               <FaYoutube className="text-white text-2xl hover:text-yellow-300 transition-colors duration-300 ease-in-out" />
             </Link>
           </div>
+          <div className="flex flex-col justify-center items-center mt-12">
+          <div className="flex">
+            <h4 className="text-md text-gray-400 cursor-default">
+              © 2025 Instaprotection Pte. Ltd. All Rights Reserved
+            </h4>
+          </div>
+        </div>
         </div>
       </div>
       <div className="max-w-7xl mx-auto px-2 py-30 hidden md:block">
@@ -450,34 +457,34 @@ export default function Footer() {
           <div className="flex items-center space-x-6 text-md">
             <Link href="/">
               <Image
-                src="/assets/logo.jpg"
+                src="/instaLogo/insta_logo_white.svg"
                 alt="Company Logo"
                 width={300}
                 height={120}
-                className="h-15 w-auto"
+                className="h-15 w-70"
               />
             </Link>
 
-            <Link
-              href="#"
+            <a
+              href="/privacyAndPolicy"
+              className="text-white hover:text-yellow-300 transition-colors duration-300 ease-in-out"
+            >
+              Privacy Policy
+            </a>
+
+            <a
+              href="/termsAndConditions"
+              className="text-white hover:text-yellow-300 transition-colors duration-300 ease-in-out"
+            >
+              Terms & Conditons
+            </a>
+
+            <a
+              href="/disclaimer"
               className="text-white hover:text-yellow-300 transition-colors duration-300 ease-in-out"
             >
               Disclaimer
-            </Link>
-
-            <Link
-              href="#"
-              className="text-white hover:text-yellow-300 transition-colors duration-300 ease-in-out"
-            >
-              Privacy Notice - Global
-            </Link>
-
-            <Link
-              href="#"
-              className="text-white hover:text-yellow-300 transition-colors duration-300 ease-in-out"
-            >
-              Cookie Policy
-            </Link>
+            </a>
           </div>
 
           <div className="justify-between items-center flex space-x-4 mt-4 md:mt-0 gap-6">
@@ -487,6 +494,13 @@ export default function Footer() {
             <Link href="#">
               <FaYoutube className="text-white text-2xl hover:text-yellow-300 transition-colors duration-300 ease-in-out" />
             </Link>
+          </div>
+        </div>
+        <div className="flex flex-col justify-center items-center mt-12 pt-6">
+          <div className="flex space-x-6 text-md">
+            <h4 className="mb-3 text-md text-gray-400 cursor-default">
+              © 2025 Instaprotection Pte. Ltd. All Rights Reserved
+            </h4>
           </div>
         </div>
       </div>

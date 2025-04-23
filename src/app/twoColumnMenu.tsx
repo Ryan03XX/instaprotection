@@ -35,7 +35,7 @@ export default function TwoColumnMenu() {
   return (
     <div className="flex flex-col md:flex-row w-full h-auto bg-white">
   {/* Menu List */}
-  <div className="w-full md:w-1/3 bg-white p-6 space-y-6">
+  <div className="w-full md:w-1/3 bg-white space-y-6 mb-10">
     {menuItems.map((item, index) => (
       <div
         key={index}
@@ -68,7 +68,7 @@ export default function TwoColumnMenu() {
         animate={{ opacity: 1, x: 0 }}
         exit={{ opacity: 0, x: -30 }}
         transition={{ duration: 0.4 }}
-        className="p-6 md:p-8"
+        className="px-6"
       >
         <div className="relative w-full h-64 md:h-96 mb-4 md:mb-0">
           <Image
@@ -79,7 +79,7 @@ export default function TwoColumnMenu() {
           />
         </div>
 
-        <div className="bg-cyan-100 p-6 shadow-lg">
+        <div className="bg-cyan-100 p-6">
           <h2 className="text-2xl md:text-4xl font-bold text-black mb-4">
             {menuItems[activeIndex]?.subtitle}
           </h2>

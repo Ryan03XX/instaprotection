@@ -56,6 +56,7 @@ const Header = () => {
   const [atTop, setAtTop] = useState(true);
   const lastScrollY = useRef(0);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isLangOpen, setIsLangOpen] = useState(false);
 
   useEffect(() => {
     if (activeMenu === "Platform") {
@@ -182,6 +183,13 @@ const Header = () => {
       document.body.classList.remove("overflow-hidden");
     };
   }, [isMobileMenuOpen]);
+
+  useEffect(() => {
+    if (!isHovering && atTop && isLangOpen) {
+      setIsLangOpen(false);
+    }
+  }, [isHovering, atTop, isLangOpen]);
+
 
   const menuItems = [
     { label: "Platform" },
@@ -514,7 +522,7 @@ const Header = () => {
       }}
     >
       <header
-        className={`fixed top-0 left-0 w-full z-20 flex justify-between items-center px-12 py-8 transition-colors duration-400 ${
+        className={`fixed top-0 left-0 w-full z-20 transition-colors duration-400 ${
           showHeader
             ? isHovering || !atTop
               ? "bg-white text-black"
@@ -522,7 +530,7 @@ const Header = () => {
             : "hidden"
         }`}
       >
-        <div className="flex items-center space-x-8">
+        <div className="flex justify-between items-center px-4 md:px-0 py-8 max-w-7xl mx-auto">
           <div className="text-2xl font-bold text-indigo-700 cursor-pointer z-20">
             <Link
               onClick={() => (window.location.href = "/")}
@@ -533,10 +541,18 @@ const Header = () => {
                   : "text-white"
               }`}
             >
-              instaProtection
+              <img
+                src={
+                  isHovering || !atTop
+                    ? "/instaLogo/insta_logo_black.svg"
+                    : "/instaLogo/insta_logo_white.svg"
+                }
+                alt="instaProtection Logo"
+                className="w-auto h-8"
+              />
             </Link>
           </div>
-          <nav className="hidden md:flex space-x-8">
+          <nav className="hidden md:flex space-x-8 ml-[-120px]">
             {menuItems.map((item) => (
               <div
                 key={item.label}
@@ -578,46 +594,58 @@ const Header = () => {
               </div>
             ))}
           </nav>
-        </div>
+          <div className="flex items-center space-x-8 hidden md:flex relative">
+            <div className="relative">
+              <button
+                className="relative flex items-center gap-3 text-lg font-medium cursor-pointer group px-3 py-2"
+                onClick={() => setIsLangOpen(!isLangOpen)}
+              >
+                <Earth className="w-6 h-6" />
+                EN
+                
+                <span className="absolute -bottom-1 left-0 w-0 h-[2px] bg-black transition-all duration-300 group-hover:w-full"></span>
+              </button>
 
-        <div className="flex items-center space-x-8 hidden md:flex">
-          <button className="relative flex items-center gap-2 text-md cursor-pointer group">
-            <Earth className="w-4 h-6" />
-            EN
-            <span className="absolute -bottom-1 left-0 w-0 h-[2px] bg-black transition-all duration-300 group-hover:w-full"></span>
-          </button>
-
-          <button className="relative flex items-center gap-2 text-md cursor-pointer group">
-            <Headset className="w-4 h-6" />
-            Customer service
-            <span className="absolute -bottom-1 left-0 w-0 h-[2px] bg-black transition-all duration-300 group-hover:w-full"></span>
-          </button>
-
-          <button className="relative overflow-hidden border px-4 py-3 text-md rounded cursor-pointer border-purple-600 group">
-            <span className="relative z-10 text-purple-600 transition-opacity duration-300 group-hover:opacity-0">
-              Get started
-            </span>
-
-            <span
-              className="absolute left-0 top-0 w-full h-full flex items-center justify-center 
-                        text-white opacity-0 font-bold transition-opacity duration-300 group-hover:opacity-100 
-                        group-hover:font-bold z-10"
-            >
-              Get started
-            </span>
-
-            <span
-              className="absolute inset-0 bg-purple-600 transform scale-x-0 group-hover:scale-x-100 
-         origin-left transition-transform duration-300 ease-out"
-            ></span>
-          </button>
-        </div>
-
-        <div className="md:hidden">
-          <MobileMenu
-            isOpen={isMobileMenuOpen}
-            setIsOpen={setIsMobileMenuOpen}
-          />
+              {/* Dropdown */}
+              {isLangOpen && (
+                <ul className="absolute right-0 mt-3 w-36 bg-white shadow-xl border z-50 text-base">
+                  <li
+                    onClick={() => {
+                      // 切换到英文
+                      setIsLangOpen(false);
+                    }}
+                    className="px-5 py-3 hover:bg-gray-100 cursor-pointer"
+                  >
+                    English
+                  </li>
+                  <li
+                    onClick={() => {
+                      // 切换到中文
+                      setIsLangOpen(false);
+                    }}
+                    className="px-5 py-3 hover:bg-gray-100 cursor-pointer"
+                  >
+                    中文
+                  </li>
+                  <li
+                    onClick={() => {
+                      // 切换到马来文
+                      setIsLangOpen(false);
+                    }}
+                    className="px-5 py-3 hover:bg-gray-100 cursor-pointer"
+                  >
+                    Bahasa Melayu
+                  </li>
+                </ul>
+              )}
+            </div>
+          </div>
+          <div className="md:hidden">
+            <MobileMenu
+              isOpen={isMobileMenuOpen}
+              setIsOpen={setIsMobileMenuOpen}
+            />
+          </div>
         </div>
       </header>
 
@@ -627,7 +655,7 @@ const Header = () => {
           onMouseEnter={() => setIsHovering(true)}
           onMouseLeave={handleMouseLeave}
         >
-          <div className="max-w-7xl mx-auto px-6 pt-6 pb-10">
+          <div className="max-w-7xl mx-auto pt-6 pb-10">
             <div className="relative flex gap-6 mb-6">
               {platformTabs.map((tab) => (
                 <div
@@ -636,7 +664,7 @@ const Header = () => {
                     platformTabRefs.current[tab] = el;
                   }}
                   onClick={() => setPlatformActiveSubTab(tab)}
-                  className={`cursor-pointer pb-2 text-md transition-colors font-bold ${
+                  className={`cursor-pointer pb-2 text-lg transition-colors font-bold ${
                     platformActiveSubTab === tab
                       ? "text-black"
                       : "text-gray-400 hover:text-black"
@@ -657,7 +685,7 @@ const Header = () => {
 
             <div className="grid grid-cols-4 gap-8">
               <div className="col-span-1">
-                <p className="text-md text-gray-600 mb-2">
+                <p className="text-lg text-gray-600 mb-2">
                   {platformActiveSubTab === "Distribution Engine" &&
                     "Comprehensive B2B2C protection and insurance platform that scales your business and powers embedded product choice"}
                   {platformActiveSubTab === "Sales" &&
@@ -713,7 +741,7 @@ const Header = () => {
                       href={item.href}
                       onClick={() => (window.location.href = item.href)}
                     >
-                      <div className="flex flex-col justify-between h-30 hover:bg-cyan-100 p-4 rounded cursor-pointer hover:cyan-300">
+                      <div className="flex flex-col justify-between h-30 hover:bg-cyan-100 p-4 cursor-pointer hover:cyan-300">
                         <div className="flex space-x-3">
                           <item.icon className="text-indigo-700 w-5 h-5 mt-1 shrink-0 " />
                           <div>
@@ -730,14 +758,14 @@ const Header = () => {
                   ))}
                 </div>
               ) : platformActiveSubTab === "Sales" ? (
-                <div className="col-span-3 grid grid-cols-2 gap-6">
+                <div className="col-span-3 grid grid-cols-2 gap-2">
                   {platformTab2.map((item) => (
                     <Link
                       key={item.title}
                       href={item.href}
                       onClick={() => (window.location.href = item.href)}
                     >
-                      <div className="flex flex-col justify-between h-30 hover:bg-cyan-100 p-4 rounded cursor-pointer hover:cyan-300">
+                      <div className="flex flex-col h-20 hover:bg-cyan-100 p-4 cursor-pointer hover:cyan-300 items-center justify-center">
                         <div className="flex space-x-3">
                           <item.icon className="text-indigo-700 w-5 h-5 mt-1 shrink-0 " />
                           <div>
@@ -761,7 +789,7 @@ const Header = () => {
                       href={item.href}
                       onClick={() => (window.location.href = item.href)}
                     >
-                      <div className="flex flex-col justify-between h-30 hover:bg-cyan-100 p-4 rounded cursor-pointer hover:cyan-300">
+                      <div className="flex flex-col h-20 hover:bg-cyan-100 p-4 cursor-pointer hover:cyan-300 items-center justify-center">
                         <div className="flex space-x-3">
                           <item.icon className="text-indigo-700 w-5 h-5 mt-1 shrink-0 " />
                           <div>
@@ -785,7 +813,7 @@ const Header = () => {
                       href={item.href}
                       onClick={() => (window.location.href = item.href)}
                     >
-                      <div className="flex flex-col justify-between h-30 hover:bg-cyan-100 p-4 rounded cursor-pointer hover:cyan-300">
+                      <div className="flex flex-col justify-center items-center h-20 hover:bg-cyan-100 p-4 rounded cursor-pointer hover:cyan-300">
                         <div className="flex space-x-3">
                           <item.icon className="text-indigo-700 w-5 h-5 mt-1 shrink-0 " />
                           <div>
@@ -813,7 +841,7 @@ const Header = () => {
           onMouseEnter={() => setIsHovering(true)}
           onMouseLeave={handleMouseLeave}
         >
-          <div className="max-w-7xl mx-auto px-6 py-10 grid grid-cols-3 gap-8">
+          <div className="max-w-7xl mx-auto py-10 grid grid-cols-3 gap-8">
             <div className="col-span-1">
               <p className="text-lg font-medium text-indigo-800 mb-2">
                 At the heart of everything we do is the power of connection
@@ -827,7 +855,7 @@ const Header = () => {
                   href={item.href}
                   onClick={() => (window.location.href = item.href)}
                 >
-                  <div className="flex flex-col justify-between h-30 hover:bg-cyan-100 p-4 rounded cursor-pointer hover:cyan-300">
+                  <div className="flex flex-col justify-between h-25 hover:bg-cyan-100 p-4 rounded cursor-pointer hover:cyan-300">
                     <div className="flex space-x-3">
                       <item.icon className="text-indigo-700 w-5 h-5 mt-1 shrink-0 " />
                       <div>
@@ -853,7 +881,7 @@ const Header = () => {
           onMouseEnter={() => setIsHovering(true)}
           onMouseLeave={handleMouseLeave}
         >
-          <div className="max-w-7xl mx-auto px-6 pt-6 pb-10">
+          <div className="max-w-7xl mx-auto pt-6 pb-10">
             <div className="relative flex gap-6 mb-6">
               {useCasesTabs.map((tab) => (
                 <div
@@ -862,7 +890,7 @@ const Header = () => {
                     tabRefs.current[tab] = el;
                   }}
                   onClick={() => setActiveSubTab(tab)}
-                  className={`cursor-pointer pb-2 text-md font-bold transition-colors ${
+                  className={`cursor-pointer pb-2 text-lg font-bold transition-colors ${
                     activeSubTab === tab
                       ? "text-black"
                       : "text-gray-400 hover:text-black"
@@ -891,14 +919,14 @@ const Header = () => {
               </div>
 
               {activeSubTab === "By Industry" ? (
-                <div className="col-span-3 grid grid-cols-3 gap-6">
+                <div className="col-span-3 grid grid-cols-3 gap-2">
                   {useCasesTab1.map((item) => (
                     <Link
                       key={item.title}
                       href={item.href}
                       onClick={() => (window.location.href = item.href)}
                     >
-                      <div className="flex flex-col justify-between h-30 hover:bg-cyan-100 p-4 rounded cursor-pointer hover:cyan-300">
+                      <div className="flex flex-col justify-between h-15 hover:bg-cyan-100 p-4 rounded cursor-pointer hover:cyan-300">
                         <div className="flex space-x-3">
                           <item.icon className="text-indigo-700 w-5 h-5 mt-1 shrink-0 " />
                           <div>
@@ -947,7 +975,7 @@ const Header = () => {
           onMouseEnter={() => setIsHovering(true)}
           onMouseLeave={handleMouseLeave}
         >
-          <div className="max-w-7xl mx-auto px-6 py-10 grid grid-cols-4 gap-8">
+          <div className="max-w-7xl mx-auto py-10 grid grid-cols-4 gap-8">
             <div className="col-span-1">
               <p className="text-lg font-medium text-indigo-800 mb-2">
                 Tailored protection solutions
@@ -965,7 +993,7 @@ const Header = () => {
                   href={item.href}
                   onClick={() => (window.location.href = item.href)}
                 >
-                  <div className="flex flex-col justify-between h-30 hover:bg-cyan-100 p-4 rounded cursor-pointer hover:cyan-300">
+                  <div className="flex flex-col justify-between h-20 hover:bg-cyan-100 p-4 rounded cursor-pointer hover:cyan-300">
                     <div className="flex space-x-3">
                       <item.icon className="text-indigo-700 w-5 h-5 mt-1 shrink-0 " />
                       <div>
@@ -991,7 +1019,7 @@ const Header = () => {
           onMouseEnter={() => setIsHovering(true)}
           onMouseLeave={handleMouseLeave}
         >
-          <div className="max-w-7xl mx-auto px-6 pt-6 pb-10">
+          <div className="max-w-7xl mx-auto pt-6 pb-10">
             <div className="relative flex gap-6 mb-6">
               {resourceTabs.map((tab) => (
                 <div
@@ -1000,7 +1028,7 @@ const Header = () => {
                     resourceTabRefs.current[tab] = el;
                   }}
                   onClick={() => setResourceActiveSubTab(tab)}
-                  className={`cursor-pointer pb-2 text-md font-bold transition-colors ${
+                  className={`cursor-pointer pb-2 text-lg font-bold transition-colors ${
                     resourceActiveSubTab === tab
                       ? "text-black"
                       : "text-gray-400 hover:text-black"

@@ -43,7 +43,7 @@ export default function TestimonialSlider() {
               key={index} // important for animation to trigger
               src={testimonials[index].image}
               alt={testimonials[index].name}
-              className="rounded-lg w-full h-full object-cover shadow-md absolute"
+              className="rounded-lg w-full h-full object-cover absolute"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}

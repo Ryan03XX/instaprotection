@@ -35,7 +35,7 @@ export default function About() {
         className="absolute top-0 left-0 w-full h-screen bg-cover bg-center z-0"
         style={{ backgroundImage: "url('/assets/background1.jpg')" }}
       />
-      <main className="flex text-left px-5 md:px-20 w-full min-h-screen flex flex-col items-start justify-center px-4">
+      <main className="flex max-w-7xl mx-auto min-h-screen flex-col items-start justify-center px-6 md:px-0">
         <FadeInOnceFromHorizon2>
           <h3 className="text-xl md:text-2xl text-white z-10 font-bold z-30 mb-6">
             <span
@@ -122,7 +122,7 @@ export default function About() {
           </div>
           <div className="w-full aspect-video">
             <iframe
-              className="w-full h-full shadow-lg"
+              className="w-full h-full"
               src="https://www.youtube.com/embed/4sA-_z01eSo"
               title="YouTube video"
               frameBorder="0"

@@ -11,6 +11,7 @@ import { useState, useEffect, useRef } from "react";
 import { AnimatedCounter } from "./animatedCounter";
 import Image from "next/image";
 import Link from "next/link";
+import { AnimatedCounterLeft } from "./animatedCounterLeft";
 
 const data = {
   financial: {
@@ -107,8 +108,8 @@ const IndustrySection = () => {
   const activeIndex = menuKeys.indexOf(active);
 
   return (
-    <div className="w-full px-4 md:px-8 py-8 md:py-12 bg-white">
-      <div className="flex flex-wrap justify-center gap-4 md:gap-12 pb-6 relative">
+    <div className="w-full py-8 md:py-12 bg-white">
+      <div className="flex flex-wrap justify-left gap-4 md:gap-12 pb-6 relative">
         {Object.entries(data).map(([key, item], index) => {
           const IconComponent = item.icon;
           return (
@@ -165,9 +166,9 @@ const IndustrySection = () => {
         </div>
 
         {/* Stats */}
-        <div className="w-full md:w-[30%] flex flex-col justify-center gap-6 px-4 md:px-10">
+        <div className="w-full w-30% md:w-[30%] flex flex-col gap-6 px-4 md:px-10 justify-center">
           {current.stats.map((stat, index) => (
-            <AnimatedCounter
+            <AnimatedCounterLeft
               key={index}
               to={parseFloat(stat.value)}
               label={stat.label}

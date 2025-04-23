@@ -54,7 +54,7 @@ export default function Value() {
                     src={values[activeIndex].image}
                     alt="Value visual"
                     fill
-                    className="rounded-lg shadow-lg object-cover"
+                    className="rounded-lg object-cover"
                   />
                 </motion.div>
               </AnimatePresence>

@@ -63,7 +63,7 @@ export default function Home() {
         style={{ backgroundImage: "url('/assets/background1.jpg')" }}
       ></div>
 
-      <main className="flex text-left px-4 sm:px-2 lg:px-20 w-full min-h-screen flex-col items-start justify-center">
+      <main className="flex max-w-7xl mx-auto min-h-screen flex-col items-start justify-center px-6 md:px-0">
         <h3 className="text-xl sm:text-2xl md:text-2xl lg:text-2xl font-bold text-white mb-4 sm:mb-6">
           <span
             style={{
