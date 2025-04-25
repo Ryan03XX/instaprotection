@@ -27,7 +27,7 @@ export default function Home() {
             style={{
               display: "block",
               position: "relative",
-              overflow: "hidden",
+              paddingBottom: "0.2em",
             }}
           >
             Guarding your assets,{" "}
@@ -36,7 +36,7 @@ export default function Home() {
             style={{
               display: "block",
               position: "relative",
-              overflow: "hidden",
+              paddingBottom: "0.2em",
             }}
           >
             protecting your future

@@ -78,7 +78,7 @@ export default function NewsSection() {
                     Insights
                   </span>
                   <Image
-                    src="/assets/home.jpg"
+                    src="/assets/home.png"
                     className="rounded"
                     width={300}
                     height={120}

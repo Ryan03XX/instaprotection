@@ -28,7 +28,7 @@ const data = {
   insurer: {
     title: "Insurer",
     icon: ShieldCheck,
-    image: "/assets/home.jpg",
+    image: "/assets/home.png",
     text: "A national insurer partnered with bolttech to implement a unified insurance distribution platform, expanding its agent network, increasing quoted premiums, and improving service efficiency to meet growing market demands while enhancing customer satisfaction nationwide.",
     stats: [
       { label: "Agent growth in 5 year", value: "300%" },
