@@ -25,7 +25,7 @@ const menuItems = [
     subtitle: "Holistic protection for modern homes",
     description:
       "Offer comprehensive coverage for both physical and digital aspects of home life, with customizable plans that meet each household’s unique needs, driving customer retention and enabling seamless cross-selling opportunities.",
-    image: "/assets/home.jpg",
+    image: "/assets/home.png",
   },
 ];
 
