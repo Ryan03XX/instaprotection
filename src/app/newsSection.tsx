@@ -1,6 +1,5 @@
 import { ChevronRight } from "lucide-react";
 import Image from "next/image";
-import Link from "next/link";
 import FadeInOnceOnScroll from "./fadeIn2";
 
 export default function NewsSection() {
@@ -33,13 +32,13 @@ export default function NewsSection() {
                   River, the Group’s company dedicated to Private...
                 </p>
 
-                <Link
+                <a
                   href="#"
                   className="inline-flex items-center text-md text-[#0A0842] transition group mt-2"
                 >
                   Read more
                   <ChevronRight className="w-4 h-4 ml-1 transition-transform duration-200 group-hover:translate-x-1" />
-                </Link>
+                </a>
               </div>
             </FadeInOnceOnScroll>
             <FadeInOnceOnScroll>
@@ -53,18 +52,18 @@ export default function NewsSection() {
                 <p className="text-sm text-[#0A0842] mb-4">
                   SAN FRANCISCO, CA – June 18, 2024 – Stellantis Financial
                   Services US, the captive automotive finance company of
-                  Stellantis in North America, today announced Link new
+                  Stellantis in North America, today announced a new
                   partnership with bolt, the insurtech with the world’s largest
                   technology-enabled insurance exchange, to support customers...{" "}
                 </p>
 
-                <Link
+                <a
                   href="#"
                   className="inline-flex items-center text-md text-[#0A0842] transition group mt-2"
                 >
                   Read more
                   <ChevronRight className="w-4 h-4 ml-1 transition-transform duration-200 group-hover:translate-x-1" />
-                </Link>
+                </a>
               </div>
             </FadeInOnceOnScroll>
           </div>
@@ -89,13 +88,13 @@ export default function NewsSection() {
                   Wearables impact on underwriting
                 </h4>
 
-                <Link
+                <a
                   href="#"
                   className="inline-flex items-center text-md text-[#0A0842] transition group mt-2"
                 >
                   Read more
                   <ChevronRight className="w-4 h-4 ml-1 transition-transform duration-200 group-hover:translate-x-1" />
-                </Link>
+                </a>
               </div>
             </FadeInOnceOnScroll>
             <FadeInOnceOnScroll>
@@ -105,13 +104,13 @@ export default function NewsSection() {
                   Partnership with Singtel
                 </h4>
 
-                <Link
+                <a
                   href="#"
                   className="inline-flex items-center text-md text-[#0A0842] transition group mt-2"
                 >
                   Read more
                   <ChevronRight className="w-4 h-4 ml-1 transition-transform duration-200 group-hover:translate-x-1" />
-                </Link>
+                </a>
               </div>
             </FadeInOnceOnScroll>
             <FadeInOnceOnScroll>
@@ -133,13 +132,13 @@ export default function NewsSection() {
                   Interview with our Group CEO
                 </h4>
 
-                <Link
+                <a
                   href="#"
                   className="inline-flex items-center text-md text-[#0A0842] transition group mt-2"
                 >
                   Read more
                   <ChevronRight className="w-4 h-4 ml-1 transition-transform duration-200 group-hover:translate-x-1" />
-                </Link>
+                </a>
               </div>
             </FadeInOnceOnScroll>
           </div>

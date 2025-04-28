@@ -416,7 +416,7 @@ export default function About() {
           </div>
           <div>
             <Image
-              src="/assets/home.jpg"
+              src="/assets/home.png"
               alt="About Image"
               width={500}
               height={500}

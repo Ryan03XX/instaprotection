@@ -15,7 +15,7 @@ const features = [
       "Greater choice to close more transactions",
       "Easy access to hard markets",
     ],
-    image: "/assets/home.jpg",
+    image: "/assets/home.png",
   },
   {
     title: "Dynamic quoting questionnaire",

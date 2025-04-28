@@ -8,17 +8,16 @@ import {
   FaLinkedin,
   FaWhatsapp,
 } from "react-icons/fa";
-import Link from "next/link";
 import Image from "next/image";
 import { ChevronDown, ChevronUp } from "lucide-react";
 import { useState, useRef, useEffect } from "react";
 
 function FooterSection({
   title,
-  links,
+  as,
 }: {
   title: string;
-  links: { label: string; href: string }[];
+  as: { label: string; href: string }[];
 }) {
   const [open, setOpen] = useState(false);
   const contentRef = useRef<HTMLUListElement>(null);
@@ -53,11 +52,11 @@ function FooterSection({
           transitionProperty: "max-height, opacity, transform",
         }}
       >
-        {links.map((link, index) => (
+        {as.map((a, index) => (
           <li key={index}>
-            <Link href={link.href} className="text-gray-300 hover:underline">
-              {link.label}
-            </Link>
+            <a href={a.href} className="text-gray-300 hover:underline">
+              {a.label}
+            </a>
           </li>
         ))}
       </ul>
@@ -107,7 +106,7 @@ export default function Footer() {
           </h6>
           <FooterSection
             title="Distribution Engine"
-            links={[
+            as={[
               { label: "By product", href: "#" },
               { label: "API integration", href: "#" },
               { label: "Embedded insurance", href: "#" },
@@ -117,14 +116,14 @@ export default function Footer() {
           />
           <FooterSection
             title="Sales"
-            links={[
+            as={[
               { label: "By industry", href: "#" },
               { label: "By insurance player", href: "#" },
             ]}
           />
           <FooterSection
             title="Servicing"
-            links={[
+            as={[
               { label: "Blog", href: "#" },
               { label: "Help center", href: "#" },
               { label: "Developers", href: "#" },
@@ -133,7 +132,7 @@ export default function Footer() {
           />
           <FooterSection
             title="Customer Solutions"
-            links={[
+            as={[
               { label: "About", href: "#" },
               { label: "Careers", href: "#" },
               { label: "Partners", href: "#" },
@@ -148,7 +147,7 @@ export default function Footer() {
           </h6>
           <FooterSection
             title="By Product"
-            links={[
+            as={[
               { label: "By product", href: "#" },
               { label: "API integration", href: "#" },
               { label: "Embedded insurance", href: "#" },
@@ -163,7 +162,7 @@ export default function Footer() {
           </h6>
           <FooterSection
             title="By Industry"
-            links={[
+            as={[
               { label: "By product", href: "#" },
               { label: "API integration", href: "#" },
               { label: "Embedded insurance", href: "#" },
@@ -173,7 +172,7 @@ export default function Footer() {
           />
           <FooterSection
             title="By Insurance Player"
-            links={[
+            as={[
               { label: "By product", href: "#" },
               { label: "API integration", href: "#" },
               { label: "Embedded insurance", href: "#" },
@@ -188,7 +187,7 @@ export default function Footer() {
           </h6>
           <FooterSection
             title="Resource Hub"
-            links={[
+            as={[
               { label: "By product", href: "#" },
               { label: "API integration", href: "#" },
               { label: "Embedded insurance", href: "#" },
@@ -198,7 +197,7 @@ export default function Footer() {
           />
           <FooterSection
             title="help"
-            links={[
+            as={[
               { label: "By product", href: "#" },
               { label: "API integration", href: "#" },
               { label: "Embedded insurance", href: "#" },
@@ -213,7 +212,7 @@ export default function Footer() {
           </h6>
           <FooterSection
             title="About Us"
-            links={[
+            as={[
               { label: "By product", href: "#" },
               { label: "API integration", href: "#" },
               { label: "Embedded insurance", href: "#" },
@@ -222,10 +221,30 @@ export default function Footer() {
             ]}
           />
         </div>
-
+        <div className="flex flex-col mt-8">
+          <h1 className="text-white text-3xl font-semibold mb-4">
+            Download App
+          </h1>
+          <div className="flex space-x-6 mr-35">
+            <a
+              href="https://apps.apple.com/my/app/instaprotection/id1497665476"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaAppStore className="text-white text-2xl hover:text-yellow-300 transition-colors duration-300 ease-in-out" />
+            </a>
+            <a
+              href="https://play.google.com/store/apps/details?id=com.ioiolab.instaprotect_droid&hl=en&pli=1"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaGooglePlay className="text-white text-2xl hover:text-yellow-300 transition-colors duration-300 ease-in-out" />
+            </a>
+          </div>
+        </div>
         <div className="flex flex-col md:flex-row justify-between items-start mt-12 border-t pt-6">
           <div className="flex items-start space-x-6 text-md">
-            <Link href="/">
+            <a href="/">
               <Image
                 src="/instaLogo/insta_logo_white.svg"
                 alt="Company Logo"
@@ -233,7 +252,7 @@ export default function Footer() {
                 height={120}
                 className="h-15 w-60"
               />
-            </Link>
+            </a>
           </div>
           <div className="flex items-center space-x-6 text-md mt-6 font-bold">
             <a
@@ -275,7 +294,7 @@ export default function Footer() {
               <FaInstagram className="text-white text-2xl hover:text-yellow-300 transition-colors duration-300 ease-in-out" />
             </a>
             <a
-              href="https://www.linkedin.com/company/instaprotection-sg/?originalSubdomain=sg"
+              href="https://www.aedin.com/company/instaprotection-sg/?originalSubdomain=sg"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Visit our Facebook page"
@@ -307,87 +326,191 @@ export default function Footer() {
             <h6 className="mb-6 text-xl text-cyan-300 cursor-default">
               Platform
             </h6>
-            <h4 className="font-bold mb-3 text-md text-white cursor-pointer hover:text-yellow-300 transition-transform duration-300 ease-in-out transform hover:scale-105">
-              Distrubution Engine
-            </h4>
+            <a
+              href="/distributionEngine"
+              className="font-bold text-md text-white cursor-pointer hover:text-yellow-300 transition-transform duration-300 ease-in-out transform hover:scale-105"
+            >
+              <h4>Distrubution Engine</h4>
+            </a>
             <ul className="space-y-3">
               <li>
-                <Link href="#" className="underline-hover">
+                <a
+                  href="/distributionEngine/dataInsights"
+                  className="underline-hover mt-3"
+                >
+                  Data Insights
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/distributionEngine/insurerLibrary"
+                  className="underline-hover"
+                >
                   Insurer library
-                </Link>
+                </a>
               </li>
               <li>
-                <Link href="#" className="underline-hover">
+                <a
+                  href="/distributionEngine/dynamicQQ"
+                  className="underline-hover"
+                >
                   Dynamic quoting questionnaire
-                </Link>
+                </a>
               </li>
               <li>
-                <Link href="#" className="underline-hover">
+                <a
+                  href="/distributionEngine/dataMarketPlace"
+                  className="underline-hover"
+                >
                   Data marketplace
-                </Link>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/distributionEngine/designSystem"
+                  className="underline-hover"
+                >
+                  Design System
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/distributionEngine/productConfigurator"
+                  className="underline-hover mb-6"
+                >
+                  Product Configurator
+                </a>
               </li>
             </ul>
 
-            <h4 className="font-bold mb-3 mt-8 text-md text-white cursor-pointer hover:text-yellow-300 transition-transform duration-300 ease-in-out transform hover:scale-105">
-              Sales
-            </h4>
+            <a
+              href="/sales"
+              className="font-bold text-md text-white cursor-pointer hover:text-yellow-300 transition-transform duration-300 ease-in-out transform hover:scale-105"
+            >
+              <h4>Sales </h4>
+            </a>
             <ul className="space-y-3">
               <li>
-                <Link href="#" className="underline-hover">
-                  Device Protection
-                </Link>
+                <a href="/sales/enablement" className="underline-hover mt-3">
+                  Enablement
+                </a>
               </li>
               <li>
-                <Link href="#" className="underline-hover">
-                  Insurance
-                </Link>
+                <a href="/sales/fulfillment" className="underline-hover">
+                  Fulfillment
+                </a>
               </li>
               <li>
-                <Link href="#" className="underline-hover">
-                  Embedded insurance API
-                </Link>
+                <a href="/sales/partnerPortal" className="underline-hover">
+                  Parter Portal
+                </a>
+              </li>
+              <li>
+                <a href="/sales/consumerPortal" className="underline-hover">
+                  Consumer Portal
+                </a>
+              </li>
+              <li>
+                <a href="/sales/agencyPortal" className="underline-hover">
+                  Agency Portal
+                </a>
+              </li>
+              <li>
+                <a href="/sales/partnerPortal" className="underline-hover mb-6">
+                  Parter Portal
+                </a>
               </li>
             </ul>
 
-            <h4 className="font-bold mb-3 mt-8 text-md text-white cursor-pointer hover:text-yellow-300 transition-transform duration-300 ease-in-out transform hover:scale-105">
-              Customer Servicing
-            </h4>
+            <a
+              href="/servicing"
+              className="font-bold mb-3 text-md text-white cursor-pointer hover:text-yellow-300 transition-transform duration-300 ease-in-out transform hover:scale-105"
+            >
+              <h4>Customer Servicing </h4>
+            </a>
             <ul className="space-y-3">
               <li>
-                <Link href="#" className="underline-hover">
-                  Servicing and claims portal
-                </Link>
+                <a href="/servicing/sncPortal" className="underline-hover mt-3">
+                  Servicing and Claim Portal
+                </a>
               </li>
               <li>
-                <Link href="#" className="underline-hover">
-                  Policy admin
-                </Link>
+                <a
+                  href="/servicing/engagementPortal"
+                  className="underline-hover"
+                >
+                  Engagement Portal
+                </a>
               </li>
               <li>
-                <Link href="#" className="underline-hover">
+                <a
+                  href="/servicing/gcontactCenters"
+                  className="underline-hover"
+                >
                   Global contact centers
-                </Link>
+                </a>
+              </li>
+              <li>
+                <a href="/servicing/policyAdmin" className="underline-hover">
+                  Policy Admin
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/servicing/servicingEcosystem"
+                  className="underline-hover mb-6"
+                >
+                  Servicing Ecosystem
+                </a>
               </li>
             </ul>
 
-            <h4 className="font-bold mb-3 mt-8 text-md text-white cursor-pointer hover:text-yellow-300 transition-transform duration-300 ease-in-out transform hover:scale-105">
-              Solutions
-            </h4>
+            <a
+              href="/customSolutions"
+              className="font-bold text-md text-white cursor-pointer hover:text-yellow-300 transition-transform duration-300 ease-in-out transform hover:scale-105"
+            >
+              <h4>Custom Solutions </h4>
+            </a>
             <ul className="space-y-3">
               <li>
-                <Link href="#" className="underline-hover">
-                  Device Protection
-                </Link>
+                <a
+                  href="/customSolutions/productManufacturing"
+                  className="underline-hover mt-3"
+                >
+                  Product Manufacturing
+                </a>
               </li>
               <li>
-                <Link href="#" className="underline-hover">
-                  insurer advisory services
-                </Link>
+                <a
+                  href="/customSolutions/insuranceEntitySetup"
+                  className="underline-hover"
+                >
+                  Insurance Entity Setup
+                </a>
               </li>
               <li>
-                <Link href="#" className="underline-hover">
-                  Insurance entity setup
-                </Link>
+                <a
+                  href="/customSolutions/professionalServices"
+                  className="underline-hover"
+                >
+                  Professional Services
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/customSolutions/insurerAdvisoryServices"
+                  className="underline-hover"
+                >
+                  Insurance Advisory Services
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/customSolutions/integrations"
+                  className="underline-hover"
+                >
+                  Integrations
+                </a>
               </li>
             </ul>
           </div>
@@ -396,24 +519,49 @@ export default function Footer() {
             <h6 className="mb-6 text-lg text-cyan-300 cursor-default">
               Programs
             </h6>
-            <h4 className="font-bold mb-3 text-md text-white cursor-pointer hover:text-yellow-300 transition-transform duration-300 ease-in-out transform hover:scale-105">
+            <h4 className="font-bold mb-3 text-md text-white cursor-default">
               By Product
             </h4>
             <ul className="space-y-3">
               <li>
-                <Link href="#" className="underline-hover">
+                <a href="/mobile" className="underline-hover">
                   Mobile devices
-                </Link>
+                </a>
               </li>
               <li>
-                <Link href="#" className="underline-hover">
-                  Consumer electronics
-                </Link>
+                <a href="/healTech" className="underline-hover">
+                  Health Tech
+                </a>
               </li>
               <li>
-                <Link href="#" className="underline-hover">
+                <a href="/electronics" className="underline-hover">
+                  Consumer Electrinics
+                </a>
+              </li>
+              <li>
+                <a href="/mobility" className="underline-hover">
+                  Mobility
+                </a>
+              </li>
+              <li>
+                <a href="/home" className="underline-hover">
+                  Home
+                </a>
+              </li>
+              <li>
+                <a href="/travel" className="underline-hover">
+                  Travel
+                </a>
+              </li>
+              <li>
+                <a href="/cyber" className="underline-hover">
+                  Cyber
+                </a>
+              </li>
+              <li>
+                <a href="/customized" className="underline-hover">
                   Customized
-                </Link>
+                </a>
               </li>
             </ul>
           </div>
@@ -423,35 +571,65 @@ export default function Footer() {
               Use cases
             </h6>
 
-            <h4 className="font-bold mb-3 text-md text-white cursor-pointer hover:text-yellow-300 transition-transform duration-300 ease-in-out transform hover:scale-105">
+            <h4 className="font-bold mb-3 text-md text-white cursor-default">
               By Industry
             </h4>
             <ul className="space-y-3">
               <li>
-                <Link href="#" className="underline-hover">
+                <a href="/financialServices" className="underline-hover">
                   Financial services
-                </Link>
+                </a>
               </li>
               <li>
-                <Link href="#" className="underline-hover">
-                  Financial services
-                </Link>
+                <a href="/retailers" className="underline-hover">
+                  Retailers
+                </a>
               </li>
               <li>
-                <Link href="#" className="underline-hover">
+                <a href="/realEstate" className="underline-hover">
+                  Real Estate
+                </a>
+              </li>
+              <li>
+                <a href="/telco" className="underline-hover">
+                  Telco
+                </a>
+              </li>
+              <li>
+                <a href="/deviceOEM" className="underline-hover">
+                  Device OEM
+                </a>
+              </li>
+              <li>
+                <a href="/everyoneElse" className="underline-hover">
+                  Everyone Else
+                </a>
+              </li>
+              <li>
+                <a href="/experiences" className="underline-hover">
+                  Experiences
+                </a>
+              </li>
+              <li>
+                <a href="/mobilityOEMs" className="underline-hover mb-6">
                   Mobility OEMs
-                </Link>
+                </a>
               </li>
             </ul>
 
-            <h4 className="font-bold mb-3 mt-6 text-md text-white cursor-pointer hover:text-yellow-300 transition-transform duration-300 ease-in-out transform hover:scale-105">
+            <h4 className="font-bold mb-3 text-md text-white cursor-default">
               By insurance player
             </h4>
             <ul className="space-y-3">
               <li>
-                <Link href="#" className="underline-hover">
+                <a href="/insurers" className="underline-hover">
                   Insurers
-                </Link>
+                </a>
+              </li>
+              <li>
+                <a href="/insuranceAgencies" className="underline-hover">
+                  Insurers Agencies
+                </a>
               </li>
             </ul>
           </div>
@@ -461,35 +639,27 @@ export default function Footer() {
               Resources
             </h6>
 
-            <h4 className="font-bold mb-3 text-md text-white cursor-pointer hover:text-yellow-300 transition-transform duration-300 ease-in-out transform hover:scale-105">
-              Resource Hub
-            </h4>
+            <a
+              href="/resources"
+              className="font-bold mb-3 text-md text-white cursor-pointer hover:text-yellow-300 transition-transform duration-300 ease-in-out transform hover:scale-105"
+            >
+              <h4>Resources Hub</h4>
+            </a>
             <ul className="space-y-3">
               <li>
-                <Link href="#" className="underline-hover">
+                <a href="/caseStudy" className="underline-hover mt-3">
                   Case studies
-                </Link>
+                </a>
               </li>
               <li>
-                <Link href="#" className="underline-hover">
+                <a href="/resoucesNews" className="underline-hover">
                   News
-                </Link>
+                </a>
               </li>
               <li>
-                <Link href="#" className="underline-hover">
+                <a href="/insights" className="underline-hover">
                   Insights
-                </Link>
-              </li>
-            </ul>
-
-            <h4 className="font-bold mb-3 mt-6 text-md text-white cursor-pointer hover:text-yellow-300 transition-transform duration-300 ease-in-out transform hover:scale-105">
-              Help
-            </h4>
-            <ul className="space-y-3">
-              <li>
-                <Link href="#" className="underline-hover">
-                  Customer Service
-                </Link>
+                </a>
               </li>
             </ul>
           </div>
@@ -498,44 +668,67 @@ export default function Footer() {
               Company
             </h6>
 
-            <h4 className="font-bold mb-3 text-md text-white cursor-pointer hover:text-yellow-300 transition-transform duration-300 ease-in-out transform hover:scale-105">
+            <h4 className="font-bold mb-3 text-md text-white cursor-default">
               About Us
             </h4>
             <ul className="space-y-3">
               <li>
-                <Link href="#" className="underline-hover">
+                <a href="/about" className="underline-hover">
                   Who we are
-                </Link>
+                </a>
               </li>
               <li>
-                <Link href="#" className="underline-hover">
+                <a href="/leadership" className="underline-hover">
                   Our leadership
-                </Link>
+                </a>
               </li>
               <li>
-                <Link href="#" className="underline-hover">
+                <a href="/careers" className="underline-hover">
                   Careers
-                </Link>
+                </a>
+              </li>
+              <li>
+                <a href="/milestones" className="underline-hover">
+                  Milestones
+                </a>
+              </li>
+              <li>
+                <a href="/news" className="underline-hover">
+                  News
+                </a>
+              </li>
+              <li>
+                <a href="/faqs" className="underline-hover">
+                  FAQs
+                </a>
               </li>
             </ul>
           </div>
         </div>
         <div className="flex flex-col items-end -mt-40 mb-50 mr-50">
-          <h1 className="text-white text-3xl font-semibold mb-4">
+          <h1 className="text-white text-3xl font-semibold mb-4 cursor-default">
             Download App
           </h1>
           <div className="flex space-x-4 mr-35">
-            <a href="#" target="_blank" rel="noopener noreferrer">
-              <FaAppStore className="text-white text-2xl hover:text-yellow-300 transition-colors duration-300 ease-in-out"/>
+            <a
+              href="https://apps.apple.com/my/app/instaprotection/id1497665476"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaAppStore className="text-white text-2xl hover:text-yellow-300 transition-colors duration-300 ease-in-out" />
             </a>
-            <a href="#" target="_blank" rel="noopener noreferrer">
-              <FaGooglePlay className="text-white text-2xl hover:text-yellow-300 transition-colors duration-300 ease-in-out"/>
+            <a
+              href="https://play.google.com/store/apps/details?id=com.ioiolab.instaprotect_droid&hl=en&pli=1"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaGooglePlay className="text-white text-2xl hover:text-yellow-300 transition-colors duration-300 ease-in-out" />
             </a>
           </div>
         </div>
         <div className="flex flex-col md:flex-row justify-between items-center mt-12 border-t pt-6">
           <div className="flex items-center space-x-6 text-md">
-            <Link href="/">
+            <a href="/">
               <Image
                 src="/instaLogo/insta_logo_white.svg"
                 alt="Company Logo"
@@ -543,7 +736,7 @@ export default function Footer() {
                 height={120}
                 className="h-15 w-70"
               />
-            </Link>
+            </a>
 
             <a
               href="/privacyAndPolicy"
@@ -585,7 +778,7 @@ export default function Footer() {
               <FaInstagram className="text-white text-2xl hover:text-yellow-300 transition-colors duration-300 ease-in-out" />
             </a>
             <a
-              href="https://www.linkedin.com/company/instaprotection-sg/?originalSubdomain=sg"
+              href="https://www.aedin.com/company/instaprotection-sg/?originalSubdomain=sg"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Visit our Facebook page"

@@ -2,7 +2,6 @@
 
 import { ChevronRight } from "lucide-react";
 import Image from "next/image";
-import Link from "next/link"; // ✅ 加入 Link
 import { useState } from "react";
 
 type NewsItem = {
@@ -10,7 +9,7 @@ type NewsItem = {
   category: string;
   title: string;
   img: string;
-  link: string;
+  a: string;
 };
 
 const newsData: Record<string, NewsItem[]> = {
@@ -19,15 +18,15 @@ const newsData: Record<string, NewsItem[]> = {
       date: "1 Jan 2024",
       category: "Case Studies",
       title: "Revolutionizing Fintech Solutions",
-      img: "/assets/home.jpg",
-      link: "#",
+      img: "/assets/home.png",
+      a: "#",
     },
     {
       date: "15 Feb 2024",
       category: "Case Studies",
       title: "AI Implementation in Healthcare",
       img: "/assets/healtech.jpg",
-      link: "#",
+      a: "#",
     },
   ],
   News: [
@@ -36,14 +35,14 @@ const newsData: Record<string, NewsItem[]> = {
       category: "News",
       title: "Interview with our Group CEO",
       img: "/assets/global.jpg",
-      link: "#",
+      a: "#",
     },
     {
       date: "20 August 2024",
       category: "News",
       title: "New Strategic Partnership Announced",
       img: "/assets/mobile.jpg",
-      link: "#",
+      a: "#",
     },
   ],
   Insights: [
@@ -52,19 +51,19 @@ const newsData: Record<string, NewsItem[]> = {
       category: "Insights",
       title: "Top 5 Tech Trends in 2024",
       img: "/assets/mobile.jpg",
-      link: "#",
+      a: "#",
     },
     {
       date: "30 April 2024",
       category: "Insights",
       title: "Building Sustainable Growth",
       img: "/assets/healtech.jpg",
-      link: "#",
+      a: "#",
     },
   ],
 };
 
-const tabLinks: Record<string, string> = {
+const tabas: Record<string, string> = {
   "Case Studies": "/caseStudy",
   News: "/resourcesNews",
   Insights: "/insights",
@@ -118,7 +117,7 @@ export default function ResourcesSection() {
                 </h4>
 
                 <a
-                  href={item.link}
+                  href={item.a}
                   className="inline-flex items-center text-md text-[#0A0842] transition group mt-2"
                 >
                   Read more
@@ -129,7 +128,7 @@ export default function ResourcesSection() {
           </div>
 
           <div className="flex justify-center mt-10">
-            <Link href={tabLinks[activeTab]}>
+            <a href={tabas[activeTab]}>
               <button className="relative overflow-hidden border px-4 py-3 text-md cursor-pointer border-cyan-500 group bg-cyan-500">
                 <span className="relative font-bold z-10 text-[#0A0842] transition-opacity duration-300 group-hover:opacity-0">
                   View all {activeTab.toLowerCase()}
@@ -148,7 +147,7 @@ export default function ResourcesSection() {
                   origin-left transition-transform duration-600 ease-out group-hover:bg-cyan-600"
                 ></span>
               </button>
-            </Link>
+            </a>
           </div>
         </>
       ) : (

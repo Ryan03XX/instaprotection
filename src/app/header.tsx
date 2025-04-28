@@ -24,7 +24,6 @@ import {
   X,
   Menu,
 } from "lucide-react";
-import Link from "next/link";
 import MobileMenu from "./phoneMenu";
 
 const Header = () => {
@@ -104,37 +103,34 @@ const Header = () => {
   }, [activeMenu]);
 
   useEffect(() => {
+    setShowHeader(true);
+
     const handleScroll = () => {
-      if (window.scrollY === 0) {
+     
+      if (window.scrollY === 0 && lastScrollY.current !== 0) {
         setAtTop(true);
         setShowHeader(true);
       } else {
         setAtTop(false);
       }
-  
-      if (window.scrollY > lastScrollY.current) {
+
+      if (window.scrollY > lastScrollY.current + 50) {
+        
         setShowHeader(false);
-      } else {
+      } else if (window.scrollY < lastScrollY.current - 50) {
         setShowHeader(true);
       }
-  
+
       lastScrollY.current = window.scrollY;
     };
-  
-    if (window.scrollY === 0) {
-      setAtTop(true);
-      setShowHeader(true);
-    } else {
-      setAtTop(false);
-      setShowHeader(false);
-    }
-  
+
     window.addEventListener("scroll", handleScroll);
+
+  
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
-  
 
   useEffect(() => {
     const activeTab = tabRefs.current[activeSubTab];
@@ -199,7 +195,6 @@ const Header = () => {
       setIsLangOpen(false);
     }
   }, [isHovering, atTop, isLangOpen]);
-
 
   const menuItems = [
     { label: "Platform" },
@@ -308,7 +303,7 @@ const Header = () => {
     },
     {
       icon: Users,
-      title: "IPolicy Admin",
+      title: "Policy Admin",
       desc: "Expand carrier and product access, streamline operations, and drive growth with more diverse insurance solutions.",
       href: "/servicing/policyAdmin",
     },
@@ -542,7 +537,7 @@ const Header = () => {
       >
         <div className="flex justify-between items-center px-4 md:px-0 py-8 max-w-7xl mx-auto">
           <div className="text-2xl font-bold text-[#011826] cursor-pointer z-20">
-            <Link
+            <a
               onClick={() => (window.location.href = "/")}
               href="/"
               className={`${
@@ -560,7 +555,7 @@ const Header = () => {
                 alt="instaProtection Logo"
                 className="w-auto h-8"
               />
-            </Link>
+            </a>
           </div>
           <nav className="hidden md:flex space-x-8 ml-[-120px]">
             {menuItems.map((item) => (
@@ -709,7 +704,7 @@ const Header = () => {
                   platformActiveSubTab === "Sales" ||
                   platformActiveSubTab === "Servicing" ||
                   platformActiveSubTab === "Custom Solutions") && (
-                  //   <Link
+                  //   <a
                   //   href={
                   //     platformActiveSubTab === "Distribution Engine"
                   //       ? "/distributionEngine"
@@ -723,7 +718,7 @@ const Header = () => {
                   // >
                   //   Learn more
                   //   <ChevronRight className="w-4 h-4 ml-1 transition-transform duration-200 group-hover:translate-x-1" />
-                  // </Link>
+                  // </a>
                   <a
                     href={
                       platformActiveSubTab === "Distribution Engine"
@@ -745,7 +740,7 @@ const Header = () => {
               {platformActiveSubTab === "Distribution Engine" ? (
                 <div className="col-span-3 grid grid-cols-3 gap-6">
                   {platformTab1.map((item) => (
-                    <Link
+                    <a
                       key={item.title}
                       href={item.href}
                       onClick={() => (window.location.href = item.href)}
@@ -763,13 +758,13 @@ const Header = () => {
                           </div>
                         </div>
                       </div>
-                    </Link>
+                    </a>
                   ))}
                 </div>
               ) : platformActiveSubTab === "Sales" ? (
                 <div className="col-span-3 grid grid-cols-2 gap-2">
                   {platformTab2.map((item) => (
-                    <Link
+                    <a
                       key={item.title}
                       href={item.href}
                       onClick={() => (window.location.href = item.href)}
@@ -787,13 +782,13 @@ const Header = () => {
                           </div>
                         </div>
                       </div>
-                    </Link>
+                    </a>
                   ))}
                 </div>
               ) : platformActiveSubTab === "Servicing" ? (
                 <div className="col-span-3 grid grid-cols-2 gap-6">
                   {platformTab3.map((item) => (
-                    <Link
+                    <a
                       key={item.title}
                       href={item.href}
                       onClick={() => (window.location.href = item.href)}
@@ -811,13 +806,13 @@ const Header = () => {
                           </div>
                         </div>
                       </div>
-                    </Link>
+                    </a>
                   ))}
                 </div>
               ) : platformActiveSubTab === "Custom Solutions" ? (
                 <div className="col-span-3 grid grid-cols-2 gap-6">
                   {platformTab4.map((item) => (
-                    <Link
+                    <a
                       key={item.title}
                       href={item.href}
                       onClick={() => (window.location.href = item.href)}
@@ -835,7 +830,7 @@ const Header = () => {
                           </div>
                         </div>
                       </div>
-                    </Link>
+                    </a>
                   ))}
                 </div>
               ) : null}
@@ -859,7 +854,7 @@ const Header = () => {
 
             <div className="col-span-2 grid grid-cols-2 gap-6">
               {company.map((item) => (
-                <Link
+                <a
                   key={item.title}
                   href={item.href}
                   onClick={() => (window.location.href = item.href)}
@@ -877,7 +872,7 @@ const Header = () => {
                       </div>
                     </div>
                   </div>
-                </Link>
+                </a>
               ))}
             </div>
           </div>
@@ -930,7 +925,7 @@ const Header = () => {
               {activeSubTab === "By Industry" ? (
                 <div className="col-span-3 grid grid-cols-3 gap-2">
                   {useCasesTab1.map((item) => (
-                    <Link
+                    <a
                       key={item.title}
                       href={item.href}
                       onClick={() => (window.location.href = item.href)}
@@ -945,13 +940,13 @@ const Header = () => {
                           </div>
                         </div>
                       </div>
-                    </Link>
+                    </a>
                   ))}
                 </div>
               ) : activeSubTab === "By Insurance Player" ? (
                 <div className="col-span-3 grid grid-cols-3 gap-6">
                   {useCasesTab2.map((item) => (
-                    <Link
+                    <a
                       key={item.title}
                       href={item.href}
                       onClick={() => (window.location.href = item.href)}
@@ -969,7 +964,7 @@ const Header = () => {
                           </div>
                         </div>
                       </div>
-                    </Link>
+                    </a>
                   ))}
                 </div>
               ) : null}
@@ -997,7 +992,7 @@ const Header = () => {
 
             <div className="col-span-3 grid grid-cols-3 gap-6">
               {programs.map((item) => (
-                <Link
+                <a
                   key={item.title}
                   href={item.href}
                   onClick={() => (window.location.href = item.href)}
@@ -1015,7 +1010,7 @@ const Header = () => {
                       </div>
                     </div>
                   </div>
-                </Link>
+                </a>
               ))}
             </div>
           </div>
@@ -1078,7 +1073,7 @@ const Header = () => {
               {resourceActiveSubTab === "Resource Hub" ? (
                 <div className="col-span-3 grid grid-cols-3 gap-6">
                   {resources.map((item) => (
-                    <Link
+                    <a
                       key={item.title}
                       href={item.href}
                       onClick={() => (window.location.href = item.href)}
@@ -1096,7 +1091,7 @@ const Header = () => {
                           </div>
                         </div>
                       </div>
-                    </Link>
+                    </a>
                   ))}
                 </div>
               ) : null}

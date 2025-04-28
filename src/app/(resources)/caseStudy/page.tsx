@@ -6,7 +6,7 @@ import React, { useState } from "react";
 type NewsItem = {
   date: string;
   title: string;
-  link: string;
+  a: string;
 };
 
 const newsList: NewsItem[] = [
@@ -14,51 +14,51 @@ const newsList: NewsItem[] = [
     date: "1 April 2025",
     title:
       "bolt Prevention Technology launches to help home insurers reduce water damage losses",
-    link: "#",
+    a: "#",
   },
   {
     date: "17 March 2025",
     title: "bolttech appoints Ridhi Chaudhary to Board of Directors",
-    link: "#",
+    a: "#",
   },
   {
     date: "18 March 2025",
     title: "bolt partners with C Spire to deliver C Spire Tech Protection",
-    link: "#",
+    a: "#",
   },
   {
     date: "5 March 2025",
     title:
       "bolt Unveils Dynamic Quoting Questionnaire 2.1, Making Insurance Quotes Faster Than Ever",
-    link: "#",
+    a: "#",
   },
   {
     date: "24 February 2025",
     title: "bolttech to participate in the inaugural Aurora Marathon 2025",
-    link: "#",
+    a: "#",
   },
   {
     date: "20 December 2024",
     title:
       "Global insurtech bolttech announces Series C funding led by Dragon Fund to drive continued expansion",
-    link: "#",
+    a: "#",
   },
   {
     date: "4 December 2024",
     title:
       "Thailand Post partners with bolttech to launch online motor insurance",
-    link: "#",
+    a: "#",
   },
   {
     date: "20 November 2024",
     title: "bolttech and HSBC close up to USD50 million venture debt facility",
-    link: "#",
+    a: "#",
   },
   {
     date: "22 October 2024",
     title:
       "Tune Protect and bolttech Insurance Partner to Launch AirAsia Travel Insurance in Hong Kong",
-    link: "#",
+    a: "#",
   },
 ];
 
@@ -119,7 +119,7 @@ export default function About() {
                   </h3>
                 </div>
                 <a
-                  href={news.link}
+                  href={news.a}
                   className="text-sm text-[#0A0842] font-medium mt-4"
                 >
                   Read more →

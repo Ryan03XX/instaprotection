@@ -17,7 +17,7 @@ const values = [
     image: "/values/value2.jpg",
   },
   {
-    title: "Link together",
+    title: "a together",
     description:
       "To achieve our vision, we have to bring together our capabilities. So we communicate in a way that’s transparent and we see every task as part of the whole.",
     image: "/values/value3.jpg",

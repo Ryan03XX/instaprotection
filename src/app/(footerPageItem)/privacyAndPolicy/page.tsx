@@ -231,7 +231,7 @@ export default function About() {
           </span>
         </h1>
         <h1 className="text-md md:text-lg text-[#0A0842] text-left items-center max-w-7xl mx-auto mt-8">
-          The Services may include gateways, links, or other functionality that
+          The Services may include gateways, as, or other functionality that
           allow you to access third party services or websites (“Third Party
           Services”) and third party content and materials (“Third Party
           Materials”). We do not supply and are not responsible for any Third
@@ -240,8 +240,8 @@ export default function About() {
           terms of service, and terms of use.
         </h1>
         <h1 className="text-md md:text-lg text-[#0A0842] text-left items-center max-w-7xl mx-auto mt-8">
-          We may, now or in the future, allow you to link your account with Us
-          to one or more of your Third Party Services accounts (each, a “Linked
+          We may, now or in the future, allow you to a your account with Us
+          to one or more of your Third Party Services accounts (each, a “aed
           Account”). Igloo is not responsible for any actions that providers of
           such Third Party Services and Third Party Materials may take or any
           information they may collect.

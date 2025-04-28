@@ -295,7 +295,7 @@ export default function About() {
           servers or network infrastructure; bypass any robot exclusion headers
           or other measures we take to restrict access to the Platform or use
           any software, technology, or device to scrape, spider, or crawl the
-          Platform or harvest or manipulate or extract data; or publish or link
+          Platform or harvest or manipulate or extract data; or publish or a
           to malicious content intended to damage or disrupt another user’s
           browser or computer.
         </h1>
@@ -311,7 +311,7 @@ export default function About() {
           </span>
         </h1>
         <h1 className="text-md md:text-lg text-[#0A0842] text-left items-center max-w-7xl mx-auto mt-8">
-          The Platform may contain (or you may be sent via the Platform) links
+          The Platform may contain (or you may be sent via the Platform) as
           to other websites ("Third-Party Websites") as well as articles,
           photographs, text, graphics, pictures, designs, music, sound, video,
           information, applications, software, and other content or items
@@ -323,7 +323,7 @@ export default function About() {
           posted on, available through, or installed from the Platform,
           including the content, accuracy, offensiveness, opinions, reliability,
           privacy practices, or other policies of or contained in the
-          Third-Party Websites or the Third-Party Content. Inclusion of, linking
+          Third-Party Websites or the Third-Party Content. Inclusion of, aing
           to, or permitting the use or installation of any Third-Party Websites
           or any Third-Party Content on the Platform does not imply approval or
           endorsement thereof by us. If you decide to leave the Platform and
@@ -492,7 +492,7 @@ export default function About() {
           MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND
           NON-INFRINGEMENT. WE MAKE NO WARRANTIES OR REPRESENTATIONS ABOUT THE
           ACCURACY OR COMPLETENESS OF THE PLATFORM’S CONTENT OR THE CONTENT OF
-          ANY WEBSITES LINKED TO THE PLATFORM AND WE WILL ASSUME NO LIABILITY OR
+          ANY WEBSITES aED TO THE PLATFORM AND WE WILL ASSUME NO LIABILITY OR
           RESPONSIBILITY FOR ANY (1) ERRORS, MISTAKES, OR INACCURACIES OF
           CONTENT AND MATERIALS, (2) PERSONAL INJURY OR PROPERTY DAMAGE, OF ANY
           NATURE WHATSOEVER, RESULTING FROM YOUR ACCESS TO AND USE OF THE
@@ -506,7 +506,7 @@ export default function About() {
           OF ANY CONTENT POSTED, TRANSMITTED, OR OTHERWISE MADE AVAILABLE VIA
           THE PLATFORM. WE DO NOT WARRANT, ENDORSE, GUARANTEE, OR ASSUME
           RESPONSIBILITY FOR ANY PRODUCT OR SERVICE ADVERTISED OR OFFERED BY A
-          THIRD PARTY THROUGH THE PLATFORM, ANY HYPERLINKED WEBSITE, OR ANY
+          THIRD PARTY THROUGH THE PLATFORM, ANY HYPERaED WEBSITE, OR ANY
           WEBSITE OR MOBILE APPLICATION FEATURED IN ANY BANNER OR OTHER
           ADVERTISING, AND WE WILL NOT BE A PARTY TO OR IN ANY WAY BE
           RESPONSIBLE FOR MONITORING ANY TRANSACTION BETWEEN YOU AND ANY

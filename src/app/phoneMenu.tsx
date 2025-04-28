@@ -3,7 +3,6 @@ import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { ChevronDown, ChevronUp } from "lucide-react";
-import Link from "next/link";
 
 const menuPhoneItems = [
   {
@@ -98,7 +97,7 @@ export default function MobileMenu({
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            className="fixed top-0 left-0 w-full h-screen bg-white z-40 flex flex-col items-center px-6 pt-24 space-y-6 overflow-y-auto"
+            className="fixed top-0 left-0 w-full min-h-screen bg-white z-40 flex flex-col items-center px-6 pt-24 space-y-6 overflow-y-auto"
             initial={{ x: "-100%" }}
             animate={{ x: 0 }}
             exit={{ x: "-100%" }}
@@ -164,13 +163,13 @@ export default function MobileMenu({
                             className="flex items-center gap-3 text-sm text-gray-700"
                           >
                             {/* {sub.icon && <span>{sub.icon}</span>} */}
-                            <Link
+                            <a
                               href={sub.href}
                               className="hover:text-indigo-700 block py-1"
                               onClick={() => toggleMobileMenu()}
                             >
                               {sub.label}
-                            </Link>
+                            </a>
                           </li>
                         ))}
                       </motion.ul>

@@ -10,7 +10,6 @@ import {
 import { useState, useEffect, useRef } from "react";
 import { AnimatedCounter } from "./animatedCounter";
 import Image from "next/image";
-import Link from "next/link";
 import { AnimatedCounterLeft } from "./animatedCounterLeft";
 
 const data = {
@@ -155,13 +154,13 @@ const IndustrySection = () => {
           />
           <div className="absolute bottom-6 left-6 right-6 md:left-6 md:right-auto bg-black/60 text-white p-4 md:p-6 rounded-md">
             <p className="text-sm md:text-md leading-relaxed">{current.text}</p>
-            <Link
+            <a
               href="#"
               className="inline-flex items-center text-white mt-3 group"
             >
               <span className="font-semibold">See the case study</span>
               <ChevronRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
-            </Link>
+            </a>
           </div>
         </div>
 

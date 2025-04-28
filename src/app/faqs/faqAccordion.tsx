@@ -176,7 +176,7 @@ export default function FaqAccordion() {
 
   const formatAnswerText = (text: string): React.ReactNode => {
     const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-    const linkRegex = /^(click here|here|watch this video)$/i;
+    const aRegex = /^(click here|here|watch this video)$/i;
   
     const parts = text.split(/(\bclick here\b|\bhere\b|\bwatch this video\b|[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,})/gi);
   
@@ -187,7 +187,7 @@ export default function FaqAccordion() {
             {part}
           </a>
         );
-      } else if (linkRegex.test(part)) {
+      } else if (aRegex.test(part)) {
         return (
           <a key={index} href="#" className="text-[#2a5caa]">
             {part}
