@@ -22,7 +22,7 @@ export default function Home() {
       ></video>
 
       <main className="flex max-w-7xl mx-auto min-h-screen flex-col items-start justify-center px-6 md:px-0">
-        <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 sm:mb-6">
+        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 sm:mb-6">
           <span
             style={{
               display: "block",
@@ -154,7 +154,7 @@ export default function Home() {
       </FadeInOnceFromHorizon>
 
       <section className="px-10 py-50 bg-white relative z-30">
-        <div className="max-w-7xl mx-auto md:grid md:grid-cols-2 gap-10 items-center flex flex-col-reverse mb-60">
+        <div className="max-w-7xl mx-auto md:grid md:grid-cols-2 gap-10 items-center flex flex-col-reverse md:mb-60">
           <div>
             <p className="text-2xl md:text-3xl font-bold text-[#534F85] leading-relaxed mb-8">
               Driven by technology
@@ -190,14 +190,14 @@ export default function Home() {
           <FadeInWhenVisible>
             <div className="overflow-hidden h-[300px] relative flex justify-end">
               <LottiePlayer
-                path="/animation/animation2.json"
+                path="/animation/animation1.json"
                 height={300}
                 width={300}
               />
             </div>
           </FadeInWhenVisible>
         </div>
-        <div className="max-w-7xl mx-auto md:grid md:grid-cols-2 gap-10 items-center flex flex-col-reverse mb-60">
+        <div className="max-w-7xl mx-auto md:grid md:grid-cols-2 gap-10 items-center flex flex-col-reverse mb-30 md:mb-60">
           <div>
             <p className="text-2xl md:text-3xl font-bold text-[#534F85] leading-relaxed mb-8">
               Distribution Engine
@@ -233,16 +233,16 @@ export default function Home() {
           </div>
 
           <FadeInWhenVisible>
-            <div className="overflow-hidden h-[300px] relative flex justify-end mt-8 md:mt-0">
+            <div className="overflow-hidden h-[300px] relative flex justify-end mt-12 md:mt-0">
               <LottiePlayer
-                path="/animation/animation3.json"
+                path="/animation/animation2.json"
                 height={300}
                 width={300}
               />
             </div>
           </FadeInWhenVisible>
         </div>
-        <div className="max-w-7xl mx-auto md:grid md:grid-cols-2 gap-10 items-center flex flex-col-reverse mb-60">
+        <div className="max-w-7xl mx-auto md:grid md:grid-cols-2 gap-10 items-center flex flex-col-reverse mb-30 md:mb-60">
           <div>
             <p className="text-2xl md:text-3xl font-bold text-[#534F85] leading-relaxed mb-8">
               Sales
@@ -276,16 +276,16 @@ export default function Home() {
           </div>
 
           <FadeInWhenVisible>
-            <div className="overflow-hidden h-[300px] relative flex justify-end mt-8 md:mt-0">
+            <div className="overflow-hidden h-[300px] relative flex justify-end">
               <LottiePlayer
-                path="/animation/animation4.json"
+                path="/animation/animation3.json"
                 height={300}
                 width={300}
               />
             </div>
           </FadeInWhenVisible>
         </div>
-        <div className="max-w-7xl mx-auto md:grid md:grid-cols-2 gap-10 items-center flex flex-col-reverse mb-60">
+        <div className="max-w-7xl mx-auto md:grid md:grid-cols-2 gap-10 items-center flex flex-col-reverse mb-30 md:mb-60">
           <div>
             <p className="text-2xl md:text-3xl font-bold text-[#534F85] leading-relaxed mb-8">
               Servicing
@@ -319,16 +319,16 @@ export default function Home() {
           </div>
 
           <FadeInWhenVisible>
-            <div className="overflow-hidden h-[300px] relative flex justify-end mt-8 md:mt-0">
+            <div className="overflow-hidden h-[300px] relative flex justify-end">
               <LottiePlayer
-                path="/animation/animation5.json"
+                path="/animation/animation4.json"
                 height={300}
                 width={300}
               />
             </div>
           </FadeInWhenVisible>
         </div>
-        <div className="max-w-7xl mx-auto md:grid md:grid-cols-2 gap-10 items-center flex flex-col-reverse mb-60">
+        <div className="max-w-7xl mx-auto md:grid md:grid-cols-2 gap-10 items-center flex flex-col-reverse mb-30 md:mb-60">
           <div>
             <p className="text-2xl md:text-3xl font-bold text-[#534F85] leading-relaxed mb-8">
               Custom solutions
@@ -364,9 +364,9 @@ export default function Home() {
           </div>
 
           <FadeInWhenVisible>
-            <div className="overflow-hidden h-[300px] relative flex justify-end mt-8 md:mt-0">
+            <div className="overflow-hidden h-[300px] relative flex justify-end">
               <LottiePlayer
-                path="/animation/animation6.json"
+                path="/animation/animation5.json"
                 height={300}
                 width={300}
               />
@@ -396,9 +396,9 @@ export default function Home() {
             </FadeInWhenVisible>
           </div>
           <FadeInWhenVisible>
-            <div className="overflow-hidden h-[300px] relative flex justify-end mt-8 md:mt-0">
+            <div className="overflow-hidden h-[300px] relative flex justify-end">
               <LottiePlayer
-                path="/animation/animation1.json"
+                path="/animation/animation6.json"
                 height={300}
                 width={300}
               />
@@ -541,7 +541,7 @@ export default function Home() {
         </div>
       </section> */}
 
-      <section className="px-6 sm:px-10 md:px-20 py-20 sm:py-24 md:py-30 bg-white relative z-30">
+      <section className="px-6 md:px-20 py-20 md:py-30 bg-white relative z-30">
         <div className="max-w-7xl mx-auto grid grid-cols-1 gap-10 items-center">
           <div>
             <p className="text-xl sm:text-2xl md:text-3xl font-bold text-[#534F85] leading-relaxed mb-4">
@@ -561,7 +561,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="px-6 sm:px-10 md:px-20 bg-white relative z-30">
+      <section className="px-6 md:px-20 bg-white relative z-30">
         <div className="max-w-7xl mx-auto grid grid-cols-1 gap-10 items-center">
           <div>
             <p className="text-xl sm:text-2xl md:text-3xl font-bold text-[#534F85] leading-relaxed mb-4">
@@ -581,7 +581,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="bg-gray-100 relative px-6 sm:px-10 md:px-20 py-30 md:py-30">
+      <section className="bg-gray-100 relative px-6 md:px-20 py-30 md:py-30">
         <NewsSection />
       </section>
 

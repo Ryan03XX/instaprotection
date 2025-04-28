@@ -1,6 +1,9 @@
 "use client";
 import {
+  FaAppStore,
+  FaAppStoreIos,
   FaFacebookF,
+  FaGooglePlay,
   FaInstagram,
   FaLinkedin,
   FaWhatsapp,
@@ -219,6 +222,7 @@ export default function Footer() {
             ]}
           />
         </div>
+
         <div className="flex flex-col md:flex-row justify-between items-start mt-12 border-t pt-6">
           <div className="flex items-start space-x-6 text-md">
             <Link href="/">
@@ -296,6 +300,7 @@ export default function Footer() {
           </div>
         </div>
       </div>
+
       <div className="max-w-7xl mx-auto px-2 py-10 hidden md:block">
         <div className="grid grid-cols-2 md:grid-cols-5 gap-6">
           <div>
@@ -515,7 +520,19 @@ export default function Footer() {
             </ul>
           </div>
         </div>
-
+        <div className="flex flex-col items-end -mt-40 mb-50 mr-50">
+          <h1 className="text-white text-3xl font-semibold mb-4">
+            Download App
+          </h1>
+          <div className="flex space-x-4 mr-35">
+            <a href="#" target="_blank" rel="noopener noreferrer">
+              <FaAppStore className="text-white text-2xl hover:text-yellow-300 transition-colors duration-300 ease-in-out"/>
+            </a>
+            <a href="#" target="_blank" rel="noopener noreferrer">
+              <FaGooglePlay className="text-white text-2xl hover:text-yellow-300 transition-colors duration-300 ease-in-out"/>
+            </a>
+          </div>
+        </div>
         <div className="flex flex-col md:flex-row justify-between items-center mt-12 border-t pt-6">
           <div className="flex items-center space-x-6 text-md">
             <Link href="/">

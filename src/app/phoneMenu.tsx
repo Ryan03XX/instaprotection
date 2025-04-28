@@ -104,7 +104,7 @@ export default function MobileMenu({
             exit={{ x: "-100%" }}
             transition={{ duration: 0.4 }}
           >
-            <div className="w-full text-center mt-10">
+            {/* <div className="w-full text-center mt-10">
               <div className="flex justify-start gap-6 mb-6">
                 <span className="flex items-center gap-2">
                   🌐 <span>EN</span>
@@ -118,7 +118,7 @@ export default function MobileMenu({
               <button className="w-full bg-[#00BAC7] text-[#0A0842] py-3 font-semibold mb-4">
                 Get started
               </button>
-            </div>
+            </div> */}
             <nav className="w-full">
               {menuPhoneItems.map((item) => (
                 <div key={item.label} className="border-t border-gray-300 py-6">

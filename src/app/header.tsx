@@ -107,6 +107,7 @@ const Header = () => {
     const handleScroll = () => {
       if (window.scrollY === 0) {
         setAtTop(true);
+        setShowHeader(true);
       } else {
         setAtTop(false);
       }
@@ -183,13 +184,13 @@ const Header = () => {
 
   useEffect(() => {
     if (isMobileMenuOpen) {
-      document.body.classList.add("overflow-hidden");
+      document.documentElement.classList.add("overflow-hidden");
     } else {
-      document.body.classList.remove("overflow-hidden");
+      document.documentElement.classList.remove("overflow-hidden");
     }
 
     return () => {
-      document.body.classList.remove("overflow-hidden");
+      document.documentElement.classList.remove("overflow-hidden");
     };
   }, [isMobileMenuOpen]);
 
@@ -540,7 +541,7 @@ const Header = () => {
         }`}
       >
         <div className="flex justify-between items-center px-4 md:px-0 py-8 max-w-7xl mx-auto">
-          <div className="text-2xl font-bold text-indigo-700 cursor-pointer z-20">
+          <div className="text-2xl font-bold text-[#011826] cursor-pointer z-20">
             <Link
               onClick={() => (window.location.href = "/")}
               href="/"
@@ -573,10 +574,10 @@ const Header = () => {
               ${
                 activeMenu === item.label
                   ? isHovering || !atTop
-                    ? "text-indigo-700"
+                    ? "text-[#011826]"
                     : "text-white"
                   : isHovering || !atTop
-                  ? "text-black hover:text-indigo-600"
+                  ? "text-black hover:text-[#011826]"
                   : "text-white hover:text-gray-300"
               }
             `}
@@ -587,8 +588,8 @@ const Header = () => {
                     className={`absolute left-0 -bottom-1 h-[2px] w-full origin-left transform transition-transform duration-400
                     ${
                       activeMenu === item.label
-                        ? "scale-x-100 bg-indigo-700"
-                        : "scale-x-0 group-hover:scale-x-100 bg-indigo-400"
+                        ? "scale-x-100 bg-[#011826]"
+                        : "scale-x-0 group-hover:scale-x-100 bg-[#011826]"
                     }
                     `}
                   />
@@ -751,7 +752,7 @@ const Header = () => {
                     >
                       <div className="flex flex-col justify-between h-30 hover:bg-cyan-100 p-4 cursor-pointer hover:cyan-300">
                         <div className="flex space-x-3">
-                          <item.icon className="text-indigo-700 w-5 h-5 mt-1 shrink-0 " />
+                          <item.icon className="text-[#011826] w-5 h-5 mt-1 shrink-0 " />
                           <div>
                             <h4 className="font-semibold text-md text-gray-900">
                               {item.title}
@@ -775,7 +776,7 @@ const Header = () => {
                     >
                       <div className="flex flex-col h-20 hover:bg-cyan-100 p-4 cursor-pointer hover:cyan-300 items-center justify-center">
                         <div className="flex space-x-3">
-                          <item.icon className="text-indigo-700 w-5 h-5 mt-1 shrink-0 " />
+                          <item.icon className="text-[#011826] w-5 h-5 mt-1 shrink-0 " />
                           <div>
                             <h4 className="font-semibold text-md text-gray-900">
                               {item.title}
@@ -799,7 +800,7 @@ const Header = () => {
                     >
                       <div className="flex flex-col h-20 hover:bg-cyan-100 p-4 cursor-pointer hover:cyan-300 items-center justify-center">
                         <div className="flex space-x-3">
-                          <item.icon className="text-indigo-700 w-5 h-5 mt-1 shrink-0 " />
+                          <item.icon className="text-[#011826] w-5 h-5 mt-1 shrink-0 " />
                           <div>
                             <h4 className="font-semibold text-md text-gray-900">
                               {item.title}
@@ -823,7 +824,7 @@ const Header = () => {
                     >
                       <div className="flex flex-col justify-center items-center h-20 hover:bg-cyan-100 p-4 rounded cursor-pointer hover:cyan-300">
                         <div className="flex space-x-3">
-                          <item.icon className="text-indigo-700 w-5 h-5 mt-1 shrink-0 " />
+                          <item.icon className="text-[#011826] w-5 h-5 mt-1 shrink-0 " />
                           <div>
                             <h4 className="font-semibold text-md text-gray-900">
                               {item.title}
@@ -851,7 +852,7 @@ const Header = () => {
         >
           <div className="max-w-7xl mx-auto py-10 grid grid-cols-3 gap-8">
             <div className="col-span-1">
-              <p className="text-lg font-medium text-indigo-800 mb-2">
+              <p className="text-lg font-medium text-[#011826] mb-2">
                 At the heart of everything we do is the power of connection
               </p>
             </div>
@@ -865,7 +866,7 @@ const Header = () => {
                 >
                   <div className="flex flex-col justify-between h-25 hover:bg-cyan-100 p-4 rounded cursor-pointer hover:cyan-300">
                     <div className="flex space-x-3">
-                      <item.icon className="text-indigo-700 w-5 h-5 mt-1 shrink-0 " />
+                      <item.icon className="text-[#011826] w-5 h-5 mt-1 shrink-0 " />
                       <div>
                         <h4 className="font-semibold text-md text-gray-900">
                           {item.title}
@@ -936,7 +937,7 @@ const Header = () => {
                     >
                       <div className="flex flex-col justify-between h-15 hover:bg-cyan-100 p-4 rounded cursor-pointer hover:cyan-300">
                         <div className="flex space-x-3">
-                          <item.icon className="text-indigo-700 w-5 h-5 mt-1 shrink-0 " />
+                          <item.icon className="text-[#011826] w-5 h-5 mt-1 shrink-0 " />
                           <div>
                             <h4 className="font-semibold text-md text-gray-900">
                               {item.title}
@@ -957,7 +958,7 @@ const Header = () => {
                     >
                       <div className="flex flex-col justify-between h-30 hover:bg-cyan-100 p-4 rounded cursor-pointer hover:cyan-300">
                         <div className="flex space-x-3">
-                          <item.icon className="text-indigo-700 w-5 h-5 mt-1 shrink-0 " />
+                          <item.icon className="text-[#011826] w-5 h-5 mt-1 shrink-0 " />
                           <div>
                             <h4 className="font-semibold text-md text-gray-900">
                               {item.title}
@@ -985,7 +986,7 @@ const Header = () => {
         >
           <div className="max-w-7xl mx-auto py-10 grid grid-cols-4 gap-8">
             <div className="col-span-1">
-              <p className="text-lg font-medium text-indigo-800 mb-2">
+              <p className="text-lg font-medium text-[#011826] mb-2">
                 Tailored protection solutions
               </p>
               <p className="text-md text-gray-600">
@@ -1003,7 +1004,7 @@ const Header = () => {
                 >
                   <div className="flex flex-col justify-between h-20 hover:bg-cyan-100 p-4 rounded cursor-pointer hover:cyan-300">
                     <div className="flex space-x-3">
-                      <item.icon className="text-indigo-700 w-5 h-5 mt-1 shrink-0 " />
+                      <item.icon className="text-[#011826] w-5 h-5 mt-1 shrink-0 " />
                       <div>
                         <h4 className="font-semibold text-md text-gray-900">
                           {item.title}
@@ -1084,7 +1085,7 @@ const Header = () => {
                     >
                       <div className="flex flex-col justify-between h-30 hover:bg-cyan-100 p-4 rounded cursor-pointer hover:cyan-300">
                         <div className="flex space-x-3">
-                          <item.icon className="text-indigo-700 w-5 h-5 mt-1 shrink-0 " />
+                          <item.icon className="text-[#011826] w-5 h-5 mt-1 shrink-0 " />
                           <div>
                             <h4 className="font-semibold text-md text-gray-900">
                               {item.title}

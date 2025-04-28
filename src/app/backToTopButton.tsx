@@ -55,7 +55,7 @@ export default function BackToTopButton() {
               cx="24"
               cy="24"
               r={radius}
-              stroke="#3b82f6"
+              stroke="#011826"
               strokeWidth="4"
               fill="none"
               strokeDasharray={circumference}
@@ -66,7 +66,7 @@ export default function BackToTopButton() {
             />
           </svg>
           <ArrowUp
-            className="relative z-10 text-blue-600 group-hover:text-blue-800"
+            className="relative z-10 text-[#011826] group-hover:text-[#011826]"
             size={20}
           />
         </motion.button>
