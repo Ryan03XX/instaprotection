@@ -107,37 +107,43 @@ export default function Footer() {
           <FooterSection
             title="Distribution Engine"
             as={[
-              { label: "By product", href: "#" },
-              { label: "API integration", href: "#" },
-              { label: "Embedded insurance", href: "#" },
-              { label: "Digital broker", href: "#" },
-              { label: "Insurance core systems", href: "#" },
+              { label: "Insurer Library", href: "/distributionEngine/insurerLibrary" },
+              { label: "Dynamic Quoting Questionnaire", href: "/distributionEngine/dynamicQQ" },
+              { label: "Product Configurator", href: "/distributionEngine/productConfigurator" },
+              { label: "Data Marketplace", href: "/distributionEngine/dataMarketplace" },
+              { label: "Data Insights", href: "/distributionEngine/dataInsights" },
+              { label: "UI Design System", href: "/distributionEngine/designSystem" },
             ]}
           />
           <FooterSection
             title="Sales"
             as={[
-              { label: "By industry", href: "#" },
-              { label: "By insurance player", href: "#" },
+              { label: "Embedded Insurance API", href: "/sales/embeddedInsurance" },
+              { label: "Consumer Portal", href: "/sales/consumerPortal" },
+              { label: "Enablement", href: "/sales/enablement" },
+              { label: "Agency Portal", href: "/sales/agencyPortal" },
+              { label: "Partner Portal", href: "/sales/partnerPortal" },
+              { label: "Fulfillment", href: "/sales/fulfillment" },
             ]}
           />
           <FooterSection
             title="Servicing"
             as={[
-              { label: "Blog", href: "#" },
-              { label: "Help center", href: "#" },
-              { label: "Developers", href: "#" },
-              { label: "Security", href: "#" },
+              { label: "Servicing and claim Portal", href: "/servicing/sncPortal" },
+              { label: "Global contact centers", href: "/servicing/gcontactCenters" },
+              { label: "Engagement Portal", href: "/servicing/engagementPortal" },
+              { label: "Policy Admin", href: "/servicing/policyAdmin" },
+              { label: "Servicing Ecosystem", href: "/servicing/servicingEcosystem" },
             ]}
           />
           <FooterSection
-            title="Customer Solutions"
+            title="Custom Solutions"
             as={[
-              { label: "About", href: "#" },
-              { label: "Careers", href: "#" },
-              { label: "Partners", href: "#" },
-              { label: "Newsroom", href: "#" },
-              { label: "Contact", href: "#" },
+              { label: "Product Manufacturing", href: "/customSolutions/productManufacturing" },
+              { label: "Insurance Entity Setup", href: "/customSolutions/insuranceEntitySetup" },
+              { label: "Professional Services", href: "/customSolutions/profesionnalServices" },
+              { label: "Insurer Advisory Services", href: "/customSolutions/insurerAdvisoryServices" },
+              { label: "Integration", href: "/customSolutions/integration" },
             ]}
           />
         </div>
@@ -146,13 +152,16 @@ export default function Footer() {
             Prorams
           </h6>
           <FooterSection
-            title="By Product"
+            title="Programs"
             as={[
-              { label: "By product", href: "#" },
-              { label: "API integration", href: "#" },
-              { label: "Embedded insurance", href: "#" },
-              { label: "Digital broker", href: "#" },
-              { label: "Insurance core systems", href: "#" },
+              { label: "Mobile Devices", href: "/mobile" },
+              { label: "Health Tech", href: "/healTech" },
+              { label: "Consumer Electronics", href: "electronics" },
+              { label: "Mobility", href: "/mobility" },
+              { label: "Home", href: "/home" },
+              { label: "Travel", href: "/travel" },
+              { label: "Cyber", href: "/cyber" },
+              { label: "Customized", href: "/customized" },
             ]}
           />
         </div>
@@ -163,21 +172,21 @@ export default function Footer() {
           <FooterSection
             title="By Industry"
             as={[
-              { label: "By product", href: "#" },
-              { label: "API integration", href: "#" },
-              { label: "Embedded insurance", href: "#" },
-              { label: "Digital broker", href: "#" },
-              { label: "Insurance core systems", href: "#" },
+              { label: "Financial Services", href: "/financialServices" },
+              { label: "Retailers", href: "/retailers" },
+              { label: "Real Estate", href: "realEstate" },
+              { label: "Telco", href: "/telco" },
+              { label: "Device OEMs", href: "/deviceOEMs" },
+              { label: "Everyone Else", href: "/everyoneElse" },
+              { label: "Experiences", href: "/experiences" },
+              { label: "Mobility OEMs", href: "mobilityOEMs" },
             ]}
           />
           <FooterSection
             title="By Insurance Player"
             as={[
-              { label: "By product", href: "#" },
-              { label: "API integration", href: "#" },
-              { label: "Embedded insurance", href: "#" },
-              { label: "Digital broker", href: "#" },
-              { label: "Insurance core systems", href: "#" },
+              { label: "Insurers", href: "/insurers" },
+              { label: "Insurance Agencies", href: "/insuranceAgencies" },
             ]}
           />
         </div>
@@ -188,21 +197,9 @@ export default function Footer() {
           <FooterSection
             title="Resource Hub"
             as={[
-              { label: "By product", href: "#" },
-              { label: "API integration", href: "#" },
-              { label: "Embedded insurance", href: "#" },
-              { label: "Digital broker", href: "#" },
-              { label: "Insurance core systems", href: "#" },
-            ]}
-          />
-          <FooterSection
-            title="help"
-            as={[
-              { label: "By product", href: "#" },
-              { label: "API integration", href: "#" },
-              { label: "Embedded insurance", href: "#" },
-              { label: "Digital broker", href: "#" },
-              { label: "Insurance core systems", href: "#" },
+              { label: "Case Studies", href: "/caseStudy" },
+              { label: "News", href: "/resourcesNews" },
+              { label: "Insights", href: "/insights" },
             ]}
           />
         </div>
@@ -211,13 +208,14 @@ export default function Footer() {
             Company
           </h6>
           <FooterSection
-            title="About Us"
+            title="Company"
             as={[
-              { label: "By product", href: "#" },
-              { label: "API integration", href: "#" },
-              { label: "Embedded insurance", href: "#" },
-              { label: "Digital broker", href: "#" },
-              { label: "Insurance core systems", href: "#" },
+              { label: "Who We Are", href: "/about" },
+              { label: "News", href: "/news" },
+              { label: "Our Leadership", href: "/leadership" },
+              { label: "Milestones", href: "/milestones" },
+              { label: "Careers", href: "/careers" },
+              { label: "FAQs", href: "/faqs" },
             ]}
           />
         </div>
