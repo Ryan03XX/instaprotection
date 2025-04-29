@@ -126,19 +126,23 @@ export default function Home() {
           Trusted by some of the world's top brands
         </h3>
 
-        <div className="overflow-hidden relative">
-          <div className="flex animate-scroll whitespace-nowrap gap-6 sm:gap-10 md:gap-12">
+        <div className="overflow-hidden relative mt-10">
+          <div className="flex animate-scroll whitespace-nowrap gap-10 md:gap-20">
             {[...Array(2)].flatMap((_, i) =>
               [
-                "/assets/logo2.svg",
-                "/assets/logo2.svg",
-                "/assets/logo2.svg",
-                "/assets/logo4.svg",
-                "/assets/logo5.svg",
-                "/assets/logo6.svg",
-                "/assets/logo7.svg",
-                "/assets/logo8.svg",
-                "/assets/logo9.svg",
+                "/partnerLogo/aia-logo-png_seeklogo-172251.png",
+                "/partnerLogo/AIG_new_logo.svg.png",
+                "/partnerLogo/allianz-logo.png",
+                "/partnerLogo/AXA_Logo.png",
+                "/partnerLogo/Etiqa_Insurance_and_Takaful.png",
+                "/partnerLogo/generali-logo.png",
+                "/partnerLogo/Great_Eastern_logo.png",
+                "/partnerLogo/images-(2).png",
+                "/partnerLogo/ING_Group_N.V._Logo.png",
+                "/partnerLogo/jpn_sompo-group_logomark_type-b_basic_posi.png",
+                "/partnerLogo/Logo-Tune-Insurance.png",
+                "/partnerLogo/Tokio_Marine.png",
+                "/partnerLogo/Zurich_Insurance_Group_logo.svg.png",
               ].map((src, index) => (
                 <div
                   className="flex flex-col items-center shrink-0"

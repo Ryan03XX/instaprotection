@@ -12,6 +12,7 @@ const menuItems = [
     description:
       "Offer comprehensive coverage and fast, dependable repairs or replacements, ensuring customers always have the devices they rely on, with 24/7 support and a streamlined claims process for a stress-free experience.",
     image: "/assets/mobile.jpg",
+    href: "/mobile", 
   },
   {
     title: "Health Tech",
@@ -19,6 +20,7 @@ const menuItems = [
     description:
       "Provide tailored insurance coverage for essential health tech devices like hearing aids and eyewear, enhancing customer loyalty through seamless service and long-term protection.",
     image: "/assets/healtech.jpg",
+    href: "/healTech", 
   },
   {
     title: "Home",
@@ -26,13 +28,15 @@ const menuItems = [
     description:
       "Offer comprehensive coverage for both physical and digital aspects of home life, with customizable plans that meet each household’s unique needs, driving customer retention and enabling seamless cross-selling opportunities.",
     image: "/assets/home.png",
+    href: "/home", 
   },
   {
     title: "Consumer Electronics",
     subtitle: "Holistic protection for modern homes",
     description:
       "Offer comprehensive coverage for both physical and digital aspects of home life, with customizable plans that meet each household’s unique needs, driving customer retention and enabling seamless cross-selling opportunities.",
-    image: "/assets/home.png",
+    image: "/assets/mobile.jpg",
+    href: "/electronics", 
   },
 ];
 
@@ -93,9 +97,11 @@ export default function TwoColumnMenu() {
           <p className="text-gray-700 mb-6 text-sm md:text-md">
             {menuItems[activeIndex]?.description}
           </p>
-          <button className="mt-4 border border-cyan-500 bg-cyan-500 text-white font-bold px-4 py-2 transition-all hover:bg-cyan-600 cursor-pointer">
-            Learn More
-          </button>
+          <a href={menuItems[activeIndex]?.href}>
+                <button className="mt-4 border border-cyan-500 bg-cyan-500 text-white font-bold px-4 py-2 transition-all hover:bg-cyan-600 cursor-pointer">
+                  Learn More
+                </button>
+              </a>
         </div>
       </motion.div>
     </AnimatePresence>

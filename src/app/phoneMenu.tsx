@@ -1,66 +1,226 @@
 "use client";
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { Menu, X } from "lucide-react";
-import { ChevronDown, ChevronUp } from "lucide-react";
+import { Menu, X, ChevronDown, ChevronUp } from "lucide-react";
 
-const menuPhoneItems = [
+// --- 型別定義 ---
+type SubSubMenuItem = {
+  label: string;
+  href: string;
+};
+
+type SubMenuItem = {
+  label: string;
+  href: string;
+  collapsible?: boolean;
+  subsubmenu?: SubSubMenuItem[];
+};
+
+type MenuItem = {
+  label: string;
+  description?: string;
+  submenu: SubMenuItem[];
+};
+
+// --- Menu Data ---
+const menuPhoneItems: MenuItem[] = [
   {
     label: "Platform",
     submenu: [
       {
         label: "Distribution Engine",
-        href: "/platform/distribution",
+        href: "/distributionEngine",
         collapsible: true,
-        subsubmenu: ["Sales", "Servicing", "Custom solutions"],
+        subsubmenu: [
+          {
+            label: "Insurer Library",
+            href: "/distributionEngine/insurerLibrary",
+          },
+          {
+            label: "Dynamic Quoting Questionnaire",
+            href: "/distributionEngine/dynamicQQ",
+          },
+          {
+            label: "Product Configurator",
+            href: "/distributionEngine/productConfigurator",
+          },
+          {
+            label: "Data Marketplace",
+            href: "/distributionEngine/dataMarketplace",
+          },
+          { label: "Data Insights", href: "/distributionEngine/dataInsights" },
+          {
+            label: "UI Design System",
+            href: "/distributionEngine/designSystem",
+          },
+        ],
+      },
+      {
+        label: "Sales",
+        href: "/sales",
+        collapsible: true,
+        subsubmenu: [
+          { label: "Embedded insurance API", href: "/sales/embeddedInsurance" },
+          { label: "Consumer Portal", href: "/sales/consumerPortal" },
+          { label: "Enablement", href: "/sales/enablement" },
+          { label: "Agency Portal", href: "/sales/agencyPortal" },
+          { label: "Partner Portal", href: "/sales/partnerPortal" },
+          { label: "Fulfillment", href: "/sales/fulfillment" },
+        ],
+      },
+      {
+        label: "Servicing",
+        href: "/servicing",
+        collapsible: true,
+        subsubmenu: [
+          { label: "Servicing and Claim Portal", href: "/servicing/sncPortal" },
+          {
+            label: "Global Contact Centers",
+            href: "/servicing/gcontactCenters",
+          },
+          { label: "Engagement Portal", href: "/servicing/engagementPortal" },
+          { label: "Policy Admin", href: "/servicing/policyAdmin" },
+          {
+            label: "Servicing Ecosystem",
+            href: "/servicing/servicingEcosystem",
+          },
+        ],
+      },
+      {
+        label: "Custom Solutions",
+        href: "/customSolutions",
+        collapsible: true,
+        subsubmenu: [
+          {
+            label: "Product Manufacturing",
+            href: "/customSolutions/productManufacturing",
+          },
+          {
+            label: "Insurance Entity Setup",
+            href: "/customSolutions/insuranceEntitySetup",
+          },
+          {
+            label: "Professional Services",
+            href: "/customSolutions/professionalServices",
+          },
+          {
+            label: "Insurer Advisory Services",
+            href: "/customSolutions/insurerAdvisoryServices",
+          },
+          { label: "Integrations", href: "/customSolutions/integrations" },
+        ],
       },
     ],
   },
   {
     label: "Programs",
-    description:
-      "Tailored protection solutions provide comprehensive coverage and exceptional service to meet unique customer needs",
+    // description:
+    //   "Tailored protection solutions provide comprehensive coverage and exceptional service to meet unique customer needs",
     submenu: [
-      { label: "Mobile devices", icon: "📱", href: "/programs/mobile" },
-      {
-        label: "Consumer electronics",
-        icon: "💻",
-        href: "/programs/electronics",
-      },
-      { label: "Health tech", icon: "💊", href: "/programs/health" },
-      { label: "Home", icon: "🏠", href: "/programs/home" },
-      {
-        label: "bolt Prevention Technology",
-        icon: "💡",
-        href: "/programs/prevention",
-      },
-      { label: "Mobility", icon: "🚗", href: "/programs/mobility" },
-      { label: "Travel", icon: "✈️", href: "/programs/travel" },
+      { label: "Mobile devices", href: "/mobile" },
+      { label: "Consumer electronics", href: "/electronics" },
+      { label: "Health tech", href: "/healtech" },
+      { label: "Home", href: "/home" },
+      { label: "Cyber", href: "/cyber" },
+      { label: "Mobility", href: "/mobility" },
+      { label: "Travel", href: "/travel" },
+      { label: "Customized", href: "/customized" },
     ],
   },
   {
     label: "Use cases",
     submenu: [
-      { label: "Retail", href: "/use-cases/retail" },
-      { label: "Telco", href: "/use-cases/telco" },
+      {
+        label: "By Industry",
+        href: "/financialServices",
+        collapsible: true,
+        subsubmenu: [
+          {
+            label: "Financial Services",
+            href: "/financialServices",
+          },
+          {
+            label: "Retailers",
+            href: "/retailers",
+          },
+          {
+            label: "Real Estate",
+            href: "/realEstate",
+          },
+          {
+            label: "Telco",
+            href: "/telco",
+          },
+          { label: "Device OEMs", href: "/deviceOEM" },
+          {
+            label: "Everyone Else",
+            href: "/everyoneElse",
+          },
+          {
+            label: "Experiences",
+            href: "/experiences",
+          },
+          {
+            label: "Mobility OEMs",
+            href: "/mobilityOEMs",
+          },
+        ],
+      },
+      {
+        label: "By Insurance Player",
+        href: "/insurers",
+        collapsible: true,
+        subsubmenu: [
+          {
+            label: "Insurers",
+            href: "/insurers",
+          },
+          {
+            label: "Insurance Agencies",
+            href: "/insuranceAgencies",
+          },
+        ],
+      },
     ],
   },
   {
     label: "Resources",
     submenu: [
-      { label: "Blog", href: "/resources/blog" },
-      { label: "Help Center", href: "/resources/help" },
+      {
+        label: "Resource Hub",
+        href: "/resources",
+        collapsible: true,
+        subsubmenu: [
+          {
+            label: "Case Studies",
+            href: "/resources/caseStudy",
+          },
+          {
+            label: "News",
+            href: "/resources/resoucesNews",
+          },
+          {
+            label: "Insights",
+            href: "/resources/insights",
+          },
+        ],
+      },
     ],
   },
   {
     label: "Company",
     submenu: [
-      { label: "About", href: "/company/about" },
-      { label: "Careers", href: "/company/careers" },
+      { label: "Who We Are", href: "/about" },
+      { label: "News", href: "/news" },
+      { label: "Our Leadership", href: "/leadership" },
+      { label: "Milestones", href: "/milestones" },
+      { label: "Careers", href: "/careers" },
+      { label: "FAQs", href: "/faqs" },
     ],
   },
 ];
 
+// --- Component ---
 export default function MobileMenu({
   isOpen,
   setIsOpen,
@@ -69,14 +229,21 @@ export default function MobileMenu({
   setIsOpen: React.Dispatch<React.SetStateAction<boolean>>;
 }) {
   const [activeMenu, setActiveMenu] = useState<string | null>(null);
+  const [activeSubMenu, setActiveSubMenu] = useState<string | null>(null);
 
   const toggleMobileMenu = () => {
     setIsOpen((prev) => !prev);
     setActiveMenu(null);
+    setActiveSubMenu(null);
   };
 
   const toggleSubMenu = (label: string) => {
     setActiveMenu((prev) => (prev === label ? null : label));
+    setActiveSubMenu(null); // 切換主選單時清除子選單
+  };
+
+  const toggleSubSubMenu = (label: string) => {
+    setActiveSubMenu((prev) => (prev === label ? null : label));
   };
 
   return (
@@ -103,21 +270,6 @@ export default function MobileMenu({
             exit={{ x: "-100%" }}
             transition={{ duration: 0.4 }}
           >
-            {/* <div className="w-full text-center mt-10">
-              <div className="flex justify-start gap-6 mb-6">
-                <span className="flex items-center gap-2">
-                  🌐 <span>EN</span>
-                </span>
-              </div>
-              <div className="flex justify-start gap-6 mb-6">
-                <span className="flex items-center gap-2">
-                  🎧 <span>Customer service</span>
-                </span>
-              </div>
-              <button className="w-full bg-[#00BAC7] text-[#0A0842] py-3 font-semibold mb-4">
-                Get started
-              </button>
-            </div> */}
             <nav className="w-full">
               {menuPhoneItems.map((item) => (
                 <div key={item.label} className="border-t border-gray-300 py-6">
@@ -138,38 +290,86 @@ export default function MobileMenu({
                     </motion.span>
                   </button>
 
-                  {item.description && (
-                    <p className="text-sm text-gray-500 mt-2">
-                      {item.description}
-                    </p>
-                  )}
-
                   <AnimatePresence>
                     {activeMenu === item.label && (
                       <motion.ul
                         className={`mt-2 space-y-2 ${
-                          item.description
-                            ? "bg-blue-50 p-4 rounded-md mt-4"
-                            : ""
+                          item.description ? "p-4 rounded-md mt-4" : ""
                         }`}
                         initial={{ opacity: 0, height: 0 }}
                         animate={{ opacity: 1, height: "auto" }}
                         exit={{ opacity: 0, height: 0 }}
                         transition={{ duration: 0.3 }}
                       >
-                        {item.submenu.map((sub, idx) => (
+                        {item.description && (
+                          <p className="text-sm text-gray-500 mt-2">
+                            {item.description}
+                          </p>
+                        )}
+                        {item.submenu.map((sub: SubMenuItem, idx: number) => (
                           <li
                             key={idx}
-                            className="flex items-center gap-3 text-sm text-gray-700"
+                            className="text-sm text-gray-700 font-semibold"
                           >
-                            {/* {sub.icon && <span>{sub.icon}</span>} */}
-                            <a
-                              href={sub.href}
-                              className="hover:text-indigo-700 block py-1"
-                              onClick={() => toggleMobileMenu()}
-                            >
-                              {sub.label}
-                            </a>
+                            {sub.collapsible && sub.subsubmenu ? (
+                              <>
+                                <button
+                                  className="w-full flex justify-between items-center py-1"
+                                  onClick={() => toggleSubSubMenu(sub.label)}
+                                >
+                                  {sub.label}
+                                  <motion.span
+                                    animate={{
+                                      rotate:
+                                        activeSubMenu === sub.label ? 180 : 0,
+                                    }}
+                                    transition={{ duration: 0.3 }}
+                                  >
+                                    {activeSubMenu === sub.label ? (
+                                      <ChevronUp size={16} />
+                                    ) : (
+                                      <ChevronDown size={16} />
+                                    )}
+                                  </motion.span>
+                                </button>
+                                <AnimatePresence>
+                                  {activeSubMenu === sub.label && (
+                                    <motion.ul
+                                      initial={{ opacity: 0, height: 0 }}
+                                      animate={{ opacity: 1, height: "auto" }}
+                                      exit={{ opacity: 0, height: 0 }}
+                                      transition={{ duration: 0.3 }}
+                                      className="ml-4 mt-2 space-y-2 p-4 rounded-md"
+                                    >
+                                      {sub.subsubmenu.map(
+                                        (
+                                          subsub: SubSubMenuItem,
+                                          subIdx: number
+                                        ) => (
+                                          <li key={subIdx}>
+                                            <a
+                                              href={subsub.href}
+                                              className="block py-1 text-gray-600 hover:text-indigo-700"
+                                              onClick={() => toggleMobileMenu()}
+                                            >
+                                              {subsub.label}
+                                            </a>
+                                          </li>
+                                        )
+                                      )}
+                                    </motion.ul>
+                                  )}
+                                </AnimatePresence>
+                              </>
+                            ) : (
+                              <a
+                                href={sub.href}
+                                className="block py-1 hover:text-indigo-700"
+                                onClick={() => toggleMobileMenu()}
+                              >
+                                {sub.label}
+                              </a>
+                            )}
                           </li>
                         ))}
                       </motion.ul>

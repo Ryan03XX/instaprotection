@@ -168,24 +168,26 @@ export default function Home() {
               insurance distribution and world-class servicing – all through a
               single API.
             </p>
-            <button className="mt-6 relative overflow-hidden border px-4 py-3 text-md cursor-pointer border-cyan-500 group bg-cyan-500">
-              <span className="relative font-bold z-10 text-[#0A0842] transition-opacity duration-300 group-hover:opacity-0">
-                Learn More
-              </span>
+            <a href="/contact">
+              <button className="mt-6 relative overflow-hidden border px-4 py-3 text-md cursor-pointer border-cyan-500 group bg-cyan-500">
+                <span className="relative font-bold z-10 text-[#0A0842] transition-opacity duration-300 group-hover:opacity-0">
+                  Learn More
+                </span>
 
-              <span
-                className="absolute left-0 top-0 w-full h-full flex items-center justify-center font-bold
-              opacity-0 transition-opacity duration-300 group-hover:opacity-100 z-10"
-                style={{ color: "#0A0842" }}
-              >
-                Learn More
-              </span>
+                <span
+                  className="absolute left-0 top-0 w-full h-full flex items-center justify-center font-bold
+                            opacity-0 transition-opacity duration-300 group-hover:opacity-100 z-10"
+                  style={{ color: "#0A0842" }}
+                >
+                  Learn More
+                </span>
 
-              <span
-                className="absolute inset-0 bg-cyan-500 transform scale-x-0 group-hover:scale-x-100 
-              origin-left transition-transform duration-600 ease-out group-hover:bg-cyan-600"
-              ></span>
-            </button>
+                <span
+                  className="absolute inset-0 bg-cyan-500 transform scale-x-0 group-hover:scale-x-100 
+                            origin-left transition-transform duration-600 ease-out group-hover:bg-cyan-600"
+                ></span>
+              </button>
+            </a>
           </div>
           <FadeInWhenVisible>
             <div className="overflow-hidden h-[300px] relative flex justify-end">
@@ -212,24 +214,26 @@ export default function Home() {
               launch (or invent) new business models with unmatched speed and
               flexibility.
             </p>
-            <button className="mt-6 relative overflow-hidden border px-4 py-3 text-md cursor-pointer border-cyan-500 group bg-cyan-500">
-              <span className="relative font-bold z-10 text-[#0A0842] transition-opacity duration-300 group-hover:opacity-0">
-                Learn More
-              </span>
+            <a href="/distributionEngine">
+              <button className="mt-6 relative overflow-hidden border px-4 py-3 text-md cursor-pointer border-cyan-500 group bg-cyan-500">
+                <span className="relative font-bold z-10 text-[#0A0842] transition-opacity duration-300 group-hover:opacity-0">
+                  Learn More
+                </span>
 
-              <span
-                className="absolute left-0 top-0 w-full h-full flex items-center justify-center font-bold
+                <span
+                  className="absolute left-0 top-0 w-full h-full flex items-center justify-center font-bold
               opacity-0 transition-opacity duration-300 group-hover:opacity-100 z-10"
-                style={{ color: "#0A0842" }}
-              >
-                Learn More
-              </span>
+                  style={{ color: "#0A0842" }}
+                >
+                  Learn More
+                </span>
 
-              <span
-                className="absolute inset-0 bg-cyan-500 transform scale-x-0 group-hover:scale-x-100 
+                <span
+                  className="absolute inset-0 bg-cyan-500 transform scale-x-0 group-hover:scale-x-100 
               origin-left transition-transform duration-600 ease-out group-hover:bg-cyan-600"
-              ></span>
-            </button>
+                ></span>
+              </button>
+            </a>
           </div>
 
           <FadeInWhenVisible>
@@ -255,24 +259,26 @@ export default function Home() {
               journey, optimize conversions, and enhance the customer experience
               with omni-channel distribution capabilities.
             </p>
-            <button className="mt-6 relative overflow-hidden border px-4 py-3 text-md cursor-pointer border-cyan-500 group bg-cyan-500">
-              <span className="relative font-bold z-10 text-[#0A0842] transition-opacity duration-300 group-hover:opacity-0">
-                Learn More
-              </span>
+            <a href="/sales">
+              <button className="mt-6 relative overflow-hidden border px-4 py-3 text-md cursor-pointer border-cyan-500 group bg-cyan-500">
+                <span className="relative font-bold z-10 text-[#0A0842] transition-opacity duration-300 group-hover:opacity-0">
+                  Learn More
+                </span>
 
-              <span
-                className="absolute left-0 top-0 w-full h-full flex items-center justify-center font-bold
+                <span
+                  className="absolute left-0 top-0 w-full h-full flex items-center justify-center font-bold
               opacity-0 transition-opacity duration-300 group-hover:opacity-100 z-10"
-                style={{ color: "#0A0842" }}
-              >
-                Learn More
-              </span>
+                  style={{ color: "#0A0842" }}
+                >
+                  Learn More
+                </span>
 
-              <span
-                className="absolute inset-0 bg-cyan-500 transform scale-x-0 group-hover:scale-x-100 
+                <span
+                  className="absolute inset-0 bg-cyan-500 transform scale-x-0 group-hover:scale-x-100 
               origin-left transition-transform duration-600 ease-out group-hover:bg-cyan-600"
-              ></span>
-            </button>
+                ></span>
+              </button>
+            </a>
           </div>
 
           <FadeInWhenVisible>
@@ -298,24 +304,26 @@ export default function Home() {
               to the claims process, to deliver industry-leading customer
               experiences tailored to your brand.
             </p>
-            <button className="mt-6 relative overflow-hidden border px-4 py-3 text-md cursor-pointer border-cyan-500 group bg-cyan-500">
-              <span className="relative font-bold z-10 text-[#0A0842] transition-opacity duration-300 group-hover:opacity-0">
-                Learn More
-              </span>
+            <a href="/servicing">
+              <button className="mt-6 relative overflow-hidden border px-4 py-3 text-md cursor-pointer border-cyan-500 group bg-cyan-500">
+                <span className="relative font-bold z-10 text-[#0A0842] transition-opacity duration-300 group-hover:opacity-0">
+                  Learn More
+                </span>
 
-              <span
-                className="absolute left-0 top-0 w-full h-full flex items-center justify-center font-bold
+                <span
+                  className="absolute left-0 top-0 w-full h-full flex items-center justify-center font-bold
               opacity-0 transition-opacity duration-300 group-hover:opacity-100 z-10"
-                style={{ color: "#0A0842" }}
-              >
-                Learn More
-              </span>
+                  style={{ color: "#0A0842" }}
+                >
+                  Learn More
+                </span>
 
-              <span
-                className="absolute inset-0 bg-cyan-500 transform scale-x-0 group-hover:scale-x-100 
+                <span
+                  className="absolute inset-0 bg-cyan-500 transform scale-x-0 group-hover:scale-x-100 
               origin-left transition-transform duration-600 ease-out group-hover:bg-cyan-600"
-              ></span>
-            </button>
+                ></span>
+              </button>
+            </a>
           </div>
 
           <FadeInWhenVisible>
@@ -343,24 +351,26 @@ export default function Home() {
               – building marketplaces, launching new businesses, expanding
               across markets, and more.
             </p>
-            <button className="relative overflow-hidden border px-4 py-3 text-md cursor-pointer border-cyan-500 group bg-cyan-500 mt-6">
-              <span className="mt-6 relative font-bold z-10 text-[#0A0842] transition-opacity duration-300 group-hover:opacity-0">
-                Learn More
-              </span>
+            <a href="/customSolutions">
+              <button className="relative overflow-hidden border px-4 py-3 text-md cursor-pointer border-cyan-500 group bg-cyan-500 mt-6">
+                <span className="mt-6 relative font-bold z-10 text-[#0A0842] transition-opacity duration-300 group-hover:opacity-0">
+                  Learn More
+                </span>
 
-              <span
-                className="absolute left-0 top-0 w-full h-full flex items-center justify-center font-bold
+                <span
+                  className="absolute left-0 top-0 w-full h-full flex items-center justify-center font-bold
               opacity-0 transition-opacity duration-300 group-hover:opacity-100 z-10"
-                style={{ color: "#0A0842" }}
-              >
-                Learn More
-              </span>
+                  style={{ color: "#0A0842" }}
+                >
+                  Learn More
+                </span>
 
-              <span
-                className="absolute inset-0 bg-cyan-500 transform scale-x-0 group-hover:scale-x-100 
+                <span
+                  className="absolute inset-0 bg-cyan-500 transform scale-x-0 group-hover:scale-x-100 
               origin-left transition-transform duration-600 ease-out group-hover:bg-cyan-600"
-              ></span>
-            </button>
+                ></span>
+              </button>
+            </a>
           </div>
 
           <FadeInWhenVisible>
