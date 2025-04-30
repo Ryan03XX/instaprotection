@@ -67,14 +67,14 @@ function FooterSection({
 export default function Footer() {
   return (
     <footer className="bg-[#0A0842] text-gray-400 text-sm">
-      <div className="w-full flex justify-center relative -mt-20">
+      {/* <div className="w-full flex justify-center relative -mt-20">
         <div className="bg-cyan-100 px-8 py-6 md:py-12 w-full max-w-7xl transition-transform hover:scale-105">
           <div className="flex flex-col text-center md:flex-row justify-between items-center gap-4">
             <h2
               className="font-bold"
               style={{ fontSize: "2.125rem", color: "#0A0842" }}
             >
-              Ready to transform your business?
+              Ready to Transform Your Business?
             </h2>
             <a href="/contact">
               <button className="relative overflow-hidden border px-4 py-3 text-md cursor-pointer border-cyan-500 group bg-cyan-500">
@@ -98,7 +98,73 @@ export default function Footer() {
             </a>
           </div>
         </div>
+      </div> */}
+      <div className="w-full flex justify-center relative -mt-20">
+        <div className="bg-cyan-100 px-8 py-6 md:py-12 w-full max-w-7xl transition-transform hover:scale-105">
+          <div className="grid md:grid-cols-6">
+            <div className="md:col-span-5">
+              <h2
+                className="font-bold text-left"
+                style={{ fontSize: "2.125rem", color: "#0A0842" }}
+              >
+                Ready to Transform Your Business?
+              </h2>
+            </div>
+
+            <div className="flex md:justify-between items-center md:mt-6 hidden md:block">
+              <a href="/contact">
+                <button className="relative overflow-hidden border px-8 py-4 text-md cursor-pointer border-cyan-500 group bg-cyan-500">
+                  <span className="relative font-bold z-10 text-[#0A0842] transition-opacity duration-300 group-hover:opacity-0">
+                    Get started
+                  </span>
+                  <span
+                    className="absolute left-0 top-0 w-full h-full flex items-center justify-center font-bold
+              opacity-0 transition-opacity duration-300 group-hover:opacity-100 z-10"
+                    style={{ color: "#0A0842" }}
+                  >
+                    Get started
+                  </span>
+                  <span
+                    className="absolute inset-0 bg-cyan-500 transform scale-x-0 group-hover:scale-x-100 
+              origin-left transition-transform duration-600 ease-out group-hover:bg-cyan-600"
+                  ></span>
+                </button>
+              </a>
+            </div>
+
+            <div className="md:col-span-5">
+              <p className="text-base text-[#0A0842] max-w-3xl text-left mt-2 md:-mt-4">
+                Unlock new opportunities and accelerate growth with tailored
+                protection solutions. Get in touch today to explore how our
+                platform can drive innovation, efficiency, and success for your
+                business.
+              </p>
+            </div>
+
+            <div className="flex md:justify-between items-center mt-6 md:mt-6 block md:hidden">
+              <a href="/contact">
+                <button className="relative overflow-hidden border px-8 py-4 text-md cursor-pointer border-cyan-500 group bg-cyan-500">
+                  <span className="relative font-bold z-10 text-[#0A0842] transition-opacity duration-300 group-hover:opacity-0">
+                    Get started
+                  </span>
+                  <span
+                    className="absolute left-0 top-0 w-full h-full flex items-center justify-center font-bold
+              opacity-0 transition-opacity duration-300 group-hover:opacity-100 z-10"
+                    style={{ color: "#0A0842" }}
+                  >
+                    Get started
+                  </span>
+                  <span
+                    className="absolute inset-0 bg-cyan-500 transform scale-x-0 group-hover:scale-x-100 
+              origin-left transition-transform duration-600 ease-out group-hover:bg-cyan-600"
+                  ></span>
+                </button>
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
+
       <div className="max-w-7xl mx-auto px-6 py-30 block md:hidden">
         <div className="md:grid md:grid-cols-5 md:gap-6 flex flex-col space-y-4 md:space-y-0">
           <h6 className="mb-4 text-xl text-cyan-300 cursor-default mt-10">
@@ -107,18 +173,39 @@ export default function Footer() {
           <FooterSection
             title="Distribution Engine"
             as={[
-              { label: "Insurer Library", href: "/distributionEngine/insurerLibrary" },
-              { label: "Dynamic Quoting Questionnaire", href: "/distributionEngine/dynamicQQ" },
-              { label: "Product Configurator", href: "/distributionEngine/productConfigurator" },
-              { label: "Data Marketplace", href: "/distributionEngine/dataMarketplace" },
-              { label: "Data Insights", href: "/distributionEngine/dataInsights" },
-              { label: "UI Design System", href: "/distributionEngine/designSystem" },
+              {
+                label: "Insurer Library",
+                href: "/distributionEngine/insurerLibrary",
+              },
+              {
+                label: "Dynamic Quoting Questionnaire",
+                href: "/distributionEngine/dynamicQQ",
+              },
+              {
+                label: "Product Configurator",
+                href: "/distributionEngine/productConfigurator",
+              },
+              {
+                label: "Data Marketplace",
+                href: "/distributionEngine/dataMarketplace",
+              },
+              {
+                label: "Data Insights",
+                href: "/distributionEngine/dataInsights",
+              },
+              {
+                label: "UI Design System",
+                href: "/distributionEngine/designSystem",
+              },
             ]}
           />
           <FooterSection
             title="Sales"
             as={[
-              { label: "Embedded Insurance API", href: "/sales/embeddedInsurance" },
+              {
+                label: "Embedded Insurance API",
+                href: "/sales/embeddedInsurance",
+              },
               { label: "Consumer Portal", href: "/sales/consumerPortal" },
               { label: "Enablement", href: "/sales/enablement" },
               { label: "Agency Portal", href: "/sales/agencyPortal" },
@@ -129,20 +216,44 @@ export default function Footer() {
           <FooterSection
             title="Servicing"
             as={[
-              { label: "Servicing and claim Portal", href: "/servicing/sncPortal" },
-              { label: "Global contact centers", href: "/servicing/gcontactCenters" },
-              { label: "Engagement Portal", href: "/servicing/engagementPortal" },
+              {
+                label: "Servicing and claim Portal",
+                href: "/servicing/sncPortal",
+              },
+              {
+                label: "Global contact centers",
+                href: "/servicing/gcontactCenters",
+              },
+              {
+                label: "Engagement Portal",
+                href: "/servicing/engagementPortal",
+              },
               { label: "Policy Admin", href: "/servicing/policyAdmin" },
-              { label: "Servicing Ecosystem", href: "/servicing/servicingEcosystem" },
+              {
+                label: "Servicing Ecosystem",
+                href: "/servicing/servicingEcosystem",
+              },
             ]}
           />
           <FooterSection
             title="Custom Solutions"
             as={[
-              { label: "Product Manufacturing", href: "/customSolutions/productManufacturing" },
-              { label: "Insurance Entity Setup", href: "/customSolutions/insuranceEntitySetup" },
-              { label: "Professional Services", href: "/customSolutions/profesionnalServices" },
-              { label: "Insurer Advisory Services", href: "/customSolutions/insurerAdvisoryServices" },
+              {
+                label: "Product Manufacturing",
+                href: "/customSolutions/productManufacturing",
+              },
+              {
+                label: "Insurance Entity Setup",
+                href: "/customSolutions/insuranceEntitySetup",
+              },
+              {
+                label: "Professional Services",
+                href: "/customSolutions/profesionnalServices",
+              },
+              {
+                label: "Insurer Advisory Services",
+                href: "/customSolutions/insurerAdvisoryServices",
+              },
               { label: "Integration", href: "/customSolutions/integration" },
             ]}
           />

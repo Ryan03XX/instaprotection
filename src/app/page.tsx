@@ -30,7 +30,7 @@ export default function Home() {
               paddingBottom: "0.2em",
             }}
           >
-            Guarding your assets,{" "}
+            Connecting the World to the{" "}
           </span>
           <span
             style={{
@@ -39,11 +39,14 @@ export default function Home() {
               paddingBottom: "0.2em",
             }}
           >
-            protecting your future
+            Right Protection at the Right Time
           </span>
         </h1>
+        <h3 className="text-lg sm:text-xl md:text-2xl text-white z-10">
+          Seamlessly embed protection products into any customer journey
+        </h3>
         <h3 className="text-lg sm:text-xl md:text-2xl text-white mb-8 md:mb-6 z-10">
-          Embed protection products into any customer journey
+          right where and when they're needed most.
         </h3>
         <a href="/contact">
           <button className="relative overflow-hidden border px-4 py-3 text-md cursor-pointer border-cyan-500 group bg-cyan-500 mt-4 sm:mt-6">
@@ -68,7 +71,7 @@ export default function Home() {
       </main>
 
       <section className="w-full bg-gray-100 z-10 py-10">
-        <h3 className="text-[#0A0842] font-bold text-sm sm:text-md mb-6 text-center relative z-20">
+        <h3 className="text-[#0A0842] font-bold text-lg mb-6 text-center relative z-20">
           Trusted by world leading brands
         </h3>
 
@@ -139,13 +142,17 @@ export default function Home() {
           <div className="flex justify-center relative">
             <div className="max-w-7xl w-full bg-cyan-500 overflow-hidden px-4 sm:px-8 md:px-10 py-8 sm:py-10 relative">
               <div className="p-4 sm:p-6">
-                <h6 className="text-black text-sm sm:text-base md:text-2xl lg:text-3xl leading-relaxed">
-                  At InstaProtection we strive to innovate and disrupt the
-                  traditional InsurTech industry. We are passionate about what
-                  we do, and our team of experts is dedicated to provide most
-                  efficient and advanced InsurTech platforms, products and
-                  services to enable customers and corporations to secure and
-                  offer relevant, effective and comprehensive services.
+                <h6 className="text-black text-lg md:text-2xl lg:text-3xl leading-relaxed font-bold">
+                  Innovating the Future of Protection Technology
+                </h6>
+              </div>
+              <div className="p-4 sm:p-6">
+                <h6 className="text-black text-sm sm:text-base md:text-2xl lg:text-2xl leading-relaxed">
+                  At InstaProtection, we’re redefining how protection works. Our
+                  passionate team of experts is dedicated to delivering advanced
+                  platforms, products, and services that empower individuals and
+                  businesses to stay secure with smart, effective, and
+                  comprehensive solutions.
                 </h6>
               </div>
             </div>
@@ -163,10 +170,10 @@ export default function Home() {
               Join the future of protection{" "}
             </h2>
             <p className="text-lg text-[#0A0842] leading-relaxed">
-              Our cloud-based platform seamlessly connects insurers,
-              distribution partners, and end-customers to power omni-channel
-              insurance distribution and world-class servicing – all through a
-              single API.
+              Our cloud-based platform seamlessly connects underwriters,
+              distribution partners, and end customers—enabling scalable,
+              omni-channel protection distribution and world-class servicing
+              through a robust and flexible digital ecosystem.
             </p>
             <a href="/contact">
               <button className="mt-6 relative overflow-hidden border px-4 py-3 text-md cursor-pointer border-cyan-500 group bg-cyan-500">
@@ -202,17 +209,16 @@ export default function Home() {
         <div className="max-w-7xl mx-auto md:grid md:grid-cols-2 gap-10 items-center flex flex-col-reverse mb-30 md:mb-60">
           <div>
             <p className="text-2xl md:text-3xl font-bold text-[#534F85] leading-relaxed mb-8">
-              Distribution Engine
+              Scalable and Flexible Distribution Platform
             </p>
             <h2 className="text-3xl md:text-5xl font-bold text-[#0A0842] mb-6">
-              Launch your own insurance offering seamlessly
+              Empower Your Business with Seamless Protection Solutions
             </h2>
             <p className="text-lg text-[#0A0842] leading-relaxed">
-              Grow revenue, reduce complexity, and manage product choices with
-              over 220+ microservices on our scalable, modular platform. Use our
-              embedded insurance platform to run your insurance programs and
-              launch (or invent) new business models with unmatched speed and
-              flexibility.
+              Accelerate growth and simplify operations with our scalable,
+              modular platform. Designed for flexibility, it empowers you to run
+              tailored protection programs or launch entirely new business
+              models—quickly, efficiently, and without added complexity.
             </p>
             <a href="/distributionEngine">
               <button className="mt-6 relative overflow-hidden border px-4 py-3 text-md cursor-pointer border-cyan-500 group bg-cyan-500">
@@ -252,12 +258,13 @@ export default function Home() {
               Sales
             </p>
             <h2 className="text-3xl md:text-5xl font-bold text-[#0A0842] mb-6">
-              Accelerate protection sales across any channel
+              Accelerate Growth Across Every Channel
             </h2>
             <p className="text-lg text-[#0A0842] leading-relaxed">
-              Embed protection products and protection offerings in any customer
-              journey, optimize conversions, and enhance the customer experience
-              with omni-channel distribution capabilities.
+              Integrate protection solutions into any customer journey with
+              ease. Expand your reach, optimize engagement, and deliver a
+              seamless experience through a flexible, omni-channel distribution
+              network designed to drive results.
             </p>
             <a href="/sales">
               <button className="mt-6 relative overflow-hidden border px-4 py-3 text-md cursor-pointer border-cyan-500 group bg-cyan-500">
@@ -297,12 +304,13 @@ export default function Home() {
               Servicing
             </p>
             <h2 className="text-3xl md:text-5xl font-bold text-[#0A0842] mb-6">
-              Empower your business with world-class insurance programs
+              Put Your Customers at the Center of Every Interaction
             </h2>
             <p className="text-lg text-[#0A0842] leading-relaxed">
-              Manage the entire protection programs lifecycle, from post-sales
-              to the claims process, to deliver industry-leading customer
-              experiences tailored to your brand.
+              Seamlessly manage the full lifecycle of protection programs—from
+              post-purchase support to claims handling—while delivering smooth,
+              personalized experiences that build trust, loyalty, and long-term
+              satisfaction.
             </p>
             <a href="/servicing">
               <button className="mt-6 relative overflow-hidden border px-4 py-3 text-md cursor-pointer border-cyan-500 group bg-cyan-500">
@@ -342,14 +350,18 @@ export default function Home() {
               Custom solutions
             </p>
             <h2 className="text-3xl md:text-5xl font-bold text-[#0A0842] mb-6">
-              Leverage our tech and insurance expertise tailored to your
-              business’ needs
+              Solutions as Unique as Your Business
             </h2>
+            <p className="text-2xl md:text-2xl font-bold text-[#534F85] leading-relaxed mb-8 italic">
+              Partner with a team that builds around your vision—every step of
+              the way.
+            </p>
             <p className="text-lg text-[#0A0842] leading-relaxed">
-              Our team uniquely combines deep technology and insurance expertise
-              to create tailored and innovative solutions alongside our partners
-              – building marketplaces, launching new businesses, expanding
-              across markets, and more.
+              We combine deep technology and protection expertise to craft
+              solutions tailored to your unique goals. Whether it’s building
+              marketplaces, launching new ventures, or expanding into new
+              markets, we work hand-in-hand with you to design and deliver the
+              right strategy for your growth.
             </p>
             <a href="/customSolutions">
               <button className="relative overflow-hidden border px-4 py-3 text-md cursor-pointer border-cyan-500 group bg-cyan-500 mt-6">
@@ -387,21 +399,39 @@ export default function Home() {
           <div>
             <FadeInWhenVisible>
               <p className="text-2xl md:text-3xl font-bold text-[#534F85] leading-relaxed mb-8">
-                Unmatched global reach and scale
+                Unmatched Reach and Scale in Asia
               </p>
             </FadeInWhenVisible>
             <FadeInWhenVisible>
               <h2 className="text-3xl md:text-5xl font-bold text-[#0A0842] mb-6">
-                The most globally scaled insurtech in the world
+                The Leading Technology-Enabled Ecosystem for Protection
               </h2>
             </FadeInWhenVisible>
             <FadeInWhenVisible>
               <p className="text-lg text-[#0A0842] leading-relaxed">
-                We’re building the world’s leading technology-enabled ecosystem
-                for protection and embedded insurance – enabling the industry to
-                close the protection gap and advance financial inclusion by
-                facilitating consumers’ access to the right insurance at the
-                right time.
+                We’re building one of Asia’s largest and most advanced InsurTech
+                ecosystems, designed to close the protection gap and drive
+                financial inclusion. By enabling consumers to access the right
+                protection at the right time, we’re empowering the industry to
+                achieve new levels of accessibility and impact across the
+                region.
+              </p>
+            </FadeInWhenVisible>
+            <FadeInWhenVisible>
+              <h2 className="text-3xl md:text-5xl font-bold text-[#0A0842] mb-6 mt-8">
+                Why Asia?
+              </h2>
+            </FadeInWhenVisible>
+            <FadeInWhenVisible>
+              <p className="text-lg text-[#0A0842] leading-relaxed">
+                Asia represents the future of protection, with a rapidly growing
+                middle class, diverse consumer needs, and an expanding digital
+                landscape. Our platform is uniquely positioned to address these
+                challenges and opportunities, offering scalable, adaptable
+                solutions to meet the region’s evolving demand for protection
+                products. We’re committed to driving innovation and growth
+                across key markets, from Southeast Asia to East Asia, ensuring
+                that protection reaches every corner of the continent.
               </p>
             </FadeInWhenVisible>
           </div>
@@ -555,16 +585,17 @@ export default function Home() {
         <div className="max-w-7xl mx-auto grid grid-cols-1 gap-10 items-center">
           <div>
             <p className="text-xl sm:text-2xl md:text-3xl font-bold text-[#534F85] leading-relaxed mb-4">
-              Our programs
+              Our Protection Solutions
             </p>
             <h2 className="text-3xl md:text-4xl md:text-5xl font-bold text-[#0A0842] mb-6">
-              Connecting your customers with more ways to protect the things
-              they value
+              Connecting Your Customers with Comprehensive Ways to Safeguard
+              What Matters Most
             </h2>
             <p className="text-base text-lg text-[#0A0842] leading-relaxed">
-              Discover the wide range of insurance and protection products
-              available to meet your customers’ needs and help them get
-              protected.
+              Discover our extensive range of protection solutions, crafted to
+              meet the unique needs of your customers. From essential items to
+              specialized coverage, we offer scalable, tailored products that
+              ensure your customers can protect the things they value most.
             </p>
           </div>
           <TwoColumnMenu />
@@ -578,11 +609,13 @@ export default function Home() {
               Case studies
             </p>
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#0A0842] mb-6">
-              Fast-track growth with digital transformation
+              Accelerating Growth Through Digital Transformation
             </h2>
             <p className="text-base sm:text-lg text-[#0A0842] leading-relaxed">
-              See how the world's leading brands are modernizing their insurance
-              products while scaling their business with bolttech.
+              Discover how businesses are modernizing their protection products
+              and scaling operations through digital transformation. Explore
+              real-world examples of innovation and success that drive
+              efficiency, growth, and improved customer experiences.
             </p>
           </div>
           <FadeInOnceOnScroll>

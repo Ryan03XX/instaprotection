@@ -7,7 +7,7 @@ import Image from "next/image";
 
 const menuItems = [
   {
-    title: "Mobile Devices",
+    title: "Mobile Device Protection",
     subtitle: "Reliable protection for mobile devices",
     description:
       "Offer comprehensive coverage and fast, dependable repairs or replacements, ensuring customers always have the devices they rely on, with 24/7 support and a streamlined claims process for a stress-free experience.",
@@ -15,7 +15,7 @@ const menuItems = [
     href: "/mobile", 
   },
   {
-    title: "Health Tech",
+    title: "Health & Wellness Coverage",
     subtitle: "Comprehensive protection for health tech",
     description:
       "Provide tailored insurance coverage for essential health tech devices like hearing aids and eyewear, enhancing customer loyalty through seamless service and long-term protection.",
@@ -23,7 +23,7 @@ const menuItems = [
     href: "/healTech", 
   },
   {
-    title: "Home",
+    title: "Property & Asset Protection",
     subtitle: "Holistic protection for modern homes",
     description:
       "Offer comprehensive coverage for both physical and digital aspects of home life, with customizable plans that meet each household’s unique needs, driving customer retention and enabling seamless cross-selling opportunities.",
@@ -31,7 +31,7 @@ const menuItems = [
     href: "/home", 
   },
   {
-    title: "Consumer Electronics",
+    title: "Lifestyle Product Protection",
     subtitle: "Holistic protection for modern homes",
     description:
       "Offer comprehensive coverage for both physical and digital aspects of home life, with customizable plans that meet each household’s unique needs, driving customer retention and enabling seamless cross-selling opportunities.",
@@ -51,7 +51,7 @@ export default function TwoColumnMenu() {
       <div
         key={index}
         onMouseEnter={() => setActiveIndex(index)}
-        className={`relative cursor-pointer text-2xl md:text-3xl transition-colors ${
+        className={`relative cursor-pointer text-xl md:text-2xl transition-colors ${
           activeIndex === index ? "text-[#011826] font-semibold" : "text-gray-600"
         }`}
       >
