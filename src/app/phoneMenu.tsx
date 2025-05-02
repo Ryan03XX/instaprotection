@@ -264,14 +264,14 @@ export default function MobileMenu({
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            className="fixed top-0 left-0 w-full min-h-screen bg-white z-40 flex flex-col items-center px-6 pt-24 space-y-6 overflow-y-auto"
+            className="fixed top-[80px] left-0 w-full h-[100dvh] bg-white z-40 flex flex-col items-center px-6 pt-6 space-y-6 overflow-y-auto"
             initial={{ x: "-100%" }}
             animate={{ x: 0 }}
             exit={{ x: "-100%" }}
             transition={{ duration: 0.4 }}
           >
             <nav className="w-full">
-              {menuPhoneItems.map((item) => (
+              {menuPhoneItems.map((item, index) => (
                 <div key={item.label} className="border-t border-gray-300 py-6">
                   <button
                     className="w-full text-left font-semibold text-xl flex justify-between items-center text-[#0A0842]"
@@ -375,7 +375,9 @@ export default function MobileMenu({
                       </motion.ul>
                     )}
                   </AnimatePresence>
+                  {index === menuPhoneItems.length - 1 && <div className="h-32" />}
                 </div>
+
               ))}
             </nav>
           </motion.div>
